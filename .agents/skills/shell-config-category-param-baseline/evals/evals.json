@@ -1,0 +1,23 @@
+{
+  "skill_name": "shell-config-category-param-baseline",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "给你一份壳配置 PRD 和后端 sample，请输出三份基线：参数追踪映射、group_key 到 stateKey 映射、参数约束统计。",
+      "expected_output": "生成三份完整文件，包含 TBD 标记、覆盖统计、冲突清单。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我们要新增空调冷热源相关二级分类，历史命名有偏差，请先保留现状，再给标准化命名建议。",
+      "expected_output": "在动态分发映射文件中同时产出现状命名与建议标准名，并附 ErrorData 监听说明。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "请统计所有 code 的输入约束，重点看一位小数、整数、min 单位、单选、无单位、特殊规则字段。",
+      "expected_output": "输出按类别分组的 code 列表与数量，并给出冲突清单。",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,3485 @@
+{
+    "code": "00000",
+    "result": "success",
+    "data": [
+        {
+            "objectId": "Eq990999000783f49d7b3a2b4adda6c463d570cadf47",
+            "objectName": "F2_空调机组3#-AHU-1F-2",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "groupOrder": 1,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "停止"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "运行"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "在线"
+                                }
+                            ],
+                            "dataValue": "1",
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "本地"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "远程"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "localRemoteStatus",
+                            "infoCodeName": "本地远程状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 3
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "alarmstatus",
+                                    "name": "异常"
+                                }
+                            ],
+                            "infoCode": "alarmstatus",
+                            "infoCodeName": "异常事件",
+                            "infoCodeType": "RISK_EVENT",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 4
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipParameterSet",
+                    "groupName": "设备参数设定",
+                    "groupOrder": 5,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "0",
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动状态设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "supplyFanGearSet",
+                            "infoCodeName": "送风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "77.6",
+                            "infoCode": "supplyFanFreqSet",
+                            "infoCodeName": "送风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "10.0",
+                            "infoCode": "returnFanFreqSet",
+                            "infoCodeName": "回风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "returnFanGearSet",
+                            "infoCodeName": "回风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "runningParameter",
+                    "groupName": "运行参数",
+                    "groupOrder": 9,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "1",
+                            "infoCode": "manualAutoStatus",
+                            "infoCodeName": "手自动状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "0",
+                                        "name": "手动"
+                                    },
+                                    {
+                                        "code": "1",
+                                        "name": "自动"
+                                    }
+                                ],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "0",
+                                "infoCode": "manualAutoSet",
+                                "infoCodeName": "手自动状态设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 1
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "infoCode": "supplyFanGear",
+                            "infoCodeName": "送风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "supplyFanGearSet",
+                                "infoCodeName": "送风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 2
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2,
+                            "unit": ""
+                        },
+                        {
+                            "dataSource": [],
+                            "infoCode": "supplyFanFreq",
+                            "infoCodeName": "送风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "77.6",
+                                "infoCode": "supplyFanFreqSet",
+                                "infoCodeName": "送风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 3,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "0.0",
+                            "infoCode": "returnFanFreq",
+                            "infoCodeName": "回风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "10.0",
+                                "infoCode": "returnFanFreqSet",
+                                "infoCodeName": "回风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 4,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "returnFanGear",
+                            "infoCodeName": "回风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "returnFanGearSet",
+                                "infoCodeName": "回风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 5
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5,
+                            "unit": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "objectId": "Eq9909990007cd2a4ae8d54f42c8bea596bc21593509",
+            "objectName": "F4_空调机组3#-AHU-4F-2",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "groupOrder": 1,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "停止"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "运行"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "在线"
+                                }
+                            ],
+                            "dataValue": "1",
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "本地"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "远程"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "localRemoteStatus",
+                            "infoCodeName": "本地远程状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 3
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "alarmstatus",
+                                    "name": "异常"
+                                }
+                            ],
+                            "infoCode": "alarmstatus",
+                            "infoCodeName": "异常事件",
+                            "infoCodeType": "RISK_EVENT",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 4
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipParameterSet",
+                    "groupName": "设备参数设定",
+                    "groupOrder": 5,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "0",
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动状态设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "supplyFanGearSet",
+                            "infoCodeName": "送风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "64.5",
+                            "infoCode": "supplyFanFreqSet",
+                            "infoCodeName": "送风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "10.0",
+                            "infoCode": "returnFanFreqSet",
+                            "infoCodeName": "回风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "returnFanGearSet",
+                            "infoCodeName": "回风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "runningParameter",
+                    "groupName": "运行参数",
+                    "groupOrder": 9,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-31 11:29:54",
+                            "dataValue": "0",
+                            "infoCode": "manualAutoStatus",
+                            "infoCodeName": "手自动状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "0",
+                                        "name": "手动"
+                                    },
+                                    {
+                                        "code": "1",
+                                        "name": "自动"
+                                    }
+                                ],
+                                "dataTime": "2024-08-04 11:29:54",
+                                "dataValue": "0",
+                                "infoCode": "manualAutoSet",
+                                "infoCodeName": "手自动状态设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 1,
+                                "additionalMapValue":{
+                                    "recoveryDateTime":"2024-09-11 11:20:00"
+                                }
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "supplyFanGear",
+                            "infoCodeName": "送风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "supplyFanGearSet",
+                                "infoCodeName": "送风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 2
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2,
+                            "unit": ""
+                        },
+                        {
+                            "dataSource": [],
+                            "infoCode": "supplyFanFreq",
+                            "infoCodeName": "送风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "64.5",
+                                "infoCode": "supplyFanFreqSet",
+                                "infoCodeName": "送风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 3,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1.0",
+                            "infoCode": "returnFanFreq",
+                            "infoCodeName": "回风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "10.0",
+                                "infoCode": "returnFanFreqSet",
+                                "infoCodeName": "回风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 4,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "returnFanGear",
+                            "infoCodeName": "回风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "returnFanGearSet",
+                                "infoCodeName": "回风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 5
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5,
+                            "unit": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "objectId": "Eq99099900076cb7c66c7549440a885d25612bc2a4a7",
+            "objectName": "F3_空调机组3#-AHU-3F-2",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "groupOrder": 1,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "停止"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "运行"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "在线"
+                                }
+                            ],
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "本地"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "远程"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "localRemoteStatus",
+                            "infoCodeName": "本地远程状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 3
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "alarmstatus",
+                                    "name": "异常"
+                                }
+                            ],
+                            "infoCode": "alarmstatus",
+                            "infoCodeName": "异常事件",
+                            "infoCodeType": "RISK_EVENT",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 4
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipParameterSet",
+                    "groupName": "设备参数设定",
+                    "groupOrder": 5,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:27:24",
+                            "dataValue": "1",
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动状态设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "supplyFanGearSet",
+                            "infoCodeName": "送风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "38.1",
+                            "infoCode": "supplyFanFreqSet",
+                            "infoCodeName": "送风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "10.0",
+                            "infoCode": "returnFanFreqSet",
+                            "infoCodeName": "回风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "returnFanGearSet",
+                            "infoCodeName": "回风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "runningParameter",
+                    "groupName": "运行参数",
+                    "groupOrder": 9,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "0",
+                            "infoCode": "manualAutoStatus",
+                            "infoCodeName": "手自动状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "0",
+                                        "name": "手动"
+                                    },
+                                    {
+                                        "code": "1",
+                                        "name": "自动"
+                                    }
+                                ],
+                                "dataTime": "2024-07-04 11:27:24",
+                                "dataValue": "1",
+                                "infoCode": "manualAutoSet",
+                                "infoCodeName": "手自动状态设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 1
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "supplyFanGear",
+                            "infoCodeName": "送风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "supplyFanGearSet",
+                                "infoCodeName": "送风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 2
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2,
+                            "unit": ""
+                        },
+                        {
+                            "dataSource": [],
+                            "infoCode": "supplyFanFreq",
+                            "infoCodeName": "送风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "38.1",
+                                "infoCode": "supplyFanFreqSet",
+                                "infoCodeName": "送风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 3,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1.0",
+                            "infoCode": "returnFanFreq",
+                            "infoCodeName": "回风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "10.0",
+                                "infoCode": "returnFanFreqSet",
+                                "infoCodeName": "回风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 4,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "returnFanGear",
+                            "infoCodeName": "回风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "returnFanGearSet",
+                                "infoCodeName": "回风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 5
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5,
+                            "unit": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "objectId": "Eq9909990007c134e132f9984d3983c0375d3975688f",
+            "objectName": "F3_空调机组3#-AHU-3F-1",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "groupOrder": 1,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "停止"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "运行"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "在线"
+                                }
+                            ],
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "dataValue": "1",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "本地"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "远程"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "localRemoteStatus",
+                            "infoCodeName": "本地远程状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 3
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "alarmstatus",
+                                    "name": "异常"
+                                }
+                            ],
+                            "infoCode": "alarmstatus",
+                            "infoCodeName": "异常事件",
+                            "infoCodeType": "RISK_EVENT",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 4
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipParameterSet",
+                    "groupName": "设备参数设定",
+                    "groupOrder": 5,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:27:24",
+                            "dataValue": "1",
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动状态设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "supplyFanGearSet",
+                            "infoCodeName": "送风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "13.8",
+                            "infoCode": "supplyFanFreqSet",
+                            "infoCodeName": "送风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "10.0",
+                            "infoCode": "returnFanFreqSet",
+                            "infoCodeName": "回风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "returnFanGearSet",
+                            "infoCodeName": "回风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "runningParameter",
+                    "groupName": "运行参数",
+                    "groupOrder": 9,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "1",
+                            "infoCode": "manualAutoStatus",
+                            "infoCodeName": "手自动状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "0",
+                                        "name": "手动"
+                                    },
+                                    {
+                                        "code": "1",
+                                        "name": "自动"
+                                    }
+                                ],
+                                "dataTime": "2024-07-04 11:27:24",
+                                "dataValue": "1",
+                                "infoCode": "manualAutoSet",
+                                "infoCodeName": "手自动状态设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 1
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "supplyFanGear",
+                            "infoCodeName": "送风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "supplyFanGearSet",
+                                "infoCodeName": "送风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 2,
+                                "additionalMapValue": {
+                                    "recoveryDateTime": "2024-07-11 11:20:00"
+                                }
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2,
+                            "unit": ""
+                        },
+                        {
+                            "dataSource": [],
+                            "infoCode": "supplyFanFreq",
+                            "infoCodeName": "送风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "13.8",
+                                "infoCode": "supplyFanFreqSet",
+                                "infoCodeName": "送风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 3,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "0.0",
+                            "infoCode": "returnFanFreq",
+                            "infoCodeName": "回风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "10.0",
+                                "infoCode": "returnFanFreqSet",
+                                "infoCodeName": "回风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 4,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "returnFanGear",
+                            "infoCodeName": "回风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "returnFanGearSet",
+                                "infoCodeName": "回风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 5
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5,
+                            "unit": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "objectId": "Eq9909990007e210dd6a4109478bb723325005fb4e1e",
+            "objectName": "F2_空调机组3#-AHU-2F-2",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "groupOrder": 1,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "停止"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "运行"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "在线"
+                                }
+                            ],
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "本地"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "远程"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "localRemoteStatus",
+                            "infoCodeName": "本地远程状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 3
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "alarmstatus",
+                                    "name": "异常"
+                                }
+                            ],
+                            "infoCode": "alarmstatus",
+                            "infoCodeName": "异常事件",
+                            "infoCodeType": "RISK_EVENT",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 4
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipParameterSet",
+                    "groupName": "设备参数设定",
+                    "groupOrder": 5,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "0",
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动状态设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "supplyFanGearSet",
+                            "infoCodeName": "送风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "68.8",
+                            "infoCode": "supplyFanFreqSet",
+                            "infoCodeName": "送风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "10.0",
+                            "infoCode": "returnFanFreqSet",
+                            "infoCodeName": "回风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "returnFanGearSet",
+                            "infoCodeName": "回风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "runningParameter",
+                    "groupName": "运行参数",
+                    "groupOrder": 9,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "0",
+                            "infoCode": "manualAutoStatus",
+                            "infoCodeName": "手自动状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "0",
+                                        "name": "手动"
+                                    },
+                                    {
+                                        "code": "1",
+                                        "name": "自动"
+                                    }
+                                ],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "0",
+                                "infoCode": "manualAutoSet",
+                                "infoCodeName": "手自动状态设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 1
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "supplyFanGear",
+                            "infoCodeName": "送风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "supplyFanGearSet",
+                                "infoCodeName": "送风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 2
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2,
+                            "unit": ""
+                        },
+                        {
+                            "dataSource": [],
+                            "infoCode": "supplyFanFreq",
+                            "infoCodeName": "送风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "68.8",
+                                "infoCode": "supplyFanFreqSet",
+                                "infoCodeName": "送风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 3,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "0.0",
+                            "infoCode": "returnFanFreq",
+                            "infoCodeName": "回风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "10.0",
+                                "infoCode": "returnFanFreqSet",
+                                "infoCodeName": "回风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 4,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "returnFanGear",
+                            "infoCodeName": "回风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "returnFanGearSet",
+                                "infoCodeName": "回风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 5
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5,
+                            "unit": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "objectId": "Eq9909990007c86978db31aa40b59ab1a49dc3debfed",
+            "objectName": "F4_空调机组3#-AHU-4F-1",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "groupOrder": 1,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "停止"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "运行"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "在线"
+                                }
+                            ],
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "本地"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "远程"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "localRemoteStatus",
+                            "infoCodeName": "本地远程状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 3
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "alarmstatus",
+                                    "name": "异常"
+                                }
+                            ],
+                            "infoCode": "alarmstatus",
+                            "infoCodeName": "异常事件",
+                            "infoCodeType": "RISK_EVENT",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 4
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipParameterSet",
+                    "groupName": "设备参数设定",
+                    "groupOrder": 5,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "1",
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动状态设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "supplyFanGearSet",
+                            "infoCodeName": "送风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "65.6",
+                            "infoCode": "supplyFanFreqSet",
+                            "infoCodeName": "送风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "10.0",
+                            "infoCode": "returnFanFreqSet",
+                            "infoCodeName": "回风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "returnFanGearSet",
+                            "infoCodeName": "回风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "runningParameter",
+                    "groupName": "运行参数",
+                    "groupOrder": 9,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:27:24",
+                            "dataValue": "0",
+                            "infoCode": "manualAutoStatus",
+                            "infoCodeName": "手自动状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "0",
+                                        "name": "手动"
+                                    },
+                                    {
+                                        "code": "1",
+                                        "name": "自动"
+                                    }
+                                ],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "1",
+                                "infoCode": "manualAutoSet",
+                                "infoCodeName": "手自动状态设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 1
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "supplyFanGear",
+                            "infoCodeName": "送风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "supplyFanGearSet",
+                                "infoCodeName": "送风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 2
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2,
+                            "unit": ""
+                        },
+                        {
+                            "dataSource": [],
+                            "infoCode": "supplyFanFreq",
+                            "infoCodeName": "送风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "65.6",
+                                "infoCode": "supplyFanFreqSet",
+                                "infoCodeName": "送风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 3,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1.0",
+                            "infoCode": "returnFanFreq",
+                            "infoCodeName": "回风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "10.0",
+                                "infoCode": "returnFanFreqSet",
+                                "infoCodeName": "回风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 4,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "returnFanGear",
+                            "infoCodeName": "回风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "returnFanGearSet",
+                                "infoCodeName": "回风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 5
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5,
+                            "unit": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "objectId": "Eq990999000754f2bf7fe2bc4657855e3e542f708f80",
+            "objectName": "F2_空调机组3#-AHU-1F-1",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "groupOrder": 1,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "停止"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "运行"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "在线"
+                                }
+                            ],
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "本地"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "远程"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "localRemoteStatus",
+                            "infoCodeName": "本地远程状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 3
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "alarmstatus",
+                                    "name": "异常"
+                                }
+                            ],
+                            "infoCode": "alarmstatus",
+                            "infoCodeName": "异常事件",
+                            "infoCodeType": "RISK_EVENT",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 4
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipParameterSet",
+                    "groupName": "设备参数设定",
+                    "groupOrder": 5,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:27:24",
+                            "dataValue": "1",
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动状态设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "supplyFanGearSet",
+                            "infoCodeName": "送风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "20.6",
+                            "infoCode": "supplyFanFreqSet",
+                            "infoCodeName": "送风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "10.0",
+                            "infoCode": "returnFanFreqSet",
+                            "infoCodeName": "回风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "returnFanGearSet",
+                            "infoCodeName": "回风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "runningParameter",
+                    "groupName": "运行参数",
+                    "groupOrder": 9,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "0",
+                            "infoCode": "manualAutoStatus",
+                            "infoCodeName": "手自动状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "0",
+                                        "name": "手动"
+                                    },
+                                    {
+                                        "code": "1",
+                                        "name": "自动"
+                                    }
+                                ],
+                                "dataTime": "2024-07-04 11:27:24",
+                                "dataValue": "1",
+                                "infoCode": "manualAutoSet",
+                                "infoCodeName": "手自动状态设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 1
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "supplyFanGear",
+                            "infoCodeName": "送风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "supplyFanGearSet",
+                                "infoCodeName": "送风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 2
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2,
+                            "unit": ""
+                        },
+                        {
+                            "dataSource": [],
+                            "infoCode": "supplyFanFreq",
+                            "infoCodeName": "送风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "20.6",
+                                "infoCode": "supplyFanFreqSet",
+                                "infoCodeName": "送风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 3,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "0.0",
+                            "infoCode": "returnFanFreq",
+                            "infoCodeName": "回风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "10.0",
+                                "infoCode": "returnFanFreqSet",
+                                "infoCodeName": "回风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 4,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "returnFanGear",
+                            "infoCodeName": "回风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "returnFanGearSet",
+                                "infoCodeName": "回风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 5
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5,
+                            "unit": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "objectId": "Eq990999000718cec97ddd3d4a44ae5ba6a643317d6f",
+            "objectName": "F2_空调机组3#-AHU-2F-1",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "groupOrder": 1,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "停止"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "运行"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "在线"
+                                }
+                            ],
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "本地"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "远程"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "localRemoteStatus",
+                            "infoCodeName": "本地远程状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 3
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "alarmstatus",
+                                    "name": "异常"
+                                }
+                            ],
+                            "infoCode": "alarmstatus",
+                            "infoCodeName": "异常事件",
+                            "infoCodeType": "RISK_EVENT",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 4
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipParameterSet",
+                    "groupName": "设备参数设定",
+                    "groupOrder": 5,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "0",
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动状态设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "supplyFanGearSet",
+                            "infoCodeName": "送风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "65.7",
+                            "infoCode": "supplyFanFreqSet",
+                            "infoCodeName": "送风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "10.0",
+                            "infoCode": "returnFanFreqSet",
+                            "infoCodeName": "回风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "returnFanGearSet",
+                            "infoCodeName": "回风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "runningParameter",
+                    "groupName": "运行参数",
+                    "groupOrder": 9,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "1",
+                            "infoCode": "manualAutoStatus",
+                            "infoCodeName": "手自动状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "0",
+                                        "name": "手动"
+                                    },
+                                    {
+                                        "code": "1",
+                                        "name": "自动"
+                                    }
+                                ],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "0",
+                                "infoCode": "manualAutoSet",
+                                "infoCodeName": "手自动状态设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 1
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "supplyFanGear",
+                            "infoCodeName": "送风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "supplyFanGearSet",
+                                "infoCodeName": "送风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 2
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2,
+                            "unit": ""
+                        },
+                        {
+                            "dataSource": [],
+                            "infoCode": "supplyFanFreq",
+                            "infoCodeName": "送风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "65.7",
+                                "infoCode": "supplyFanFreqSet",
+                                "infoCodeName": "送风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 3,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1.0",
+                            "infoCode": "returnFanFreq",
+                            "infoCodeName": "回风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "10.0",
+                                "infoCode": "returnFanFreqSet",
+                                "infoCodeName": "回风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 4,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "returnFanGear",
+                            "infoCodeName": "回风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "returnFanGearSet",
+                                "infoCodeName": "回风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 5
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5,
+                            "unit": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "objectId": "Eq9909990007c9dc9e0378b74d75b5746aa96f0b90ec",
+            "objectName": "B1_空调机组1#-AHU-B1-1",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "groupOrder": 1,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "停止"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "运行"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "在线"
+                                }
+                            ],
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "本地"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "远程"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "localRemoteStatus",
+                            "infoCodeName": "本地远程状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 3
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "alarmstatus",
+                                    "name": "异常"
+                                }
+                            ],
+                            "infoCode": "alarmstatus",
+                            "infoCodeName": "异常事件",
+                            "infoCodeType": "RISK_EVENT",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 4
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "equipParameterSet",
+                    "groupName": "设备参数设定",
+                    "groupOrder": 5,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "0",
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动状态设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "supplyFanGearSet",
+                            "infoCodeName": "送风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "20.5",
+                            "infoCode": "supplyFanFreqSet",
+                            "infoCodeName": "送风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "10.0",
+                            "infoCode": "returnFanFreqSet",
+                            "infoCodeName": "回风机频率设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1",
+                            "infoCode": "returnFanGearSet",
+                            "infoCodeName": "回风机档位设定",
+                            "infoCodeType": "IOT_SETTING",
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5
+                        }
+                    ]
+                },
+                {
+                    "groupChildren": [],
+                    "groupCode": "runningParameter",
+                    "groupName": "运行参数",
+                    "groupOrder": 9,
+                    "relInfoCodeConfigs": [
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                }
+                            ],
+                            "dataTime": "2024-07-04 11:29:54",
+                            "dataValue": "1",
+                            "infoCode": "manualAutoStatus",
+                            "infoCodeName": "手自动状态",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "0",
+                                        "name": "手动"
+                                    },
+                                    {
+                                        "code": "1",
+                                        "name": "自动"
+                                    }
+                                ],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "0",
+                                "infoCode": "manualAutoSet",
+                                "infoCodeName": "手自动状态设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 1
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 1
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "supplyFanGear",
+                            "infoCodeName": "送风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "supplyFanGearSet",
+                                "infoCodeName": "送风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 2
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 2,
+                            "unit": ""
+                        },
+                        {
+                            "dataSource": [],
+                            "infoCode": "supplyFanFreq",
+                            "infoCodeName": "送风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-04 11:29:54",
+                                "dataValue": "20.5",
+                                "infoCode": "supplyFanFreqSet",
+                                "infoCodeName": "送风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 3,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 3,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [],
+                            "dataTime": "2024-07-03 11:20:00",
+                            "dataValue": "1.0",
+                            "infoCode": "returnFanFreq",
+                            "infoCodeName": "回风机频率",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "10.0",
+                                "infoCode": "returnFanFreqSet",
+                                "infoCodeName": "回风机频率设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "scale": 1,
+                                "sequence": 4,
+                                "unit": "Hz"
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "scale": 1,
+                            "sequence": 4,
+                            "unit": "Hz"
+                        },
+                        {
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "低档"
+                                },
+                                {
+                                    "code": "2",
+                                    "name": "中档"
+                                },
+                                {
+                                    "code": "3",
+                                    "name": "高档"
+                                },
+                                {
+                                    "code": "99",
+                                    "name": "其他"
+                                }
+                            ],
+                            "infoCode": "returnFanGear",
+                            "infoCodeName": "回风机档位",
+                            "infoCodeType": "IOT_RUNNING",
+                            "relInfoCodeConfig": {
+                                "dataSource": [
+                                    {
+                                        "code": "1",
+                                        "name": "低档"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "name": "中档"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "name": "高档"
+                                    },
+                                    {
+                                        "code": "99",
+                                        "name": "其他"
+                                    }
+                                ],
+                                "dataTime": "2024-07-03 11:20:00",
+                                "dataValue": "1",
+                                "infoCode": "returnFanGearSet",
+                                "infoCodeName": "回风机档位设定",
+                                "infoCodeType": "IOT_SETTING",
+                                "relTemplateTypeId": "1808554878207741954",
+                                "sequence": 5
+                            },
+                            "relTemplateTypeId": "1808554878207741954",
+                            "sequence": 5,
+                            "unit": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "message": null,
+    "count": 9,
+    "total": "9",
+    "timestamp": "1720066030131"
+}

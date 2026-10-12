@@ -1,0 +1,126 @@
+{
+  "cLog": {
+    "prefix": "clog",
+    "body": [
+      "console.log(${1:})"
+    ],
+    "description": "创建日志输出"
+  },
+  "vueSfc": {
+    "prefix": "vue3sfc",
+    "body": [
+      "<template>",
+      "  <div class=\"${1:component}\">${2}</div>",
+      "</template>",
+      "",
+      "<script setup lang=\"ts\">",
+      "const props = defineProps({",
+      "  ${3:msg}: {",
+      "    type: String,",
+      "    default: ''",
+      "  }",
+      "});",
+      "",
+      "const emit = defineEmits(['${4:update}']);",
+      "",
+      "const state = reactive({",
+      "  ${5:key}: ${6:null}",
+      "});",
+      "</script>",
+      "",
+      "<style scoped lang=\"less\">",
+      ".${1:component} {",
+      "  ${7:/* styles */}",
+      "}",
+      "</style>"
+    ],
+    "description": "创建基础 Vue 3 组件模板"
+  },
+  "vueComposable": {
+    "prefix": "vue3hook",
+    "body": [
+      "import { ref, computed } from 'vue';",
+      "",
+      "export const use${1:Feature} = () => {",
+      "  const state = ref(${2:null});",
+      "  const isReady = computed(() => state.value !== null);",
+      "",
+      "  const setState = (value: ${3:unknown}) => {",
+      "    state.value = value;",
+      "  };",
+      "",
+      "  return {",
+      "    state,",
+      "    isReady,",
+      "    setState",
+      "  };",
+      "};"
+    ],
+    "description": "创建基础 Vue 3 组合式函数"
+  },
+  "useLoadingHook": {
+    "prefix": "useLoadingHook",
+    "body": [
+      "import useLoading from '@/hooks/useLoading';",
+      "",
+      "const { loading, openLoading, closeLoading } = useLoading(",
+      "  '${1:container-class}',",
+      "  '${2:#F1F4F6}',",
+      "  '${3:ball}'",
+      ");"
+    ],
+    "description": "快速引入并初始化 useLoading Hook"
+  },
+  "useCancelTokenHook": {
+    "prefix": "useCancelToken",
+    "body": [
+      "import axios from 'axios';",
+      "import UseCancelTokenHooks from '@/hooks/UseCancelTokenHooks';",
+      "",
+      "const { cancelToken, cancelQuest, source } = UseCancelTokenHooks();",
+      "",
+      "axios.get('${1:/api/path}', {",
+      "  cancelToken: cancelToken(),",
+      "}).catch(error => {",
+      "  if (axios.isCancel(error)) {",
+      "    console.warn(error.message);",
+      "  }",
+      "});",
+      "",
+      "onBeforeUnmount(() => {",
+      "  cancelQuest();",
+      "});"
+    ],
+    "description": "使用请求取消 Hook 的模板"
+  },
+  "dataDockHandlingHook": {
+    "prefix": "useDataDockHandling",
+    "body": [
+      "import dataDockHandling from '@/hooks/dataDockHandling';",
+      "",
+      "const {",
+      "  loadDynaDataWithIotHandling,",
+      "  loadDangerEventsListWithHandling,",
+      "  loadBatchQueryInfoCodeIotHandling,",
+      "  loadBdtpDataHandling,",
+      "  writeDataToResponsiveDock",
+      "} = dataDockHandling();"
+    ],
+    "description": "引入 dataDockHandling Hook 常用方法"
+  },
+  "responsiveDockSingleton": {
+    "prefix": "useResponsiveDock",
+    "body": [
+      "import DockSingleton from '@/hooks/responsiveDock';",
+      "",
+      "const {",
+      "  setIotData,",
+      "  getIotData,",
+      "  setCustomInfo,",
+      "  getCustomInfo,",
+      "  clearOneObjectInfo",
+      "} = DockSingleton.getInstance();"
+    ],
+    "description": "获取 responsiveDock 单例实例"
+  }
+}

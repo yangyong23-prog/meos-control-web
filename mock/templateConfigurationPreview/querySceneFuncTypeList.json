@@ -1,0 +1,198 @@
+{
+    "code": "00000",
+    "result": "success",
+    "data": {
+        "templateType": "SIGN_LIGHTING",
+        "templateTypeName": "标识照明1",
+        "sceneModes": [
+            {
+                "sceneId": "1772447427050508289",
+                "sceneName": "3333",
+                "sceneMode": "PARTIAL_OPEN"
+            }
+        ],
+        "summary": {
+            "total": 4,
+            "openCount": 1,
+            "closeCount": 3,
+            "unConfigCount": 0
+        },
+        "funcTypeSettings": [
+            {
+                "funcType": "2",
+                "funcTypeName": "氛围照明",
+                "sceneModes": [
+                    {
+                        "sceneId": "1772447427050508289",
+                        "sceneName": "3333",
+                        "sceneMode": "PARTIAL_OPEN"
+                    }
+                ],
+                "summary": {
+                    "total": 1,
+                    "openCount": 1,
+                    "closeCount": 0,
+                    "unConfigCount": 0
+                },
+                "lampFuncTypeSettings": [
+                    {
+                        "lampFuncType": "3",
+                        "lampFuncTypeName": "灯带",
+                        "sceneModes": [
+                            {
+                                "sceneId": "1772447427050508289",
+                                "sceneName": "3333",
+                                "sceneMode": "PARTIAL_OPEN"
+                            }
+                        ],
+                        "summary": {
+                            "total": 1,
+                            "openCount": 1,
+                            "closeCount": 0,
+                            "unConfigCount": 0
+                        }
+                    },
+                    {
+                        "lampFuncType": "4",
+                        "lampFuncTypeName": "洗墙灯",
+                        "sceneModes": [
+                            {
+                                "sceneId": "1772447427050508289",
+                                "sceneName": "4444",
+                                "sceneMode": "PARTIAL_OPEN"
+                            }
+                        ],
+                        "summary": {
+                            "total": 1,
+                            "openCount": 1,
+                            "closeCount": 0,
+                            "unConfigCount": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "funcType": "7",
+                "funcTypeName": "标识照明",
+                "sceneModes": [
+                    {
+                        "sceneId": "1772447427050508289",
+                        "sceneName": "3333",
+                        "sceneMode": "ALL_CLOSE"
+                    }
+                ],
+                "summary": {
+                    "total": 3,
+                    "openCount": 0,
+                    "closeCount": 3,
+                    "unConfigCount": 0
+                },
+                "lampFuncTypeSettings": [
+                    {
+                        "lampFuncType": "3",
+                        "lampFuncTypeName": "灯带",
+                        "sceneModes": [
+                            {
+                                "sceneId": "1772447427050508289",
+                                "sceneName": "3333",
+                                "sceneMode": "ALL_CLOSE"
+                            }
+                        ],
+                        "summary": {
+                            "total": 2,
+                            "openCount": 0,
+                            "closeCount": 2,
+                            "unConfigCount": 0
+                        }
+                    },
+                    {
+                        "lampFuncType": "5",
+                        "lampFuncTypeName": "标识指示灯",
+                        "sceneModes": [
+                            {
+                                "sceneId": "1772447427050508289",
+                                "sceneName": "3333",
+                                "sceneMode": "ALL_CLOSE"
+                            }
+                        ],
+                        "summary": {
+                            "total": 1,
+                            "openCount": 0,
+                            "closeCount": 1,
+                            "unConfigCount": 0
+                        }
+                    },
+                    {
+                        "lampFuncType": "44",
+                        "lampFuncTypeName": "小品灯",
+                        "sceneModes": [
+                            {
+                                "sceneId": "1772447427050508289",
+                                "sceneName": "4444",
+                                "sceneMode": "PARTIAL_OPEN"
+                            }
+                        ],
+                        "summary": {
+                            "total": 1,
+                            "openCount": 1,
+                            "closeCount": 0,
+                            "unConfigCount": 0
+                        }
+                    },
+                    {
+                        "lampFuncType": "99",
+                        "lampFuncTypeName": "水下灯",
+                        "sceneModes": [
+                            {
+                                "sceneId": "1772447427050508289",
+                                "sceneName": "4444",
+                                "sceneMode": "PARTIAL_OPEN"
+                            }
+                        ],
+                        "summary": {
+                            "total": 1,
+                            "openCount": 1,
+                            "closeCount": 0,
+                            "unConfigCount": 0
+                        }
+                    },
+                    {
+                        "lampFuncType": "997",
+                        "lampFuncTypeName": "造型装饰灯",
+                        "sceneModes": [
+                            {
+                                "sceneId": "1772447427050508289",
+                                "sceneName": "4444",
+                                "sceneMode": "NOT_CONFIGURED"
+                            }
+                        ],
+                        "summary": {
+                            "total": 1,
+                            "openCount": 1,
+                            "closeCount": 0,
+                            "unConfigCount": 0
+                        }
+                    },
+                    {
+                        "lampFuncType": "99",
+                        "lampFuncTypeName": "路灯",
+                        "sceneModes": [
+                            {
+                                "sceneId": "1772447427050508289",
+                                "sceneName": "4444",
+                                "sceneMode": "PARTIAL_OPEN"
+                            }
+                        ],
+                        "summary": {
+                            "total": 1,
+                            "openCount": 1,
+                            "closeCount": 0,
+                            "unConfigCount": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "timestamp": "1712024875300"
+}

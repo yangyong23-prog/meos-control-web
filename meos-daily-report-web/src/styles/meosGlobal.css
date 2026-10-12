@@ -1,0 +1,23 @@
+/**
+ * 全局样式文件
+ * 用于定义项目全局CSS样式，确保视觉统一性
+ */
+
+/* 页面背景色：统一设置为白色，作为项目视觉基础 */
+body {
+  background-color: #ffffff;
+}
+
+/* 
+ * 根容器样式
+ * - width: 100% - 容器宽度占满父元素，确保内容区域完整显示
+ * - height: 100% - 容器高度占满父元素，实现全屏布局
+ * - overflow-x: hidden - 隐藏横向溢出内容，防止出现水平滚动条
+ * - overflow-y: auto - 纵向内容溢出时显示滚动条，保证内容可访问
+ */
+#app {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

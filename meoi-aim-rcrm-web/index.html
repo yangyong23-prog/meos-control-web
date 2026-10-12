@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>meoi-aim-rcrm-web</title>
+        <script src="/yiheng-common-web/static/env/apm.env.js"></script>
+        <script>
+            let _loadStyles = function () {
+                let prefix = window.apmCommonEnv ? window.apmCommonEnv.INTERFACE_PREFIX_APM_STATIC_CONFIG : undefined;
+                let createLink = function (url, id) {
+                    let urlLink = document.createElement('link');
+                    urlLink.rel = 'stylesheet';
+                    urlLink.id = id;
+                    urlLink.href = url;
+                    document.head.prepend(urlLink);
+                };
+                let isLinkExists = function (id) {
+                    let node = document.querySelector('link[id="' + id + '"]');
+                    return node === null;
+                };
+                if (prefix !== undefined) {
+                    isLinkExists('commoncss') && createLink(`${prefix}/styles/common.css`, 'commoncss');
+                    isLinkExists('variablescss') && createLink(`${prefix}/styles/variables.css`, 'variablescss');
+                    isLinkExists('fontcss') && createLink(`${prefix}/styles/font/font.css`, 'fontcss');
+                }
+            };
+
+            _loadStyles();
+        </script>
+    </head>
+
+    <body>
+        <noscript>
+            <strong
+                >We're sorry but early doesn't work properly without JavaScript enabled. Please enable it to
+                continue.</strong
+            >
+        </noscript>
+        <div id="rcrm" style="width: 100%; height: 100%"></div>
+    </body>
+</html>

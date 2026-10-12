@@ -1,0 +1,209 @@
+<template>
+    <div class="item-wrap">
+        <m-form-item
+            :ref="el => (fieldRefs[0] = el)"
+            :label="field?.name"
+            :prop="propKey"
+            :rules="{
+                validator: (rule, value, callback) => validateBothInput(selectValue, callback),
+                trigger: 'none'
+            }"
+            label-width="140px"
+            class="form-item"
+        >
+            <template #label>
+                <div style="word-break: break-word">{{ field?.name }}</div>
+            </template>
+            <m-select v-model="selectValue" :size="116" :disabled="disabled" :options="list" clearable></m-select>
+        </m-form-item>
+        <m-form-item
+            v-if="useSustainTime"
+            :ref="el => (fieldRefs[1] = el)"
+            :label="i18n.global.t('meos_control_web.duration')"
+            :prop="propKey + 'sustainTime'"
+            :rules="[
+                { validator: (_value, _rule, callback) => validateBothInput(sustainTime, callback), trigger: 'none' },
+                {
+                    validator: (_value, _rule, callback) => validateStepInput(sustainTime, callback),
+                    trigger: ['blur']
+                }
+            ]"
+            label-width="64px"
+            style="--padding-3: 0"
+            class="form-item sustain-time"
+        >
+            <StepInputNumber
+                v-model="sustainTime"
+                :min="5"
+                :max="1440"
+                :step="5"
+                :precision="0"
+                allow-empty
+                :blur-round="true"
+                :suffix="i18n.global.t('meos_control_web.minute')"
+                width="90px"
+                :disabled="disabled"
+            />
+            <div v-if="interfereOverTime" class="desc-text">{{ interfereOverTime }}{{ i18n.global.t('meos_control_web.intervention_end') }}</div>
+        </m-form-item>
+    </div>
+</template>
+<script setup>
+import { EMPTYTEXT } from './timetableConfig';
+import { isEmptyNoReturn } from '@/utils/tools';
+import { strategyTimeKey } from './useTimetableEditorItem';
+import dayjs from 'dayjs';
+import { getDayjsTz } from '@/utils/globalVariables';
+import StepInputNumber from '@/components/ObjectInfoComponents/ControlForm/StepInputNumber.vue';
+import i18n from '@/localization';
+
+const props = defineProps({
+    label: {
+        type: String,
+        default: ''
+    },
+    propKey: {
+        type: String,
+        default: ''
+    },
+    coolMode: {
+        type: String,
+        default: ''
+    },
+    defaultData: {
+        type: Object,
+        default: () => null
+    },
+    field: {
+        type: Object,
+        default: () => {}
+    },
+    disabled: {
+        type: Boolean,
+        default: false
+    },
+    useSustainTime: {
+        type: Boolean,
+        default: true
+    }
+});
+
+const selectValue = defineModel({ type: String, default: '' });
+const list = [
+    { id: 'OPEN', name: i18n.global.t('meos_control_web.on') },
+    { id: 'CLOSE', name: i18n.global.t('meos_control_web.off') }
+];
+
+const sustainTime = ref();
+const fieldRefs = ref([]);
+const strategyTime = inject(strategyTimeKey);
+
+// 干预结束时间
+const interfereOverTime = computed(() => {
+    if (selectValue.value && sustainTime.value && strategyTime?.value) {
+        const day = getDayjsTz().format('YYYY-MM-DD');
+        const curTime = dayjs(`${day} ${strategyTime?.value}`, 'YYYY-MM-DD HH:mm').add(sustainTime.value, 'm');
+        return curTime.format('HH:mm');
+    }
+    return null;
+});
+
+const validateStepInput = (val, callback) => {
+    const hasInputVal = val?.toString();
+    const curItemVal = val ?? 0;
+    const hasError = curItemVal % 5 !== 0 || curItemVal > 1440 || curItemVal < 5;
+    if (hasInputVal && hasError) {
+        callback(new Error(i18n.global.t('meos_control_web.multiples_of_5_range_5_to_1440')));
+    } else {
+        callback();
+        return true;
+    }
+};
+
+const isSustainTimeEmpty = () => !props.useSustainTime || isEmptyNoReturn(sustainTime.value);
+
+const validateBothInput = (val, callback) => {
+    const isEmpty1 = isEmptyNoReturn(selectValue.value);
+    const isEmpty2 = isSustainTimeEmpty();
+    const isCurEmpty = isEmptyNoReturn(val);
+
+    if (props.useSustainTime && isEmpty1 !== isEmpty2 && isCurEmpty) {
+        callback(new Error(EMPTYTEXT));
+    } else {
+        callback();
+        return true;
+    }
+};
+
+const validator = async () => {
+    const promises = [];
+    fieldRefs.value?.forEach(c => {
+        if (c) {
+            promises.push(c.validate());
+        }
+    });
+    const rst = await Promise.allSettled(promises);
+    const hasErr = rst.some(obj => obj.status === 'rejected');
+    const firstErrMsg = rst.filter(obj => obj.status === 'rejected').flatMap(obj => obj?.reason?.errors?.map(e => e?.message) || [])?.[0];
+
+    return { status: !hasErr, errorMsg: firstErrMsg || EMPTYTEXT, prop: props.propKey };
+};
+
+watch(
+    [() => props.defaultData, () => props.field?.aliasCode],
+    () => {
+        if (props.defaultData && props.field?.aliasCode) {
+            sustainTime.value = props.defaultData.sustainTime;
+            selectValue.value = props.defaultData[props.field?.aliasCode];
+        }
+    },
+    {
+        immediate: true
+    }
+);
+
+const getValue = () => {
+    const val = { [props.field?.aliasCode]: selectValue.value, sustainTime: props.useSustainTime ? sustainTime.value : '' };
+    if (props.coolMode) {
+        val.coolMode = props.coolMode;
+    }
+    return val;
+};
+
+const isAllEmpty = () => {
+    const isEmptyInput1 = isEmptyNoReturn(selectValue.value);
+    const isEmptyInput2 = isSustainTimeEmpty();
+    return isEmptyInput1 && isEmptyInput2;
+};
+
+defineExpose({
+    validator,
+    getValue,
+    isAllEmpty
+});
+</script>
+<style lang="less" scoped>
+.item-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    --padding-3: 8px;
+    .form-item {
+        margin-bottom: 0;
+    }
+    .desc-text {
+        margin-left: 8px;
+        color: #aeb6be;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 166.667% */
+    }
+    .sustain-time {
+        :deep(.m-input-number-rightButton.no-suffix) {
+            border-radius: 4px 0 0 4px;
+        }
+    }
+}
+</style>

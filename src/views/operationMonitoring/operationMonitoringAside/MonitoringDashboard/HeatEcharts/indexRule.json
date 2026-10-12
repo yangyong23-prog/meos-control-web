@@ -1,0 +1,93 @@
+{
+    "code": "00000",
+    "result": "success",
+    "data": [
+        {
+            "objectId": "Eq95224575586a66c85b489e4394afa5319245600a79",
+            "classCode": "ACGEHE",
+            "infoCode": "lowDetaTemp"
+        },
+        {
+            "objectId": "Eq9522457558f620ab87f969429fa2bd1b155dc252b4",
+            "classCode": "ACGEHE",
+            "infoCode": "highDetaTemp"
+        },
+        {
+            "objectId": "Eq9522457558f620ab87f969429fa2bd1b155dc252b4",
+            "classCode": "ACGEHE",
+            "infoCode": "highOutTemp"
+        },
+        {
+            "objectId": "Eq9522457558a3c86d6a1f70416d958f0dc4558bd3ef",
+            "classCode": "ACGEHE",
+            "infoCode": "lowOutTemp"
+        },
+
+        {
+            "objectId": "Eq95224575586a66c85b489e4394afa5319245600a79",
+            "classCode": "ACGEHE",
+            "infoCode": "lowDetaTemp"
+        },
+        {
+            "objectId": "Eq9522457558f620ab87f969429fa2bd1b155dc252b4",
+            "classCode": "ACGEHE",
+            "infoCode": "highDetaTemp"
+        },
+        {
+            "objectId": "Eq9522457558a3c86d6a1f70416d958f0dc4558bd3ef",
+            "classCode": "ACGEHE",
+            "infoCode": "lowOutTemp"
+        },
+        {
+            "objectId": "Eq9522457558a3c86d6a1f70416d958f0dc4558bd3ef",
+            "classCode": "highOutTemp",
+            "infoCode": "lowOutTemp"
+        },
+        {
+            "objectId": "Eq9522457558a3c86d6a1f70416d958f0dc4558bd3ef",
+            "classCode": "ACCH",
+            "infoCode": "2heatWaterMainSupplyTemp"
+        },
+        {
+            "objectId": "Eq9522457558a3c86d6a1f70416d958f0dc4558bd3ef",
+            "classCode": "ACCH",
+            "infoCode": "heatSecondarySideWaterMainSupplyTempSet"
+        },
+        {
+            "objectId": "Eq9522457558a3c86d6a1f70416d958f0dc4558bd3ef",
+            "classCode": "ACCH",
+            "infoCode": "heatSecondarySideWaterDetaTemp"
+        },
+        {
+            "objectId": "Eq9522457558a3c86d6a1f70416d958f0dc4558bd3ef",
+            "classCode": "ACCH",
+            "infoCode": "waterDetaPressSet"
+        },
+        {
+            "objectId": "Eq9522457558a3c86d6a1f70416d958f0dc4558bd3ef",
+            "classCode": "ACCH",
+            "infoCode": "waterDetaPress"
+        },
+        {
+            "objectId": "Eq9522457558a3c86d6a1f70416d958f0dc4558bd3ef",
+            "classCode": "ACCH",
+            "infoCode": "waterDetaTempSet"
+        },
+        {
+            "objectId": "Eq9522457558a3c86d6a1f70416d958f0dc4558bd3ef",
+            "classCode": "ACCH",
+            "infoCode": "waterDetaTemp"
+        },
+        {
+            "objectId": "Eq9522457558a3c86d6a1f70416d958f0dc4558bd3ef",
+            "classCode": "ACCH",
+            "infoCode": "heatWaterSupplyTempSet"
+        },
+        {
+            "objectId": "Eq9522457558a3c86d6a1f70416d958f0dc4558bd3ef",
+            "classCode": "ACCH",
+            "infoCode": "heatWaterMainSupplyTemp"
+        }
+    ],
+    "timestamp": "1728829253941"
+}

@@ -1,0 +1,100 @@
+<svg width="1600" height="188" viewBox="0 0 1600 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 188V0H1540.5L1600 40V44H1542V144L1600 183.5V188H0Z" fill="#C7CFD8"/>
+<g clip-path="url(#clip0_1348_27137)">
+<rect x="1500" width="41" height="144" fill="#C7CFD8"/>
+<path d="M1600.05 40H1500V0H1540.49L1600.05 40Z" fill="#C0CAD1"/>
+<path d="M1499.98 40H1599.98V44H1499.98V40Z" fill="#D4D9E0"/>
+<path d="M1601 184H1500V144H1542.08L1601 184Z" fill="#BCC6D2"/>
+<path d="M1500 184H1600V188H1500V184Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip1_1348_27137)">
+<rect x="1330" width="190" height="145" fill="#C7CFD8"/>
+<path d="M1520 40.0273H1330V0H1520V40.0273Z" fill="#C0CAD1"/>
+<path d="M1330 40H1520V44H1330V40Z" fill="#D4D9E0"/>
+<path d="M1520 184H1330V144H1520V184Z" fill="#BCC6D2"/>
+<path d="M1330 184H1520V188H1330V184Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip2_1348_27137)">
+<rect x="1140" width="190" height="145" fill="#C7CFD8"/>
+<path d="M1330 40.0273H1140V0H1330V40.0273Z" fill="#C0CAD1"/>
+<path d="M1140 40H1330V44H1140V40Z" fill="#D4D9E0"/>
+<path d="M1330 184H1140V144H1330V184Z" fill="#BCC6D2"/>
+<path d="M1140 184H1330V188H1140V184Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip3_1348_27137)">
+<rect x="950" width="190" height="145" fill="#C7CFD8"/>
+<path d="M1140 40.0273H950V0H1140V40.0273Z" fill="#C0CAD1"/>
+<path d="M950 40H1140V44H950V40Z" fill="#D4D9E0"/>
+<path d="M1140 184H950V144H1140V184Z" fill="#BCC6D2"/>
+<path d="M950 184H1140V188H950V184Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip4_1348_27137)">
+<rect x="760" width="190" height="145" fill="#C7CFD8"/>
+<path d="M950 40.0273H760V0H950V40.0273Z" fill="#C0CAD1"/>
+<path d="M760 40H950V44H760V40Z" fill="#D4D9E0"/>
+<path d="M950 184H760V144H950V184Z" fill="#BCC6D2"/>
+<path d="M760 184H950V188H760V184Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip5_1348_27137)">
+<rect x="570" width="190" height="145" fill="#C7CFD8"/>
+<path d="M760 40.0273H570V0H760V40.0273Z" fill="#C0CAD1"/>
+<path d="M570 40H760V44H570V40Z" fill="#D4D9E0"/>
+<path d="M760 184H570V144H760V184Z" fill="#BCC6D2"/>
+<path d="M570 184H760V188H570V184Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip6_1348_27137)">
+<rect x="380" width="190" height="145" fill="#C7CFD8"/>
+<path d="M570 40.0273H380V0H570V40.0273Z" fill="#C0CAD1"/>
+<path d="M380 40H570V44H380V40Z" fill="#D4D9E0"/>
+<path d="M570 184H380V144H570V184Z" fill="#BCC6D2"/>
+<path d="M380 184H570V188H380V184Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip7_1348_27137)">
+<rect x="190" width="190" height="145" fill="#C7CFD8"/>
+<path d="M380 40.0273H190V0H380V40.0273Z" fill="#C0CAD1"/>
+<path d="M190 40H380V44H190V40Z" fill="#D4D9E0"/>
+<path d="M380 184H190V144H380V184Z" fill="#BCC6D2"/>
+<path d="M190 184H380V188H190V184Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip8_1348_27137)">
+<rect width="190" height="188" fill="#C7CFD8"/>
+<path d="M56 40H0V0H56V40Z" fill="#C0CAD1"/>
+<path d="M0 0H56V40L0 0Z" fill="#BCC6D2"/>
+<path d="M130 0H186V44L130 0Z" fill="#BCC6D2"/>
+<rect x="56" width="4" height="40" fill="#D4D9E0"/>
+<rect x="186" width="4" height="44" fill="#D4D9E0"/>
+<path d="M0 40H60V44H0V40Z" fill="#D4D9E0"/>
+<path d="M-1 184H59V188H-1V184Z" fill="#D4D9E0"/>
+<path d="M189.821 144.206L250.836 184.214H186V188L-0.133975 188.5V144.706L189.821 144.206Z" fill="#BCC6D2"/>
+<path d="M0 184H190V188H0V184Z" fill="#D4D9E0"/>
+</g>
+<defs>
+<clipPath id="clip0_1348_27137">
+<rect width="80" height="188" fill="white" transform="translate(1520)"/>
+</clipPath>
+<clipPath id="clip1_1348_27137">
+<rect width="190" height="188" fill="white" transform="translate(1330)"/>
+</clipPath>
+<clipPath id="clip2_1348_27137">
+<rect width="190" height="188" fill="white" transform="translate(1140)"/>
+</clipPath>
+<clipPath id="clip3_1348_27137">
+<rect width="190" height="188" fill="white" transform="translate(950)"/>
+</clipPath>
+<clipPath id="clip4_1348_27137">
+<rect width="190" height="188" fill="white" transform="translate(760)"/>
+</clipPath>
+<clipPath id="clip5_1348_27137">
+<rect width="190" height="188" fill="white" transform="translate(570)"/>
+</clipPath>
+<clipPath id="clip6_1348_27137">
+<rect width="190" height="188" fill="white" transform="translate(380)"/>
+</clipPath>
+<clipPath id="clip7_1348_27137">
+<rect width="190" height="188" fill="white" transform="translate(190)"/>
+</clipPath>
+<clipPath id="clip8_1348_27137">
+<rect width="190" height="188" fill="white"/>
+</clipPath>
+</defs>
+</svg>

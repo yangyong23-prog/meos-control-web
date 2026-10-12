@@ -1,0 +1,4 @@
+interface:
+  display_name: "Production Build Guard"
+  short_description: "Run production builds only when explicitly requested"
+  default_prompt: "Use $production-build-guard to choose verification commands without running an unrequested production build."

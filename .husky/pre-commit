@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "[pre-commit] 校验暂存区文件的 ESLint / Prettier 规则..."
+pnpm exec lint-staged
+
+if git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(js|ts|vue)$' > /dev/null; then
+	pnpm run impact:report -- --staged
+else
+	echo "[impact-report] 暂存区无 js/ts/vue 变更，跳过生成"
+fi

@@ -1,0 +1,138 @@
+/* CSS样式重置 */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+body,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+    margin: 0;
+}
+dl,
+ol,
+ul {
+    margin: 0;
+    padding-left: 0;
+    line-height: 1.7;
+}
+li {
+    list-style: none;
+}
+dd {
+    margin-left: 0;
+}
+a {
+    text-decoration: none;
+    color: var(--blue-500);
+}
+table {
+    border-collapse: collapse;
+}
+button,
+fieldset,
+input,
+legend,
+optgroup,
+select,
+textarea {
+    padding: 0;
+}
+fieldset {
+    margin: 0;
+    border: 0;
+}
+button {
+    outline: 0;
+}
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+/* 一行文本，超出宽度显示... */
+.g-text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+}
+.g-display-flex {
+    display: flex;
+}
+.g-display-none {
+    display: none;
+}
+.g-display-default {
+    display: initial;
+}
+.g-justify-content-center {
+    justify-content: center;
+}
+.g-align-items-center {
+    align-items: center;
+}
+.g-flex-direction-column {
+    flex-direction: column;
+}
+.g-flex-direction-default {
+    flex-direction: initial;
+}
+
+/* 鼠标样式 */
+.g-cursor-default {
+    cursor: default;
+}
+.g-cursor-pointer {
+    cursor: pointer;
+}
+.g-cursor-not-allowed {
+    cursor: not-allowed;
+}
+
+/* 控制滚动条出现 */
+.g-scrollbar-default {
+    overflow: auto;
+}
+.g-scrollbar-default:hover {
+    overflow: auto;
+}
+
+/*  全局修改滚动条样式  */
+::-webkit-scrollbar {
+    width: var(--g-scrollbar-size) !important;
+    height: var(--g-scrollbar-size) !important;
+}
+::-webkit-scrollbar-track {
+    border-radius: var(--g-scrollbar-size) !important;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: var(--g-scrollbar-size) !important;
+    border-style: dashed !important;
+    border-color: transparent !important;
+    border-width: var(--g-scrollbar-border-size) !important;
+    background-color: transparent !important;
+    background-clip: padding-box !important;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--grey-400) !important;
+}
+:hover::-webkit-scrollbar-thumb {
+    background-color: var(--grey-400) !important;
+}

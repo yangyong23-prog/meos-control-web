@@ -1,0 +1,38 @@
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex-display($justify-content: flex-start, $align-item: flex-start, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align-item;
+    justify-content: $justify-content;
+}
+
+@mixin flex-center() {
+    @include flex-display(center, center);
+}
+
+@mixin font-size-color($size, $color, $family: 'PingFangSC-Regular') {
+    font-size: $size;
+    color: $color;
+    font-family: $family;
+}
+
+// 多行超出...
+@mixin multi-ellipsis($lines) {
+    display: box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical; // 从顶部向底部垂直布置子元素
+}
+
+// 一行超出...
+@mixin text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+}

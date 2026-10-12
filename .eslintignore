@@ -1,0 +1,17 @@
+/node_modules/**/*
+
+/src/video-sdk/**/*
+/src/dahua-rtsp-sdk/**/*
+
+src/types/vite-env.d.ts
+
+src/types/components.d.ts
+
+src/types/auto-imports.d.ts
+
+.eslintrc-auto-import.json
+
+translation
+
+# 忽略所有 Markdown 文件
+*.md

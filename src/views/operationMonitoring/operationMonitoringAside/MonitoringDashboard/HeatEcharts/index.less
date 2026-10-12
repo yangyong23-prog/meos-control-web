@@ -1,0 +1,52 @@
+.line-chart-wrapper {
+    width: 100%;
+    height: calc(100% - 92px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    :deep(canvas:hover) {
+        cursor: default;
+    }
+}
+.chart {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+:deep(.tooltip-lists-line-chart) {
+    font-size: 14px;
+    margin-bottom: 12px;
+    .tooltip__title {
+        color: #2e3742;
+        font-weight: 700;
+        margin-right: 12px;
+    }
+    .tooltip__time {
+        color: #626c78;
+    }
+}
+:deep(.tooltip-lengend) {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    color: #1b2129;
+    .tooltip-color {
+        width: 16px;
+        height: 3px;
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    .tooltip-name {
+        color: #626c78;
+        margin-left: 4px;
+    }
+}
+.all-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    user-select: none;
+    color: @grey-600;
+}

@@ -1,0 +1,1 @@
+export const RUNNING_MONITOR_TYPE = 'WEAK_POWER';

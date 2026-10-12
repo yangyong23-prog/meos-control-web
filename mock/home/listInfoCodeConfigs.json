@@ -1,0 +1,758 @@
+{
+    "code": "00000",
+    "result": "success",
+    "data": [
+        {
+            "objectId": "42",
+            "objectName": "B1_通风风机_1哈哈哈哈哈哈哈哈哈",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "relInfoCodeConfigs": [
+                        {
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "infoCodeOrder": 61,
+                            "relTemplateTypeId": "37",
+                            "infoCodeType": "IOT_SETTIN",
+                            "dataValue": "0",
+                            "dataTime": "1988-09-30 17:19:35",
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                }
+                            ]
+                        },
+                        {
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeOrder": 41,
+                            "relTemplateTypeId": "90",
+                            "infoCodeType": "RWD_OBJECT",
+                            "dataValue": "运行",
+                            "dataTime": "1979-12-09 23:54:33"
+                        },
+                        {
+                            "infoCode": "orderFailAlarm",
+                            "infoCodeName": "控反不一致状态",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "IOT_SETTING",
+                            "dataTime": "1993-05-15 21:08:56"
+                        }
+                    ],
+                    "groupOrder": 63
+                },
+                {
+                    "groupCode": "parameterSetOperation",
+                    "groupName": "参数设定&操作",
+                    "relInfoCodeConfigs": [
+                        {
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动设定",
+                            "infoCodeOrder": 61,
+                            "relTemplateTypeId": "37",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "2024-07-01 17:19:35",
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                },
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                }
+                            ]
+                        },
+                        {
+                            "infoCode": "62",
+                            "infoCodeName": "开闭状态",
+                            "infoCodeOrder": 41,
+                            "relTemplateTypeId": "90",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "开启",
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "关闭"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "开启"
+                                }
+                            ],
+                            "dataTime": "1979-12-09 23:54:33",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "0",
+                                "dataSource": [
+                                    {
+                                        "code": "0",
+                                        "name": "关闭"
+                                    },
+                                    {
+                                        "code": "1",
+                                        "name": "开启"
+                                    }
+                                ]
+                            },
+                            "additionalMapValue": {
+                                "intervened": true
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "12",
+                            "unit":"m",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        }
+                    ],
+                    "groupOrder": 63
+                },
+                {
+                    "groupCode": "equipInfo",
+                    "groupName": "基本信息",
+                    "relInfoCodeConfigs": [
+                        {
+                            "infoCode": "31",
+                            "infoCodeName": "设备编码",
+                            "infoCodeOrder": 61,
+                            "relTemplateTypeId": "37",
+                            "infoCodeType": "IJDR43253252IJDR43253252IJDR43253252",
+                            "dataValue": "JDR43253252JDR43253252JDR43253252JDR43253252",
+                            "dataTime": "1988-09-30 17:19:35"
+                        },
+                        {
+                            "infoCode": "62",
+                            "infoCodeName": "设备服务空间",
+                            "infoCodeOrder": 41,
+                            "relTemplateTypeId": "90",
+                            "infoCodeType": "RWD_OBJECT",
+                            "dataValue": "B3_通风风机空间风风机空间空",
+                            "dataTime": "1979-12-09 23:54:33"
+                        }
+                    ],
+                    "groupOrder": 63
+                }
+            ]
+        },
+        {
+            "objectId": "47",
+            "objectName": "B1_通风风机_1哈哈哈哈哈哈哈哈哈",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "relInfoCodeConfigs": [
+                        {
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "infoCodeOrder": 61,
+                            "relTemplateTypeId": "37",
+                            "infoCodeType": "IOT_SETTIN",
+                            "dataValue": "1",
+                            "dataTime": "2024-07-01 17:19:35",
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "在线"
+                                }
+                            ]
+                        },
+                        {
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeOrder": 41,
+                            "relTemplateTypeId": "90",
+                            "infoCodeType": "RWD_OBJECT",
+                            "dataValue": "运行",
+                            "dataTime": "1979-12-09 23:54:33"
+                        },
+                        {
+                            "infoCode": "orderFailAlarm",
+                            "infoCodeName": "控反不一致状态",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "正常",
+                            "dataValue": "正常",
+                            "dataTime": "1993-05-15 21:08:56"
+                        }
+                    ],
+                    "groupOrder": 63
+                },
+                {
+                    "groupCode": "parameterSetOperation",
+                    "groupName": "参数设定&操作",
+                    "relInfoCodeConfigs": [
+                        {
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动设定",
+                            "infoCodeOrder": 61,
+                            "relTemplateTypeId": "37",
+                            "infoCodeType": "IOT_SETTIN",
+                            "dataValue": "1",
+                            "dataTime": "2024-07-01 17:19:35",
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                },
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                }
+                            ]
+                        },
+                        {
+                            "infoCode": "62",
+                            "infoCodeName": "开闭状态",
+                            "infoCodeOrder": 41,
+                            "relTemplateTypeId": "90",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "开启",
+                            "dataTime": "1979-12-09 23:54:33",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "关闭",
+                                "dataSource": []
+                            },
+                            "additionalMapValue": {
+                                "intervened": true
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "unit":"m",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        }
+                    ],
+                    "groupOrder": 63
+                },
+                {
+                    "groupCode": "63",
+                    "groupName": "基本信息",
+                    "relInfoCodeConfigs": [
+                        {
+                            "infoCode": "31",
+                            "infoCodeName": "设备编码",
+                            "infoCodeOrder": 61,
+                            "relTemplateTypeId": "37",
+                            "infoCodeType": "IJDR43253252",
+                            "dataValue": "JDR43253252",
+                            "dataTime": "1988-09-30 17:19:35"
+                        },
+                        {
+                            "infoCode": "62",
+                            "infoCodeName": "设备服务空间",
+                            "infoCodeOrder": 41,
+                            "relTemplateTypeId": "90",
+                            "infoCodeType": "RWD_OBJECT",
+                            "dataValue": "B3_通风风机空间风风机空间空",
+                            "dataTime": "1979-12-09 23:54:33"
+                        }
+                    ],
+                    "groupOrder": 63
+                }
+            ]
+        },
+        {
+            "objectId": "48",
+            "objectName": "B1_通风风机_1哈哈哈哈哈哈哈哈哈",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "relInfoCodeConfigs": [
+                        {
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "infoCodeOrder": 61,
+                            "relTemplateTypeId": "37",
+                            "infoCodeType": "IOT_SETTIN",
+                            "dataValue": "1",
+                            "dataTime": "2024-07-01 17:19:35",
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "在线"
+                                }
+                            ]
+                        },
+                        {
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeOrder": 41,
+                            "relTemplateTypeId": "90",
+                            "infoCodeType": "RWD_OBJECT",
+                            "dataValue": "运行",
+                            "dataTime": "1979-12-09 23:54:33"
+                        },
+                        {
+                            "infoCode": "orderFailAlarm",
+                            "infoCodeName": "控反不一致状态",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "IOT_SETTING",
+                            "dataTime": "1993-05-15 21:08:56"
+                        }
+                    ],
+                    "groupOrder": 63
+                },
+                {
+                    "groupCode": "parameterSetOperation",
+                    "groupName": "参数设定&操作",
+                    "relInfoCodeConfigs": [
+                        {
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动设定",
+                            "infoCodeOrder": 61,
+                            "relTemplateTypeId": "37",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "0",
+                            "dataTime": "2024-07-01 17:19:35",
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                },
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                }
+                            ]
+                        },
+                        {
+                            "infoCode": "62",
+                            "infoCodeName": "开闭状态",
+                            "infoCodeOrder": 41,
+                            "relTemplateTypeId": "90",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataTime": "1979-12-09 23:54:33",
+                            "dataValue": "0",
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "测试"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "开启"
+                                }
+                            ]
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        }
+                    ],
+                    "groupOrder": 63
+                },
+                {
+                    "groupCode": "63",
+                    "groupName": "基本信息",
+                    "relInfoCodeConfigs": [
+                        {
+                            "infoCode": "31",
+                            "infoCodeName": "设备编码",
+                            "infoCodeOrder": 61,
+                            "relTemplateTypeId": "37",
+                            "infoCodeType": "IJDR43253252",
+                            "dataValue": "JDR43253252",
+                            "dataTime": "1988-09-30 17:19:35"
+                        },
+                        {
+                            "infoCode": "62",
+                            "infoCodeName": "设备服务空间",
+                            "infoCodeOrder": 41,
+                            "relTemplateTypeId": "90",
+                            "infoCodeType": "RWD_OBJECT",
+                            "dataValue": "B3_通风风机空间风风机空间空",
+                            "dataTime": "1979-12-09 23:54:33"
+                        }
+                    ],
+                    "groupOrder": 63
+                }
+            ]
+        },
+        {
+            "objectId": "47",
+            "objectName": "B1_通风风机_1哈哈哈哈哈哈哈哈哈",
+            "relInfoCodeGroupConfigs": [
+                {
+                    "groupCode": "equipStatus",
+                    "groupName": "设备状态",
+                    "relInfoCodeConfigs": [
+                        {
+                            "infoCode": "onlineStatus",
+                            "infoCodeName": "在线状态",
+                            "infoCodeOrder": 61,
+                            "relTemplateTypeId": "37",
+                            "infoCodeType": "IOT_SETTIN",
+                            "dataValue": "1",
+                            "dataTime": "2024-07-01 17:19:35",
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "离线"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "在线"
+                                }
+                            ]
+                        },
+                        {
+                            "infoCode": "runStatus",
+                            "infoCodeName": "运行状态",
+                            "infoCodeOrder": 41,
+                            "relTemplateTypeId": "90",
+                            "infoCodeType": "RWD_OBJECT",
+                            "dataValue": "运行",
+                            "dataTime": "1979-12-09 23:54:33"
+                        },
+                        {
+                            "infoCode": "orderFailAlarm",
+                            "infoCodeName": "控反不一致状态",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "IOT_SETTING",
+                            "dataTime": "1993-05-15 21:08:56"
+                        }
+                    ],
+                    "groupOrder": 63
+                },
+                {
+                    "groupCode": "parameterSetOperation",
+                    "groupName": "参数设定&操作",
+                    "relInfoCodeConfigs": [
+                        {
+                            "infoCode": "manualAutoSet",
+                            "infoCodeName": "手自动设定",
+                            "infoCodeOrder": 61,
+                            "relTemplateTypeId": "37",
+                            "infoCodeType": "IOT_SETTIN",
+                            "dataValue": "1",
+                            "dataTime": "2024-07-01 17:19:35",
+                            "dataSource": [
+                                {
+                                    "code": "1",
+                                    "name": "自动"
+                                },
+                                {
+                                    "code": "0",
+                                    "name": "手动"
+                                }
+                            ]
+                        },
+                        {
+                            "infoCode": "62",
+                            "infoCodeName": "开闭状态",
+                            "infoCodeOrder": 41,
+                            "relTemplateTypeId": "90",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "0",
+                            "dataSource": [
+                                {
+                                    "code": "0",
+                                    "name": "关闭"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "开启"
+                                }
+                            ],
+                            "dataTime": "1979-12-09 23:54:33",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "0",
+                                "dataSource": [
+                                    {
+                                        "code": "0",
+                                        "name": "关闭"
+                                    },
+                                    {
+                                        "code": "1",
+                                        "name": "开启"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        },
+                        {
+                            "infoCode": "82",
+                            "infoCodeName": "回风机温度",
+                            "infoCodeOrder": 18,
+                            "relTemplateTypeId": "41",
+                            "infoCodeType": "IOT_SETTING",
+                            "dataValue": "1",
+                            "dataTime": "1993-05-15 21:08:56",
+                            "relInfoCodeConfig": {
+                                "infoCode": "",
+                                "infoCodeName": "",
+                                "dataValue": "",
+                                "dataSource": []
+                            }
+                        }
+                    ],
+                    "groupOrder": 63
+                },
+                {
+                    "groupCode": "63",
+                    "groupName": "基本信息",
+                    "relInfoCodeConfigs": [
+                        {
+                            "infoCode": "31",
+                            "infoCodeName": "设备编码",
+                            "infoCodeOrder": 61,
+                            "relTemplateTypeId": "37",
+                            "infoCodeType": "IJDR43253252",
+                            "dataValue": "JDR43253252",
+                            "dataTime": "1988-09-30 17:19:35"
+                        },
+                        {
+                            "infoCode": "62",
+                            "infoCodeName": "设备服务空间",
+                            "infoCodeOrder": 41,
+                            "relTemplateTypeId": "90",
+                            "infoCodeType": "RWD_OBJECT",
+                            "dataValue": "B3_通风风机空间风风机空间空",
+                            "dataTime": "1979-12-09 23:54:33"
+                        }
+                    ],
+                    "groupOrder": 63
+                }
+            ]
+        }
+    ],
+    "message": "anim dolor in consectetur dolor",
+    "total": 81
+}

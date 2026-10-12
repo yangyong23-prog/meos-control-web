@@ -1,0 +1,195 @@
+{
+    "code": "00000",
+    "result": "fail",
+    "message": "aliquip exercitation",
+    "data": [
+        {
+            "id": "Fl61011220107ca564431e4e4b6c8b1dfb9b2740d88a",
+            "name": "11",
+            "localId": "64",
+            "localName": "开北划线么省导",
+            "objType": "consectetur",
+            "classCode": "35",
+            "valid": false,
+            "relCircuits": [
+                {
+                    "id": "85",
+                    "name": "格斗教积",
+                    "localId": "24",
+                    "localName": "品基那适高",
+                    "objType": "anim",
+                    "classCode": "85",
+                    "valid": true,
+                    "funcType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "lampFuncType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "settingMode": "OPEN"
+                },
+                {
+                    "id": "85",
+                    "name": "格斗教积",
+                    "localId": "24",
+                    "localName": "品基那适高",
+                    "objType": "anim",
+                    "classCode": "85",
+                    "valid": true,
+                    "funcType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "lampFuncType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "settingMode": "OPEN"
+                }
+            ]
+        },
+        {
+            "id": "Fl610112201066066618864e486ca998fc733b6e7179",
+            "name": "11",
+            "localId": "64",
+            "localName": "开北划线么省导",
+            "objType": "consectetur",
+            "classCode": "35",
+            "valid": false,
+            "relCircuits": [
+                {
+                    "id": "85",
+                    "name": "格斗教积",
+                    "localId": "24",
+                    "localName": "品基那适高",
+                    "objType": "anim",
+                    "classCode": "85",
+                    "valid": true,
+                    "funcType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "lampFuncType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "settingMode": "OPEN"
+                },
+                {
+                    "id": "85",
+                    "name": "格斗教积",
+                    "localId": "24",
+                    "localName": "品基那适高",
+                    "objType": "anim",
+                    "classCode": "85",
+                    "valid": true,
+                    "funcType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "lampFuncType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "settingMode": "OPEN"
+                }
+            ]
+        },
+        {
+            "id": "Fl6101122010378267380ad243dfaada9f9e28b04bf9",
+            "name": "11",
+            "localId": "64",
+            "localName": "开北划线么省导",
+            "objType": "consectetur sint",
+            "classCode": "35",
+            "valid": false,
+            "relCircuits": [
+                {
+                    "id": "85",
+                    "name": "格斗教积",
+                    "localId": "24",
+                    "localName": "品基那适高",
+                    "objType": "anim",
+                    "classCode": "85",
+                    "valid": true,
+                    "funcType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "lampFuncType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "settingMode": "OPEN"
+                },
+                {
+                    "id": "85",
+                    "name": "格斗教积",
+                    "localId": "24",
+                    "localName": "品基那适高",
+                    "objType": "anim",
+                    "classCode": "85",
+                    "valid": true,
+                    "funcType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "lampFuncType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "settingMode": "OPEN"
+                }
+            ]
+        },
+        {
+            "id": "Fl6101122010bb61dce18b1141d08bd900b550e1cb7c",
+            "name": "11",
+            "localId": "64",
+            "localName": "开北划线么省导",
+            "objType": "consectetur sint",
+            "classCode": "35",
+            "valid": false,
+            "relCircuits": [
+                {
+                    "id": "85",
+                    "name": "格斗教积",
+                    "localId": "24",
+                    "localName": "品基那适高",
+                    "objType": "anim",
+                    "classCode": "85",
+                    "valid": true,
+                    "funcType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "lampFuncType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "settingMode": "CLOSE"
+                },
+                {
+                    "id": "85",
+                    "name": "格斗教积",
+                    "localId": "24",
+                    "localName": "品基那适高",
+                    "objType": "anim",
+                    "classCode": "85",
+                    "valid": true,
+                    "funcType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "lampFuncType": {
+                        "key":"1",
+                        "value":"回路类型1"
+                    },
+                    "settingMode": "CLOSE"
+                }
+            ]
+        }
+    ]
+}

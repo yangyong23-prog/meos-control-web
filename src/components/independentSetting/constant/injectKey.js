@@ -1,0 +1,9 @@
+export const openTimeFunKey = Symbol('openTimeFun');
+export const closeTimeFunKey = Symbol('closeTimeFun');
+export const showTimeKey = Symbol('showTime');
+export const disinterventionKey = Symbol('disintervention');
+export const handleKey = Symbol('handle');
+export const openSettingPopKey = Symbol('openSettingPop');
+export const disableControlsKey = Symbol('disableControls');
+export const isAutoDisabledKey = Symbol('isAutoDisabled');
+export const getDisabledTipsKey = Symbol('getDisabledTips');

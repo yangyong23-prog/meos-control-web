@@ -1,0 +1,26 @@
+<svg width="26" height="31" viewBox="0 0 26 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.00390625 0H23.413L25.9156 1.35425H1.87431L0.00390625 0Z" fill="#AEC1CE"/>
+<rect x="6" y="23" width="3" height="8" rx="1" fill="url(#paint0_linear_225_55353)"/>
+<path d="M18 24C18 23.4477 18.4477 23 19 23H20C20.5523 23 21 23.4477 21 24V30C21 30.5523 20.5523 31 20 31H19C18.4477 31 18 30.5523 18 30V24Z" fill="url(#paint1_linear_225_55353)"/>
+<rect x="1.92578" y="1.35425" width="23.9895" height="22.4418" fill="#8197A5"/>
+<path d="M5.64575e-05 0L1.92992 1.35434V23.7961L0.00377859 21.8614L5.64575e-05 0Z" fill="#6F8796"/>
+<circle cx="8.5" cy="7.5" r="1.5" fill="#AEC1CE"/>
+<circle cx="13.5" cy="7.5" r="1.5" fill="#AEC1CE"/>
+<circle cx="18.5" cy="7.5" r="1.5" fill="#AEC1CE"/>
+<circle cx="8.5" cy="12.5" r="1.5" fill="#AEC1CE"/>
+<circle cx="13.5" cy="12.5" r="1.5" fill="#AEC1CE"/>
+<circle cx="18.5" cy="12.5" r="1.5" fill="#AEC1CE"/>
+<circle cx="8.5" cy="17.5" r="1.5" fill="#AEC1CE"/>
+<circle cx="13.5" cy="17.5" r="1.5" fill="#AEC1CE"/>
+<circle cx="18.5" cy="17.5" r="1.5" fill="#AEC1CE"/>
+<defs>
+<linearGradient id="paint0_linear_225_55353" x1="6" y1="27" x2="8.625" y2="27" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9EB2BE"/>
+<stop offset="0.631671" stop-color="#8197A5"/>
+</linearGradient>
+<linearGradient id="paint1_linear_225_55353" x1="18" y1="27" x2="20.625" y2="27" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9EB2BE"/>
+<stop offset="0.631671" stop-color="#8197A5"/>
+</linearGradient>
+</defs>
+</svg>

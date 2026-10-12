@@ -1,0 +1,16 @@
+{
+  "id": "4606090",
+  "name": "chart",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5114466",
+      "name": "加载",
+      "font_class": "jiazai",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    }
+  ]
+}

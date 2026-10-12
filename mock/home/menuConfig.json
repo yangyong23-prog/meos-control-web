@@ -1,0 +1,642 @@
+{
+    "cause": null,
+    "code": "00000",
+    "count": null,
+    "data": [
+        {
+            "anomalousEvent": 0,
+            "anomalousEventNumber": 0,
+            "children": [
+                {
+                    "anomalousEvent": 0,
+                    "anomalousEventNumber": 0,
+                    "children": [
+                        {
+                            "anomalousEvent": 0,
+                            "anomalousEventNumber": 1,
+                            "children": [],
+                            "classCode": "SETDHI",
+                            "diagramBaseObject": "SETDHI",
+                            "graphTypeCode": "高压进线柜",
+                            "id": null,
+                            "imageOrProductName": "高压配电关系图",
+                            "infos": [],
+                            "localId": "SETDHI01",
+                            "localName": "高压配电系统#002",
+                            "menuCode": null,
+                            "name": null,
+                            "productModule": "状态感知",
+                            "systemId": "Eq6101122010f62ce86c75674ab18657cd528cf2526b"
+                        },
+                        {
+                            "anomalousEvent": 1,
+                            "anomalousEventNumber": 0,
+                            "children": [],
+                            "classCode": "SETDHI",
+                            "diagramBaseObject": "SETDHI",
+                            "graphTypeCode": "高压进线柜",
+                            "id": null,
+                            "imageOrProductName": "高压配电关系图",
+                            "infos": [
+                                {
+                                    "code": "功率因数最大值",
+                                    "name": "冷机运行台数",
+                                    "rule": "2",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "all": "12",
+                                        "online": "2"
+                                    }
+                                },
+                                {
+                                    "code": "string",
+                                    "name": "系统EER",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "kwh",
+                                        "ipValue": "5"
+                                    }
+                                },
+                                {
+                                    "code": "string",
+                                    "name": "冷机COP",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "w",
+                                        "ipValue": "23"
+                                    }
+                                }
+                            ],
+                            "localId": "SETDHI02",
+                            "localName": "高压配电系统高压配电关系图高压配电关系图高压配电关系图",
+                            "menuCode": null,
+                            "name": null,
+                            "productModule": "状态感知",
+                            "systemId": "Eq6101122010c47b144b02dc4459a30d5cdeaaf739c6"
+                        },
+                        {
+                            "anomalousEvent": 1,
+                            "anomalousEventNumber": 11,
+                            "children": [],
+                            "classCode": "SETDHI",
+                            "diagramBaseObject": "SETDHI",
+                            "graphTypeCode": "高压进线柜",
+                            "id": null,
+                            "imageOrProductName": "高压配电关系图",
+                            "infos": [
+                                {
+                                    "code": "string",
+                                    "name": "系统EER",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "kwh",
+                                        "ipValue": "5"
+                                    }
+                                },
+                                {
+                                    "code": "string",
+                                    "name": "冷机COP冷机COP冷机COP",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "w",
+                                        "ipValue": "23"
+                                    }
+                                }
+                            ],
+                            "localId": "SETDHI02",
+                            "localName": "高压配电系统#001",
+                            "menuCode": null,
+                            "name": null,
+                            "productModule": "状态感知",
+                            "systemId": "Eq6101122010c47b144b02dc4459a30d5cdeaaf739c6"
+                        }
+                    ],
+                    "classCode": null,
+                    "diagramBaseObject": null,
+                    "graphTypeCode": null,
+                    "id": "高压配电系统",
+                    "imageOrProductName": null,
+                    "infos": [],
+                    "localId": null,
+                    "localName": "高压配电系统",
+                    "menuCode": null,
+                    "name": "高压配电系统",
+                    "productModule": null,
+                    "systemId": null
+                },
+                {
+                    "anomalousEvent": 0,
+                    "anomalousEventNumber": 0,
+                    "children": [
+                        {
+                            "anomalousEvent": 0,
+                            "anomalousEventNumber": 1,
+                            "children": [],
+                            "classCode": "SETDHI",
+                            "diagramBaseObject": "SETDHI",
+                            "graphTypeCode": "高压进线柜",
+                            "id": null,
+                            "imageOrProductName": "高压配电关系图",
+                            "infos": [
+                                {
+                                    "code": "哈哈哈哈",
+                                    "name": "变压器最大负载",
+                                    "rule": "1",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "localName": "设备编码",
+                                        "ipValue": "222.0",
+                                        "unit": "w"
+                                    }
+                                },
+                                {
+                                    "code": "哇哇",
+                                    "name": "变压器温度最大值",
+                                    "rule": "3",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "localName": "设备编码",
+                                        "terms": [
+                                            {
+                                                "infoCode": "aPhaseCoilTemp",
+                                                "ipValue": "11.2",
+                                                "unit": "kwh"
+                                            },
+                                            {
+                                                "infoCode": "bPhaseCoilTemp",
+                                                "ipValue": "22.2",
+                                                "unit": "℃"
+                                            },
+                                            {
+                                                "infoCode": "cPhaseCoilTemp",
+                                                "ipValue": "33.3",
+                                                "unit": "℃"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "localId": "SETDHI01",
+                            "localName": "高压配电系统#002",
+                            "menuCode": null,
+                            "name": null,
+                            "productModule": "状态感知",
+                            "systemId": "Eq6101122010f62ce86c75674ab18657cd528cf2526b"
+                        },
+                        {
+                            "anomalousEvent": 1,
+                            "anomalousEventNumber": 0,
+                            "children": [],
+                            "classCode": "SETDHI",
+                            "diagramBaseObject": "SETDHI",
+                            "graphTypeCode": "高压进线柜",
+                            "id": null,
+                            "imageOrProductName": "高压配电关系图",
+                            "infos": [
+                                {
+                                    "code": "功率因数最大值",
+                                    "name": "冷机运行台数",
+                                    "rule": "2",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "all": "12",
+                                        "online": "2"
+                                    }
+                                },
+                                {
+                                    "code": "string",
+                                    "name": "系统EER",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "kwh",
+                                        "ipValue": "5"
+                                    }
+                                },
+                                {
+                                    "code": "string",
+                                    "name": "冷机COP",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "w",
+                                        "ipValue": "23"
+                                    }
+                                }
+                            ],
+                            "localId": "SETDHI02",
+                            "localName": "高压配电系统高压配电关系图高压配电关系图高压配电关系图",
+                            "menuCode": null,
+                            "name": null,
+                            "productModule": "状态感知",
+                            "systemId": "Eq6101122010c47b144b02dc4459a30d5cdeaaf739c6"
+                        },
+                        {
+                            "anomalousEvent": 1,
+                            "anomalousEventNumber": 11,
+                            "children": [],
+                            "classCode": "SETDHI",
+                            "diagramBaseObject": "SETDHI",
+                            "graphTypeCode": "高压进线柜",
+                            "id": null,
+                            "imageOrProductName": "高压配电关系图",
+                            "infos": [
+                                {
+                                    "code": "string",
+                                    "name": "系统EER",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "kwh",
+                                        "ipValue": "5"
+                                    }
+                                },
+                                {
+                                    "code": "string",
+                                    "name": "冷机COP冷机COP冷机COP",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "w",
+                                        "ipValue": "23"
+                                    }
+                                }
+                            ],
+                            "localId": "SETDHI02",
+                            "localName": "高压配电系统#001",
+                            "menuCode": null,
+                            "name": null,
+                            "productModule": "状态感知",
+                            "systemId": "Eq6101122010c47b144b02dc4459a30d5cdeaaf739c6"
+                        }
+                    ],
+                    "classCode": null,
+                    "diagramBaseObject": null,
+                    "graphTypeCode": null,
+                    "id": "高压配电系统",
+                    "imageOrProductName": null,
+                    "infos": [],
+                    "localId": null,
+                    "localName": "高压配电系统",
+                    "menuCode": null,
+                    "name": "高压配电系统",
+                    "productModule": null,
+                    "systemId": null
+                }
+            ],
+            "classCode": null,
+            "diagramBaseObject": null,
+            "graphTypeCode": null,
+            "id": "强电",
+            "imageOrProductName": null,
+            "infos": [],
+            "localId": null,
+            "localName": "强电",
+            "menuCode": "AC",
+            "name": "强电",
+            "productModule": null,
+            "systemId": null
+        },
+        {
+            "anomalousEvent": 0,
+            "anomalousEventNumber": 0,
+            "children": [
+                {
+                    "anomalousEvent": 0,
+                    "anomalousEventNumber": 0,
+                    "children": [
+                        {
+                            "anomalousEvent": 0,
+                            "anomalousEventNumber": 1,
+                            "children": [],
+                            "classCode": "SETDHI",
+                            "diagramBaseObject": "SETDHI",
+                            "graphTypeCode": "高压进线柜",
+                            "id": null,
+                            "imageOrProductName": "高压配电关系图",
+                            "infos": [
+                                {
+                                    "code": "哈哈哈哈",
+                                    "name": "变压器最大负载",
+                                    "rule": "1",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "localName": "设备编码",
+                                        "ipValue": "数值",
+                                        "unit": "w"
+                                    }
+                                },
+                                {
+                                    "code": "哇哇",
+                                    "name": "变压器温度最大值",
+                                    "rule": "3",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "localName": "设备编码",
+                                        "terms": [
+                                            {
+                                                "infoCode": "aPhaseCoilTemp",
+                                                "ipValue": "数值",
+                                                "unit": "单位"
+                                            },
+                                            {
+                                                "infoCode": "cPhaseCoilTemp",
+                                                "ipValue": "数值",
+                                                "unit": "单位"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "localId": "SETDHI01",
+                            "localName": "高压配电系统#002",
+                            "menuCode": null,
+                            "name": null,
+                            "productModule": "状态感知",
+                            "systemId": "Eq6101122010f62ce86c75674ab18657cd528cf2526b"
+                        },
+                        {
+                            "anomalousEvent": 1,
+                            "anomalousEventNumber": 0,
+                            "children": [],
+                            "classCode": "SETDHI",
+                            "diagramBaseObject": "SETDHI",
+                            "graphTypeCode": "高压进线柜",
+                            "id": null,
+                            "imageOrProductName": "高压配电关系图",
+                            "infos": [
+                                {
+                                    "code": "功率因数最大值",
+                                    "name": "冷机运行台数",
+                                    "rule": "2",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "all": "12",
+                                        "online": "2"
+                                    }
+                                },
+                                {
+                                    "code": "string",
+                                    "name": "系统EER",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "kwh",
+                                        "ipValue": "5"
+                                    }
+                                },
+                                {
+                                    "code": "string",
+                                    "name": "冷机COP",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "w",
+                                        "ipValue": "23"
+                                    }
+                                }
+                            ],
+                            "localId": "SETDHI02",
+                            "localName": "高压配电系统高压配电关系图高压配电关系图高压配电关系图",
+                            "menuCode": null,
+                            "name": null,
+                            "productModule": "状态感知",
+                            "systemId": "Eq6101122010c47b144b02dc4459a30d5cdeaaf739c6"
+                        },
+                        {
+                            "anomalousEvent": 1,
+                            "anomalousEventNumber": 11,
+                            "children": [],
+                            "classCode": "SETDHI",
+                            "diagramBaseObject": "SETDHI",
+                            "graphTypeCode": "高压进线柜",
+                            "id": null,
+                            "imageOrProductName": "高压配电关系图",
+                            "infos": [
+                                {
+                                    "code": "string",
+                                    "name": "系统EER",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "kwh",
+                                        "ipValue": "5"
+                                    }
+                                },
+                                {
+                                    "code": "string",
+                                    "name": "冷机COP冷机COP冷机COP",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "w",
+                                        "ipValue": "23"
+                                    }
+                                }
+                            ],
+                            "localId": "SETDHI02",
+                            "localName": "高压配电系统#001",
+                            "menuCode": null,
+                            "name": null,
+                            "productModule": "状态感知",
+                            "systemId": "Eq6101122010c47b144b02dc4459a30d5cdeaaf739c6"
+                        }
+                    ],
+                    "classCode": null,
+                    "diagramBaseObject": null,
+                    "graphTypeCode": null,
+                    "id": "高压配电系统",
+                    "imageOrProductName": null,
+                    "infos": [],
+                    "localId": null,
+                    "localName": "高压配电系统",
+                    "menuCode": null,
+                    "name": "高压配电系统",
+                    "productModule": null,
+                    "systemId": null
+                },
+                {
+                    "anomalousEvent": 0,
+                    "anomalousEventNumber": 0,
+                    "children": [
+                        {
+                            "anomalousEvent": 0,
+                            "anomalousEventNumber": 1,
+                            "children": [],
+                            "classCode": "SETDHI",
+                            "diagramBaseObject": "SETDHI",
+                            "graphTypeCode": "高压进线柜",
+                            "id": null,
+                            "imageOrProductName": "高压配电关系图",
+                            "infos": [
+                                {
+                                    "code": "哈哈哈哈",
+                                    "name": "变压器最大负载",
+                                    "rule": "1",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "localName": "设备编码",
+                                        "ipValue": "数值",
+                                        "unit": "w"
+                                    }
+                                },
+                                {
+                                    "code": "哇哇",
+                                    "name": "变压器温度最大值",
+                                    "rule": "3",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "localName": "设备编码",
+                                        "terms": [
+                                            {
+                                                "infoCode": "aPhaseCoilTemp",
+                                                "ipValue": "32",
+                                                "unit": "w"
+                                            },
+                                            {
+                                                "infoCode": "cPhaseCoilTemp",
+                                                "ipValue": "34",
+                                                "unit": "w"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "localId": "SETDHI01",
+                            "localName": "高压配电系统#002",
+                            "menuCode": null,
+                            "name": null,
+                            "productModule": "状态感知",
+                            "systemId": "Eq6101122010f62ce86c75674ab18657cd528cf2526b"
+                        },
+                        {
+                            "anomalousEvent": 1,
+                            "anomalousEventNumber": 0,
+                            "children": [],
+                            "classCode": "SETDHI",
+                            "diagramBaseObject": "SETDHI",
+                            "graphTypeCode": "高压进线柜",
+                            "id": null,
+                            "imageOrProductName": "高压配电关系图",
+                            "infos": [
+                                {
+                                    "code": "功率因数最大值",
+                                    "name": "冷机运行台数",
+                                    "rule": "2",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "all": "12",
+                                        "online": "2"
+                                    }
+                                },
+                                {
+                                    "code": "string",
+                                    "name": "系统EER",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "kwh",
+                                        "ipValue": "5"
+                                    }
+                                },
+                                {
+                                    "code": "string",
+                                    "name": "冷机COP",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "w",
+                                        "ipValue": "23"
+                                    }
+                                }
+                            ],
+                            "localId": "SETDHI02",
+                            "localName": "高压配电系统高压配电关系图高压配电关系图高压配电关系图",
+                            "menuCode": null,
+                            "name": null,
+                            "productModule": "状态感知",
+                            "systemId": "Eq6101122010c47b144b02dc4459a30d5cdeaaf739c6"
+                        },
+                        {
+                            "anomalousEvent": 1,
+                            "anomalousEventNumber": 11,
+                            "children": [],
+                            "classCode": "SETDHI",
+                            "diagramBaseObject": "SETDHI",
+                            "graphTypeCode": "高压进线柜",
+                            "id": null,
+                            "imageOrProductName": "高压配电关系图",
+                            "infos": [
+                                {
+                                    "code": "string",
+                                    "name": "系统EER",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "kwh",
+                                        "ipValue": "5"
+                                    }
+                                },
+                                {
+                                    "code": "string",
+                                    "name": "冷机COP冷机COP冷机COP",
+                                    "rule": "4",
+                                    "explain": "string",
+                                    "dataSet": {
+                                        "unit": "w",
+                                        "ipValue": "23"
+                                    }
+                                }
+                            ],
+                            "localId": "SETDHI02",
+                            "localName": "高压配电系统#001",
+                            "menuCode": null,
+                            "name": null,
+                            "productModule": "状态感知",
+                            "systemId": "Eq6101122010c47b144b02dc4459a30d5cdeaaf739c6"
+                        }
+                    ],
+                    "classCode": null,
+                    "diagramBaseObject": null,
+                    "graphTypeCode": null,
+                    "id": "高压配电系统",
+                    "imageOrProductName": null,
+                    "infos": [],
+                    "localId": null,
+                    "localName": "高压配电系统",
+                    "menuCode": null,
+                    "name": "高压配电系统",
+                    "productModule": null,
+                    "systemId": null
+                }
+            ],
+            "classCode": null,
+            "diagramBaseObject": null,
+            "graphTypeCode": null,
+            "id": "空调",
+            "imageOrProductName": null,
+            "infos": [],
+            "localId": null,
+            "localName": "空调",
+            "menuCode": "SE",
+            "name": "空调",
+            "productModule": null,
+            "systemId": null
+        }
+    ],
+    "defExec": true,
+    "extra": null,
+    "includeColumns": [],
+    "isFail": false,
+    "isSuccess": true,
+    "message": null,
+    "result": "success",
+    "timestamp": 1713350563057,
+    "total": null,
+    "traceId": null,
+    "withColumns": []
+}

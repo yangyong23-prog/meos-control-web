@@ -1,0 +1,1067 @@
+{
+  "data": {
+      "templateType": "string",
+      "templateTypeName": "冷战",
+      "sceneModes": [
+          {
+              "sceneId": "s1",
+              "sceneName": "场景1",
+              "sceneMode": "ALL"
+          },
+          {
+              "sceneId": "s2",
+              "sceneName": "场景2",
+              "sceneMode": "OPEN"
+          },
+          {
+              "sceneId": "s3",
+              "sceneName": "场景3",
+              "sceneMode": "CLOSE"
+          }
+      ],
+      "funcTypeSettings": [
+          {
+              "funcType": "string",
+              "funcTypeName": "自然光可替代的普通照明",
+              "sceneModes": [
+                  {
+                      "sceneId": "string",
+                      "sceneName": "场景1",
+                      "sceneMode": "OPEN"
+                  },
+                  {
+                      "sceneId": "string",
+                      "sceneName": "场景2",
+                      "sceneMode": "ALL"
+                  },
+                  {
+                      "sceneId": "string",
+                      "sceneName": "场景3",
+                      "sceneMode": "NOT_CONFIGURED"
+                  }
+              ],
+              "lampFuncTypeSettings": [
+                  {
+                      "lampFuncType": "string",
+                      "lampFuncTypeName": "射灯射灯",
+                      "sceneModes": [
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景1",
+                              "sceneMode": "ALL_OPEN"
+                          },
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景2",
+                              "sceneMode": "ALL_OPEN"
+                          },
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景3",
+                              "sceneMode": "ALL_OPEN"
+                          }
+                      ]
+                  },
+                  {
+                      "lampFuncType": "string",
+                      "lampFuncTypeName": "筒灯",
+                      "sceneModes": [
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景1",
+                              "sceneMode": "ALL_OPEN"
+                          },
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景2",
+                              "sceneMode": "ALL_OPEN"
+                          },
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景3",
+                              "sceneMode": "ALL_OPEN"
+                          }
+                      ]
+                  },
+                  {
+                      "lampFuncType": "string",
+                      "lampFuncTypeName": "射灯",
+                      "sceneModes": [
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景1",
+                              "sceneMode": "ALL_OPEN"
+                          },
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景2",
+                              "sceneMode": "ALL_OPEN"
+                          },
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景3",
+                              "sceneMode": "ALL_OPEN"
+                          }
+                      ]
+                  }
+              ]
+          },
+          {
+              "funcType": "string",
+              "funcTypeName": "自然光可替代的普通照明",
+              "sceneModes": [
+                  {
+                      "sceneId": "string",
+                      "sceneName": "场景1",
+                      "sceneMode": "ALL_OPEN"
+                  },
+                  {
+                      "sceneId": "string",
+                      "sceneName": "场景2",
+                      "sceneMode": "ALL_OPEN"
+                  },
+                  {
+                      "sceneId": "string",
+                      "sceneName": "场景3",
+                      "sceneMode": "ALL_OPEN"
+                  }
+              ],
+              "lampFuncTypeSettings": [
+                  {
+                      "lampFuncType": "string",
+                      "lampFuncTypeName": "射灯射灯",
+                      "sceneModes": [
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景1",
+                              "sceneMode": "ALL_OPEN"
+                          },
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景2",
+                              "sceneMode": "ALL_OPEN"
+                          },
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景3",
+                              "sceneMode": "ALL_OPEN"
+                          }
+                      ]
+                  },
+                  {
+                      "lampFuncType": "string",
+                      "lampFuncTypeName": "筒灯",
+                      "sceneModes": [
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景1",
+                              "sceneMode": "ALL_OPEN"
+                          },
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景2",
+                              "sceneMode": "ALL_OPEN"
+                          },
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景3",
+                              "sceneMode": "ALL_OPEN"
+                          }
+                      ]
+                  },
+                  {
+                      "lampFuncType": "string",
+                      "lampFuncTypeName": "射灯",
+                      "sceneModes": [
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景1",
+                              "sceneMode": "ALL_OPEN"
+                          },
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景2",
+                              "sceneMode": "ALL_OPEN"
+                          },
+                          {
+                              "sceneId": "string",
+                              "sceneName": "场景3",
+                              "sceneMode": "ALL_OPEN"
+                          }
+                      ]
+                  }
+              ]
+          },
+          {
+            "funcType": "string",
+            "funcTypeName": "自然光可替代的普通照明",
+            "sceneModes": [
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景1",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景2",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景3",
+                    "sceneMode": "ALL_OPEN"
+                }
+            ],
+            "lampFuncTypeSettings": [
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "筒灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "funcType": "string",
+            "funcTypeName": "自然光可替代的普通照明",
+            "sceneModes": [
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景1",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景2",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景3",
+                    "sceneMode": "ALL_OPEN"
+                }
+            ],
+            "lampFuncTypeSettings": [
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "筒灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "funcType": "string",
+            "funcTypeName": "自然光可替代的普通照明",
+            "sceneModes": [
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景1",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景2",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景3",
+                    "sceneMode": "ALL_OPEN"
+                }
+            ],
+            "lampFuncTypeSettings": [
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "筒灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "funcType": "string",
+            "funcTypeName": "自然光可替代的普通照明",
+            "sceneModes": [
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景1",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景2",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景3",
+                    "sceneMode": "ALL_OPEN"
+                }
+            ],
+            "lampFuncTypeSettings": [
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "筒灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "funcType": "string",
+            "funcTypeName": "自然光可替代的普通照明",
+            "sceneModes": [
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景1",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景2",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景3",
+                    "sceneMode": "ALL_OPEN"
+                }
+            ],
+            "lampFuncTypeSettings": [
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "筒灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "funcType": "string",
+            "funcTypeName": "自然光可替代的普通照明",
+            "sceneModes": [
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景1",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景2",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景3",
+                    "sceneMode": "ALL_OPEN"
+                }
+            ],
+            "lampFuncTypeSettings": [
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "筒灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "funcType": "string",
+            "funcTypeName": "自然光可替代的普通照明",
+            "sceneModes": [
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景1",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景2",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景3",
+                    "sceneMode": "ALL_OPEN"
+                }
+            ],
+            "lampFuncTypeSettings": [
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "筒灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "funcType": "string",
+            "funcTypeName": "自然光可替代的普通照明",
+            "sceneModes": [
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景1",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景2",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景3",
+                    "sceneMode": "ALL_OPEN"
+                }
+            ],
+            "lampFuncTypeSettings": [
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "筒灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "funcType": "string",
+            "funcTypeName": "自然光可替代的普通照明",
+            "sceneModes": [
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景1",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景2",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景3",
+                    "sceneMode": "ALL_OPEN"
+                }
+            ],
+            "lampFuncTypeSettings": [
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "筒灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "funcType": "string",
+            "funcTypeName": "自然光可替代的普通照明",
+            "sceneModes": [
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景1",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景2",
+                    "sceneMode": "ALL_OPEN"
+                },
+                {
+                    "sceneId": "string",
+                    "sceneName": "场景3",
+                    "sceneMode": "ALL_OPEN"
+                }
+            ],
+            "lampFuncTypeSettings": [
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "筒灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                },
+                {
+                    "lampFuncType": "string",
+                    "lampFuncTypeName": "射灯",
+                    "sceneModes": [
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景1",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景2",
+                            "sceneMode": "ALL_OPEN"
+                        },
+                        {
+                            "sceneId": "string",
+                            "sceneName": "场景3",
+                            "sceneMode": "ALL_OPEN"
+                        }
+                    ]
+                }
+            ]
+        }
+      ]
+  },
+  "cause": "string",
+  "code": "00000",
+  "count": "string",
+  "defExec": true,
+  "extra": "string",
+  "includeColumns": "string",
+  "isFail": true,
+  "isSuccess": true,
+  "message": "string",
+  "result": "success",
+  "timestamp": 0,
+  "total": 30,
+  "traceId": "string",
+  "withColumns": "string"
+}

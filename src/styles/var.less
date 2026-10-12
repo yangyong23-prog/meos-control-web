@@ -1,0 +1,31 @@
+@media screen and (max-width: 1600px) {
+    :root {
+        --broken-width: 400px;
+    }
+}
+
+@media screen and (min-width: 1601px) {
+    :root {
+        --broken-width: 480px;
+    }
+}
+:root {
+    --platform-font-weight: 400;
+    --z-index-system-graph-header: 65;
+    --z-index-common-drawer: 150;
+    --z-index-common-drawer-top: 160;
+    --z-index-timetable: 70;
+    --z-index-page-detail: 99;
+    --z-index-priority-drawer: 200;
+    --z-index-floating-card: 200;
+    --z-index-hover-card: 99;
+    --z-index-half-view-wrapper: 1001;
+    --z-index-topology-view-wrapper: 1000;
+    --z-index-modal-confirm: 3000;
+    --z-index-table-tooltip: 4000;
+    --z-index-ac-operation-control-right-loading-mask: 4000;
+    --z-index-select-dropdown: 10000;
+}
+:root[data-os='mac'] {
+    --platform-font-weight: 400;
+}

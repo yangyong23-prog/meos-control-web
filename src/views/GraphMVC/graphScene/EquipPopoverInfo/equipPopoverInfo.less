@@ -1,0 +1,40 @@
+.equip-popover-dom-box {
+    position: relative;
+    display: flex;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid @grey-300;
+    background: @white;
+    &-arrow {
+        position: absolute;
+        display: flex;
+        left: 50%;
+        bottom: -7px;
+        transform: translateX(-50%);
+        width: 12px;
+        height: 7px;
+        overflow: hidden;
+    }
+    .equip-popover-inner {
+        display: flex;
+        max-width: 396px;
+        align-items: flex-start;
+    }
+    .equip-popover-name {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px;
+        flex: 1;
+    }
+    .equip-popover-status {
+        display: flex;
+        margin-left: 8px;
+        padding: 0 6px;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: var(--platform-font-weight);
+        line-height: 22px;
+        border-radius: 2px;
+    }
+}

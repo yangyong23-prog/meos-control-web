@@ -1,0 +1,29 @@
+<svg width="185" height="268" viewBox="0 0 185 268" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_225_55203)">
+<ellipse cx="81.6811" cy="133.708" rx="81.6811" ry="133.708" transform="matrix(1 0 0.0448399 0.998994 9.85938 1.16162)" fill="#9BA6AC"/>
+<rect x="78.9824" y="1.16162" width="13.9381" height="2.32302" fill="#8F9293"/>
+<rect x="91.7578" y="265.985" width="12.7766" height="2.32302" fill="#8F9293"/>
+<ellipse cx="81.6811" cy="133.799" rx="81.6811" ry="133.799" transform="matrix(1 0 0.0448399 0.998994 0 0.978516)" fill="url(#paint0_linear_225_55203)"/>
+<mask id="mask0_225_55203" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="0" width="165" height="269">
+<ellipse cx="81.6811" cy="134.289" rx="81.6811" ry="134.289" transform="matrix(1 0 0.0448399 0.998994 0 0)" fill="#4A6E81"/>
+</mask>
+<g mask="url(#mask0_225_55203)">
+<path d="M89.158 -22.3521L87.3894 279.626" stroke="#8197A5" stroke-width="4.64603"/>
+<path d="M-59.8809 108.173L235.95 143.448" stroke="#8197A5" stroke-width="4.64603"/>
+<path d="M-4.07227 216.609L180.138 35.0102" stroke="#8197A5" stroke-width="4.64603"/>
+<path d="M187.318 256.43L-11.2474 -4.82413" stroke="#8197A5" stroke-width="4.64603"/>
+</g>
+<path d="M153.125 61.56L161.836 58.0754" stroke="#8F999E" stroke-width="5.22679"/>
+<path d="M169.387 135.766L179.259 136.346" stroke="#8F999E" stroke-width="5.22679"/>
+<path d="M156.03 216.041L164.161 220.106" stroke="#8F999E" stroke-width="5.22679"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_225_55203" x1="81.6811" y1="0" x2="81.6811" y2="267.599" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#D5E0E7"/>
+</linearGradient>
+<clipPath id="clip0_225_55203">
+<rect width="185" height="268" fill="white"/>
+</clipPath>
+</defs>
+</svg>

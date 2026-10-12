@@ -1,0 +1,82 @@
+{
+    "data": {
+        "templateType": "string",
+        "templateTypeName": "公区",
+        "summary": [
+            {
+                "total": 100,
+                "openCount": 20,
+                "closeCount": 10,
+                "unConfigCount": 5
+            }
+        ],
+        "funcTypeSettings": [
+            {
+                "funcType": "string",
+                "funcTypeName": "普通照明",
+                "summary": [
+                    {
+                        "total": 0,
+                        "openCount": 0,
+                        "closeCount": 0,
+                        "unConfigCount": 0
+                    }
+                ],
+                "lampFuncTypeSettings": [
+                    {
+                        "lampFuncType": "string",
+                        "lampFuncTypeName": "筒灯",
+                        "summary": [
+                            {
+                                "total": 0,
+                                "openCount": 0,
+                                "closeCount": 0,
+                                "unConfigCount": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "funcType": "string",
+                "funcTypeName": "装饰照明",
+                "summary": [
+                    {
+                        "total": 0,
+                        "openCount": 0,
+                        "closeCount": 0,
+                        "unConfigCount": 0
+                    }
+                ],
+                "lampFuncTypeSettings": [
+                    {
+                        "lampFuncType": "string",
+                        "lampFuncTypeName": "广告灯",
+                        "summary": [
+                            {
+                                "total": 0,
+                                "openCount": 0,
+                                "closeCount": 0,
+                                "unConfigCount": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "cause": "string",
+    "code": "00000",
+    "count": "string",
+    "defExec": true,
+    "extra": "string",
+    "includeColumns": "string",
+    "isFail": true,
+    "isSuccess": true,
+    "message": "string",
+    "result": "success",
+    "timestamp": 0,
+    "total": "string",
+    "traceId": "string",
+    "withColumns": "string"
+}

@@ -1,0 +1,38 @@
+// -----------------------------设备小蓝点
+.robot-info-container {
+    pointer-events: none;
+    .robot-info-normal-dom {
+        position: relative;
+        .robot-info-dot {
+            width: 32px;
+            height: 32px;
+            border: 1.5px solid #ffffff;
+            border-radius: 8px;
+            pointer-events: auto;
+            background-color: #999999;
+            .robot-icon {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .robot-info-name {
+            display: inline-block;
+            pointer-events: auto;
+            font-size: 12px;
+            line-height: 15px;
+            padding-top: 4px;
+            text-align: center;
+            color: #000000;
+            text-shadow: 1px 0 0 #ffffff, 0 1px 0 #ffffff, -1px 0 0 #ffffff, 0 -1px 0 #ffffff;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+    }
+}

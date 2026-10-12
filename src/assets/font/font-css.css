@@ -1,0 +1,12 @@
+.icon-phone,
+.icon-password {
+  color: var(--gray-500);
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: 0;
+  fill: currentColor;
+  overflow: hidden;
+}

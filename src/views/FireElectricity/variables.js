@@ -1,0 +1,11 @@
+export const SUBSCRIBE_TYPE = 'FIRE_FIGHTING';
+export const RUNNING_MONITOR_TYPE = 'FIRE_FIGHTING_ELECTRICITY';
+export const PERMISSION = '';
+export const PRODUCT_CODE = '';
+
+export default {
+    PERMISSION,
+    SUBSCRIBE_TYPE,
+    RUNNING_MONITOR_TYPE,
+    PRODUCT_CODE
+};

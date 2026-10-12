@@ -1,0 +1,111 @@
+<svg width="950" height="616" viewBox="0 0 950 616" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.88622e-05 0H950V188H570L570 428H380V616H59L0 576V428H380L380 188H59L3.88622e-05 148V0Z" fill="#C7CFD8"/>
+<g clip-path="url(#clip0_1348_26172)">
+<rect x="760" width="190" height="145" fill="#C7CFD8"/>
+<path d="M950 40.0273H760V0H950V40.0273Z" fill="#C0CAD1"/>
+<path d="M760 40H950V44H760V40Z" fill="#D4D9E0"/>
+<path d="M950 184H760V144H950V184Z" fill="#BCC6D2"/>
+<path d="M760 184H950V188H760V184Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip1_1348_26172)">
+<rect x="570" width="190" height="145" fill="#C7CFD8"/>
+<path d="M760 40.0273H570V0H760V40.0273Z" fill="#C0CAD1"/>
+<path d="M570 40H760V44H570V40Z" fill="#D4D9E0"/>
+<path d="M760 184H570V144H760V184Z" fill="#BCC6D2"/>
+<path d="M570 184H760V188H570V184Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip2_1348_26172)">
+<rect x="380" width="190" height="188" fill="#C7CFD8"/>
+<path d="M407 144L440 184H380V144H407Z" fill="#BCC6D2"/>
+<path d="M570 40.0273H380V0H570V40.0273Z" fill="#C0CAD1"/>
+<path d="M380 40H570V44H380V40Z" fill="#D4D9E0"/>
+<path d="M565.981 184H569.981V188H565.981V184Z" fill="#D4D9E0"/>
+<path d="M380 184H440V188H380V184Z" fill="#D4D9E0"/>
+<path d="M570 144.206V188H535H509.984V144.206H570Z" fill="#BCC6D2"/>
+</g>
+<g clip-path="url(#clip3_1348_26172)">
+<rect x="190" width="190" height="145" fill="#C7CFD8"/>
+<path d="M380 40.0273H190V0H380V40.0273Z" fill="#C0CAD1"/>
+<path d="M190 40H380V44H190V40Z" fill="#D4D9E0"/>
+<path d="M380 184H190V144H380V184Z" fill="#BCC6D2"/>
+<path d="M190 184H380V188H190V184Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip4_1348_26172)">
+<rect width="190" height="144" fill="#C7CFD8"/>
+<path d="M0 3.5V0L59 40.0078V44L0 3.5Z" fill="#A9B8CC"/>
+<path d="M0 148V144L59 184.046V188L0 148Z" fill="#A9B8CC"/>
+<path d="M0 0H190V40H59.054L0 0Z" fill="#C0CAD1"/>
+<path d="M59 40H190V44H59V40Z" fill="#D4D9E0"/>
+<path d="M0 144H190V184H59L0 144Z" fill="#BCC6D2"/>
+<path d="M59 184H190V188H59V184Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip5_1348_26172)">
+<g clip-path="url(#clip6_1348_26172)">
+<rect x="440" y="188" width="70" height="120" fill="#C7CFD8"/>
+<rect x="436" y="188" width="4" height="120" fill="#D4D9E0"/>
+<path d="M380 188H436V308H380V188Z" fill="#BCC6D2"/>
+<rect x="510" y="188" width="56" height="120" fill="#BCC6D2"/>
+<rect x="566" y="188" width="4" height="120" fill="#D4D9E0"/>
+</g>
+</g>
+<g clip-path="url(#clip7_1348_26172)">
+<g clip-path="url(#clip8_1348_26172)">
+<rect x="440" y="308" width="70" height="120" fill="#C7CFD8"/>
+<rect x="436" y="308" width="4" height="120" fill="#D4D9E0"/>
+<path d="M380 308H436V428H380V308Z" fill="#BCC6D2"/>
+<rect x="510" y="308" width="56" height="120" fill="#BCC6D2"/>
+<rect x="566" y="308" width="4" height="120" fill="#D4D9E0"/>
+</g>
+</g>
+<g clip-path="url(#clip9_1348_26172)">
+<rect x="190" y="428" width="190" height="145" fill="#C7CFD8"/>
+<path d="M380 468.027H190V428H380V468.027Z" fill="#C0CAD1"/>
+<path d="M190 468H380V472H190V468Z" fill="#D4D9E0"/>
+<path d="M380 612H190V572H380V612Z" fill="#BCC6D2"/>
+<path d="M190 612H380V616H190V612Z" fill="#D4D9E0"/>
+</g>
+<g clip-path="url(#clip10_1348_26172)">
+<rect y="428" width="190" height="144" fill="#C7CFD8"/>
+<path d="M0 431.5V428L59 468.008V472L0 431.5Z" fill="#A9B8CC"/>
+<path d="M0 576V572L59 612.046V616L0 576Z" fill="#A9B8CC"/>
+<path d="M0 428H190V468H59.054L0 428Z" fill="#C0CAD1"/>
+<path d="M59 468H190V472H59V468Z" fill="#D4D9E0"/>
+<path d="M0 572H190V612H59L0 572Z" fill="#BCC6D2"/>
+<path d="M59 612H190V616H59V612Z" fill="#D4D9E0"/>
+</g>
+<defs>
+<clipPath id="clip0_1348_26172">
+<rect width="190" height="188" fill="white" transform="translate(760)"/>
+</clipPath>
+<clipPath id="clip1_1348_26172">
+<rect width="190" height="188" fill="white" transform="translate(570)"/>
+</clipPath>
+<clipPath id="clip2_1348_26172">
+<rect width="190" height="188" fill="white" transform="translate(380)"/>
+</clipPath>
+<clipPath id="clip3_1348_26172">
+<rect width="190" height="188" fill="white" transform="translate(190)"/>
+</clipPath>
+<clipPath id="clip4_1348_26172">
+<rect width="190" height="188" fill="white"/>
+</clipPath>
+<clipPath id="clip5_1348_26172">
+<rect width="950" height="120" fill="white" transform="translate(0 188)"/>
+</clipPath>
+<clipPath id="clip6_1348_26172">
+<rect width="190" height="120" fill="white" transform="translate(380 188)"/>
+</clipPath>
+<clipPath id="clip7_1348_26172">
+<rect width="950" height="120" fill="white" transform="translate(0 308)"/>
+</clipPath>
+<clipPath id="clip8_1348_26172">
+<rect width="190" height="120" fill="white" transform="translate(380 308)"/>
+</clipPath>
+<clipPath id="clip9_1348_26172">
+<rect width="190" height="188" fill="white" transform="translate(190 428)"/>
+</clipPath>
+<clipPath id="clip10_1348_26172">
+<rect width="190" height="188" fill="white" transform="translate(0 428)"/>
+</clipPath>
+</defs>
+</svg>

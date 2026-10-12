@@ -1,0 +1,13 @@
+export const openDetailDrawerInjectKey = Symbol('openDetailDrawerInjectKey');
+export const closeDetailDrawerInjectKey = Symbol('closeDetailDrawerInjectKey');
+export const showModuleInfoInjectKey = Symbol('showModuleInfoInjectKey');
+export const selectModuleInfoInjectKey = Symbol('selectModuleInfoInjectKey');
+export const buildFloorsInjectKey = Symbol('buildFloorsInjectKey');
+export const floorViewInjectKey = Symbol('floorViewInjectKey');
+export const spacePassengerFlowDataInjectKey = Symbol('spacePassengerFlowDataInjectKey');
+export const runningMonitorSecondTypeInjectKey = Symbol('runningMonitorSecondTypeInjectKey');
+export const currentFloorObjInjectKey = Symbol('currentFloorObjInjectKey');
+export const currentBuildingObjInjectKey = Symbol('currentBuildingObjInjectKey');
+export const currentBuidingNumInjectKey = Symbol('currentBuidingNumInjectKey');
+export const doorsGroupDataListInjectKey = Symbol('doorsGroupDataListInjectKey');
+export const doorsGroupDataLoadingInjectKey = Symbol('doorsGroupDataLoadingInjectKey');

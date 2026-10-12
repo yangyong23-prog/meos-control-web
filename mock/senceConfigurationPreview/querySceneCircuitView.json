@@ -1,0 +1,17 @@
+{
+    "data": [],
+    "cause": "string",
+    "code": "00000",
+    "count": "string",
+    "defExec": true,
+    "extra": "string",
+    "includeColumns": "string",
+    "isFail": true,
+    "isSuccess": true,
+    "message": "string",
+    "result": "success",
+    "timestamp": 0,
+    "total": 40,
+    "traceId": "string",
+    "withColumns": "string"
+}

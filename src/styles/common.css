@@ -1,0 +1,162 @@
+/* stylelint-disable no-missing-end-of-source-newline */
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable prettier/prettier */
+html,
+body,
+div,
+span,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+iframe,
+textarea,
+label,
+p,
+blockquote,
+th,
+section,
+td,
+a,
+button {
+    border: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'PingFang SC', 'Noto Sans', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: var(--gray-900);
+    position: relative;
+    line-height: normal;
+    min-width: 1280px;
+    overflow-x: auto;
+}
+
+a {
+    color: #ffffff;
+    outline: none;
+    text-decoration: none;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+:root {
+    --active-bg-color: #e1f2ff;
+    --active-color: var(--blue-500);
+}
+::-webkit-scrollbar {
+    background: transparent !important;
+    width: 4px !important;
+    height: 4px !important;
+    border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c4c9cfcc !important;
+}
+
+.meos-group-title-1 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gray-800);
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 12px;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 3px;
+        height: 14px;
+        background: var(--blue-500);
+        margin-right: 9px;
+    }
+}
+
+.meos-group-title-2 {
+    color: var(--gray-800);
+    font-size: 14px;
+    font-weight: 700;
+    margin: 12px 0;
+}
+
+.meos-text-link {
+    color: var(--blue-500);
+    cursor: pointer;
+
+    &:hover {
+        color: var(--blue-600);
+    }
+}
+
+.meos-ellipsis-line,
+.meos-ellipsis-line-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.meos-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meos-flex-ai-center {
+    display: flex;
+    align-items: center;
+}
+
+.meos-flex-jc-center {
+    display: flex;
+    justify-content: center;
+}
+
+.meos-jc-fe {
+    justify-content: flex-end;
+}
+
+.meos-jc-fs {
+    justify-content: flex-start;
+}
+
+.meos-jc-center {
+    justify-content: center;
+}

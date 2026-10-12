@@ -1,0 +1,1573 @@
+{
+    "code": "00000",
+    "result": "success",
+    "data": [
+        {
+            "code": "acceptanceCompletionDate",
+            "name": "验收完成日期",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "originDataType": "DTime",
+            "dataType": "DATETIME",
+            "dataSources": []
+        },
+        {
+            "code": "accRunTime",
+            "name": "累计运行时间",
+            "classCode": "LTLTCC",
+            "unit": "h",
+            "scale": 1,
+            "firstTag": "运行参数",
+            "secondTag": "运行时间",
+            "originDataType": "Accd",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "autoCtrlType",
+            "name": "自动控制模式",
+            "classCode": "LTLTCC",
+            "firstTag": "技术参数",
+            "originDataType": "MEnum",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "1",
+                    "name": "声控"
+                },
+                {
+                    "code": "2",
+                    "name": "人员探测控制"
+                },
+                {
+                    "code": "3",
+                    "name": "定时控制"
+                },
+                {
+                    "code": "99",
+                    "name": "其他"
+                }
+            ]
+        },
+        {
+            "code": "bAInterveneSet",
+            "name": "BA手动干预状态设定",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "设定参数",
+            "originDataType": "Boolp",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "不允许"
+                },
+                {
+                    "code": "1",
+                    "name": "允许"
+                }
+            ]
+        },
+        {
+            "code": "bAInterveneStatus",
+            "name": "BA手动干预状态",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "运行参数",
+            "originDataType": "Boolv",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "不允许"
+                },
+                {
+                    "code": "1",
+                    "name": "允许"
+                }
+            ]
+        },
+        {
+            "code": "bimId",
+            "name": "BIM模型中编码",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "bimLocation",
+            "name": "BIM模型中坐标",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "基本参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "boundingBox",
+            "name": "边界盒子坐标",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "brand",
+            "name": "品牌",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "生产厂家",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "bright",
+            "name": "亮度",
+            "classCode": "LTLTCC",
+            "unit": "cd/㎡",
+            "scale": 1,
+            "firstTag": "运行参数",
+            "secondTag": "整机",
+            "originDataType": "Inst",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "cADID",
+            "name": "设计图纸中编码",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "基本参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "capsNumber",
+            "name": "灯头数量",
+            "classCode": "LTLTCC",
+            "unit": "个",
+            "firstTag": "技术参数",
+            "secondTag": "",
+            "originDataType": "NumInt",
+            "dataType": "INTEGER",
+            "dataSources": []
+        },
+        {
+            "code": "checkStatus",
+            "name": "核查状态",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "secondTag": "",
+            "originDataType": "Bool",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "未核查"
+                },
+                {
+                    "code": "1",
+                    "name": "核查完成"
+                }
+            ]
+        },
+        {
+            "code": "circlePipeFlag",
+            "name": "是否是环管",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "originDataType": "Enum",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "否"
+                },
+                {
+                    "code": "1",
+                    "name": "是"
+                }
+            ]
+        },
+        {
+            "code": "circlePipeName",
+            "name": "环管名称",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "closeTimeCount",
+            "name": "关闭时间计时",
+            "classCode": "LTLTCC",
+            "unit": "h",
+            "scale": 1,
+            "firstTag": "运行参数",
+            "secondTag": "运行时间",
+            "originDataType": "Accd",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "colorTemperature.",
+            "name": "色温",
+            "classCode": "LTLTCC",
+            "unit": "K",
+            "scale": 1,
+            "firstTag": "运行参数",
+            "secondTag": "整机",
+            "originDataType": "Inst",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "colorTempSet",
+            "name": "色温设定值",
+            "classCode": "LTLTCC",
+            "unit": "K",
+            "scale": 1,
+            "firstTag": "设定参数",
+            "originDataType": "Num",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "comCode",
+            "name": "设备通信编码",
+            "classCode": "LTLTCC",
+            "firstTag": "技术参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "controlDemand",
+            "name": "孪生控制需求",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "设定参数",
+            "secondTag": "控制需求",
+            "originDataType": "Enump",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "1",
+                    "name": "开启"
+                },
+                {
+                    "code": "2",
+                    "name": "关闭"
+                },
+                {
+                    "code": "99",
+                    "name": "其他"
+                }
+            ]
+        },
+        {
+            "code": "ctrlMode",
+            "name": "当前控制模式",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "运行参数",
+            "secondTag": "",
+            "originDataType": "Enumv",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "1",
+                    "name": "照度反馈控制"
+                },
+                {
+                    "code": "2",
+                    "name": "电价反馈控制"
+                },
+                {
+                    "code": "3",
+                    "name": "碳因子反馈控制"
+                },
+                {
+                    "code": "99",
+                    "name": "其他"
+                }
+            ]
+        },
+        {
+            "code": "ctrlModeSetEnump",
+            "name": "控制模式设定",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "设定参数",
+            "secondTag": "",
+            "originDataType": "Enump",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "1",
+                    "name": "照度反馈控制"
+                },
+                {
+                    "code": "2",
+                    "name": "电价反馈控制"
+                },
+                {
+                    "code": "3",
+                    "name": "碳因子反馈控制"
+                },
+                {
+                    "code": "99",
+                    "name": "其他"
+                }
+            ]
+        },
+        {
+            "code": "dataSource",
+            "name": "数据来源",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "defaultQRCode",
+            "name": "二维码内容",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "基本参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "deploymentDate",
+            "name": "投入使用日期",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "originDataType": "DTime",
+            "dataType": "DATETIME",
+            "dataSources": []
+        },
+        {
+            "code": "digitalDeliveryName",
+            "name": "数字化交付名称",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "elecConsumP",
+            "name": "耗电功率",
+            "classCode": "LTLTCC",
+            "unit": "W",
+            "scale": 1,
+            "firstTag": "运行参数",
+            "secondTag": "整机",
+            "originDataType": "Inst",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "equipFreqSet",
+            "name": "设备频率设定",
+            "classCode": "LTLTCC",
+            "unit": "Hz",
+            "scale": 1,
+            "firstTag": "设定参数",
+            "originDataType": "Nump",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "equipGearSet",
+            "name": "设备挡位设定",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "设定参数",
+            "originDataType": "Enump",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "1",
+                    "name": "低挡"
+                },
+                {
+                    "code": "2",
+                    "name": "中挡"
+                },
+                {
+                    "code": "3",
+                    "name": "高挡"
+                },
+                {
+                    "code": "99",
+                    "name": "其他"
+                }
+            ]
+        },
+        {
+            "code": "equipO2OLocalName",
+            "name": "设备O2O本地名称",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "基本参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "equipOffSet",
+            "name": "设备关设定",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "设定参数",
+            "originDataType": "Boolp",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "正常"
+                },
+                {
+                    "code": "1",
+                    "name": "关闭"
+                }
+            ]
+        },
+        {
+            "code": "equipOnSet",
+            "name": "设备开设定",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "设定参数",
+            "originDataType": "Boolp",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "正常"
+                },
+                {
+                    "code": "1",
+                    "name": "开启"
+                }
+            ]
+        },
+        {
+            "code": "equipOpeningSet",
+            "name": "设备开度设定",
+            "classCode": "LTLTCC",
+            "unit": "%",
+            "scale": 1,
+            "firstTag": "设定参数",
+            "originDataType": "Nump",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "equipSourceOut",
+            "name": "设备来源",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "equipStatus",
+            "name": "设备状态",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "运行维保",
+            "originDataType": "Enum",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "1",
+                    "name": "启用"
+                },
+                {
+                    "code": "2",
+                    "name": "闲置"
+                },
+                {
+                    "code": "3",
+                    "name": "封存"
+                },
+                {
+                    "code": "4",
+                    "name": "未安装"
+                },
+                {
+                    "code": "99",
+                    "name": "其他"
+                }
+            ]
+        },
+        {
+            "code": "equipSwitchSet",
+            "name": "设备开关设定",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "设定参数",
+            "originDataType": "Boolp",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "关闭"
+                },
+                {
+                    "code": "1",
+                    "name": "开启"
+                }
+            ]
+        },
+        {
+            "code": "faultStatus",
+            "name": "故障状态",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "运行参数",
+            "originDataType": "Boolv",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "正常"
+                },
+                {
+                    "code": "1",
+                    "name": "故障"
+                }
+            ]
+        },
+        {
+            "code": "firstSysEquipName",
+            "name": "一级系统或设备名称",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "fixedAssetNumber",
+            "name": "固定资产编号",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "funcType",
+            "name": "功能类型",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "技术参数",
+            "secondTag": "",
+            "originDataType": "Enum",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "1",
+                    "name": "普通照明"
+                },
+                {
+                    "code": "3",
+                    "name": "广告照明"
+                },
+                {
+                    "code": "4",
+                    "name": "备用照明"
+                },
+                {
+                    "code": "7",
+                    "name": "标识照明"
+                },
+                {
+                    "code": "8",
+                    "name": "装饰照明"
+                },
+                {
+                    "code": "9",
+                    "name": "常亮照明"
+                },
+                {
+                    "code": "99",
+                    "name": "其他"
+                }
+            ]
+        },
+        {
+            "code": "hasCountDemand",
+            "name": "是否有计量需求",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "secondTag": "",
+            "originDataType": "Bool",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "否"
+                },
+                {
+                    "code": "1",
+                    "name": "是"
+                }
+            ]
+        },
+        {
+            "code": "i",
+            "name": "工作电流",
+            "classCode": "LTLTCC",
+            "unit": "A",
+            "scale": 1,
+            "firstTag": "运行参数",
+            "secondTag": "整机",
+            "originDataType": "Inst",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "id",
+            "name": "设备ID",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "inCloudSet",
+            "name": "云端控制",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "设定参数",
+            "originDataType": "Boolp",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "非云端"
+                },
+                {
+                    "code": "1",
+                    "name": "云端"
+                }
+            ]
+        },
+        {
+            "code": "inCloudStatus",
+            "name": "云端状态",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "运行参数",
+            "originDataType": "Boolv",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "非云端"
+                },
+                {
+                    "code": "1",
+                    "name": "云端"
+                }
+            ]
+        },
+        {
+            "code": "installer",
+            "name": "安装单位名称",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "现场安装",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "installHeight",
+            "name": "安装高度",
+            "classCode": "LTLTCC",
+            "unit": "mm",
+            "scale": 1,
+            "firstTag": "台账参数",
+            "secondTag": "现场安装",
+            "originDataType": "Num",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "installLocation",
+            "name": "安装位置",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "现场安装",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "isforTenantUse",
+            "name": "是否是租户使用",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "技术参数",
+            "originDataType": "Bool",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "否"
+                },
+                {
+                    "code": "1",
+                    "name": "是"
+                }
+            ]
+        },
+        {
+            "code": "isMainLedger",
+            "name": "是否维保台账",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "secondTag": "",
+            "originDataType": "Bool",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "否"
+                },
+                {
+                    "code": "1",
+                    "name": "是"
+                }
+            ]
+        },
+        {
+            "code": "isOperationLedger",
+            "name": "是否运行台账",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "secondTag": "",
+            "originDataType": "Bool",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "否"
+                },
+                {
+                    "code": "1",
+                    "name": "是"
+                }
+            ]
+        },
+        {
+            "code": "isSpecialEquipment",
+            "name": "是否特种设备",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "originDataType": "Bool",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "否"
+                },
+                {
+                    "code": "1",
+                    "name": "是"
+                }
+            ]
+        },
+        {
+            "code": "lampFuncType",
+            "name": "灯具功能类型",
+            "classCode": "LTLTCC",
+            "firstTag": "技术参数",
+            "secondTag": "",
+            "originDataType": "Enum",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "1",
+                    "name": "筒灯"
+                },
+                {
+                    "code": "2",
+                    "name": "射灯"
+                },
+                {
+                    "code": "3",
+                    "name": "灯带"
+                },
+                {
+                    "code": "4",
+                    "name": "广告灯箱"
+                },
+                {
+                    "code": "5",
+                    "name": "标识指示灯"
+                },
+                {
+                    "code": "6",
+                    "name": "应急灯"
+                },
+                {
+                    "code": "7",
+                    "name": "金卤灯"
+                },
+                {
+                    "code": "8",
+                    "name": "洗墙灯"
+                },
+                {
+                    "code": "9",
+                    "name": "泛光灯"
+                },
+                {
+                    "code": "10",
+                    "name": "投光灯"
+                },
+                {
+                    "code": "11",
+                    "name": "点光源"
+                },
+                {
+                    "code": "12",
+                    "name": "线条灯"
+                },
+                {
+                    "code": "13",
+                    "name": "LOGO灯"
+                },
+                {
+                    "code": "14",
+                    "name": "路灯"
+                },
+                {
+                    "code": "15",
+                    "name": "高杆灯"
+                },
+                {
+                    "code": "16",
+                    "name": "地埋灯"
+                },
+                {
+                    "code": "17",
+                    "name": "草坪灯"
+                },
+                {
+                    "code": "18",
+                    "name": "树灯"
+                },
+                {
+                    "code": "19",
+                    "name": "庭院灯"
+                },
+                {
+                    "code": "20",
+                    "name": "花坛轮廓灯"
+                },
+                {
+                    "code": "21",
+                    "name": "造型装饰灯"
+                },
+                {
+                    "code": "22",
+                    "name": "小品灯"
+                },
+                {
+                    "code": "23",
+                    "name": "水下灯"
+                },
+                {
+                    "code": "24",
+                    "name": "荧光灯"
+                },
+                {
+                    "code": "25",
+                    "name": "日光灯"
+                },
+                {
+                    "code": "99",
+                    "name": "其他"
+                }
+            ]
+        },
+        {
+            "code": "leakageProtectType",
+            "name": "漏电保护功能类型",
+            "classCode": "LTLTCC",
+            "firstTag": "技术参数",
+            "secondTag": "漏电保护",
+            "originDataType": "Enum",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "1",
+                    "name": "漏电保护器"
+                },
+                {
+                    "code": "2",
+                    "name": "剩余电流互感器直接联动脱扣"
+                },
+                {
+                    "code": "3",
+                    "name": "剩余电流互感器通过主机联动脱扣"
+                },
+                {
+                    "code": "99",
+                    "name": "其他"
+                }
+            ]
+        },
+        {
+            "code": "localId",
+            "name": "设备本地编码",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "基本参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "localName",
+            "name": "设备本地名称",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "基本参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "localRemoteSet",
+            "name": "本地远程控制",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "设定参数",
+            "originDataType": "Boolp",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "本地"
+                },
+                {
+                    "code": "1",
+                    "name": "远程"
+                }
+            ]
+        },
+        {
+            "code": "localRemoteStatus",
+            "name": "本地远程状态",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "运行参数",
+            "originDataType": "Boolv",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "本地"
+                },
+                {
+                    "code": "1",
+                    "name": "远程"
+                }
+            ]
+        },
+        {
+            "code": "logicalAddress",
+            "name": "协议地址",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "技术参数",
+            "secondTag": "通讯地址",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "luminanceSet",
+            "name": "亮度设定值",
+            "classCode": "LTLTCC",
+            "unit": "cd/㎡",
+            "scale": 1,
+            "firstTag": "设定参数",
+            "secondTag": "",
+            "originDataType": "Num",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "maintainProContact",
+            "name": "维保商联系方式",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "maintainProvider",
+            "name": "维保商",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "major",
+            "name": "所属专业",
+            "classCode": "LTLTCC",
+            "firstTag": "技术参数",
+            "secondTag": "",
+            "originDataType": "Enum",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "SE",
+                    "name": "强电专业"
+                },
+                {
+                    "code": "WE",
+                    "name": "弱电专业"
+                },
+                {
+                    "code": "AC",
+                    "name": "空调专业"
+                },
+                {
+                    "code": "WS",
+                    "name": "给排水专业"
+                },
+                {
+                    "code": "FF",
+                    "name": "消防专业"
+                },
+                {
+                    "code": "SP",
+                    "name": "安防专业"
+                },
+                {
+                    "code": "CF",
+                    "name": "土建精装专业"
+                },
+                {
+                    "code": "LT",
+                    "name": "照明专业"
+                },
+                {
+                    "code": "FG",
+                    "name": "燃气专业"
+                },
+                {
+                    "code": "EL",
+                    "name": "电梯专业"
+                },
+                {
+                    "code": "TP",
+                    "name": "热能动力专业"
+                },
+                {
+                    "code": "CU",
+                    "name": "餐饮专业"
+                }
+            ]
+        },
+        {
+            "code": "majorTechParams",
+            "name": "主要技术参数",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "manualAutoSet",
+            "name": "手自动状态设定",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "设定参数",
+            "originDataType": "Boolp",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "手动"
+                },
+                {
+                    "code": "1",
+                    "name": "自动"
+                }
+            ]
+        },
+        {
+            "code": "manualAutoStatus",
+            "name": "手自动状态",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "运行参数",
+            "originDataType": "Boolv",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "手动"
+                },
+                {
+                    "code": "1",
+                    "name": "自动"
+                }
+            ]
+        },
+        {
+            "code": "manualNum",
+            "name": "人工编号",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "manufacturer",
+            "name": "生产厂家名称",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "生产厂家",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "modelElevation",
+            "name": "模型标高",
+            "classCode": "LTLTCC",
+            "unit": "mm",
+            "firstTag": "技术参数",
+            "secondTag": "",
+            "originDataType": "Num",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "nameplate",
+            "name": "设备铭牌照片",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "照片文档",
+            "originDataType": "Pic",
+            "dataType": "PIC",
+            "dataSources": []
+        },
+        {
+            "code": "onlineStatus",
+            "name": "在线状态",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "运行参数",
+            "originDataType": "Boolv",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "离线"
+                },
+                {
+                    "code": "1",
+                    "name": "在线"
+                }
+            ]
+        },
+        {
+            "code": "openTimeCount",
+            "name": "开启时间计时",
+            "classCode": "LTLTCC",
+            "unit": "h",
+            "scale": 1,
+            "firstTag": "运行参数",
+            "secondTag": "运行时间",
+            "originDataType": "Accd",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "orderFailAlarm",
+            "name": "状态反馈与指令不符报警",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "事件消息",
+            "secondTag": "报警消息",
+            "originDataType": "Boolp",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "正常"
+                },
+                {
+                    "code": "1",
+                    "name": "报警"
+                }
+            ]
+        },
+        {
+            "code": "outline",
+            "name": "轮廓线",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "基本参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "pic",
+            "name": "设备照片",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "照片文档",
+            "originDataType": "Pic",
+            "dataType": "PIC",
+            "dataSources": []
+        },
+        {
+            "code": "productDate",
+            "name": "生产日期",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "生产厂家",
+            "originDataType": "DTime",
+            "dataType": "DATETIME",
+            "dataSources": []
+        },
+        {
+            "code": "protocol",
+            "name": "通讯协议",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "技术参数",
+            "secondTag": "协议",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "purchasePrice",
+            "name": "采购价格",
+            "classCode": "LTLTCC",
+            "unit": "元",
+            "scale": 2,
+            "firstTag": "台账参数",
+            "secondTag": "供应购买",
+            "originDataType": "Num",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "qRCodePic",
+            "name": "二维码图片",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "originDataType": "Pic",
+            "dataType": "PIC",
+            "dataSources": []
+        },
+        {
+            "code": "quantity",
+            "name": "数量",
+            "classCode": "LTLTCC",
+            "unit": "个",
+            "firstTag": "台账参数",
+            "secondTag": "",
+            "originDataType": "NumInt",
+            "dataType": "INTEGER",
+            "dataSources": []
+        },
+        {
+            "code": "remark",
+            "name": "备注说明",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "residualsValueRate",
+            "name": "净残值率",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "scale": 2,
+            "firstTag": "台账参数",
+            "secondTag": "运行维保",
+            "originDataType": "Num",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "runMode",
+            "name": "运行模式",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "运行参数",
+            "originDataType": "Enumv",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "99",
+                    "name": "其他"
+                }
+            ]
+        },
+        {
+            "code": "runModeSet",
+            "name": "运行模式设定",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "设定参数",
+            "originDataType": "Enump",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "99",
+                    "name": "其他"
+                }
+            ]
+        },
+        {
+            "code": "runStatus",
+            "name": "运行状态",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "运行参数",
+            "originDataType": "Boolv",
+            "dataType": "BOOLEAN",
+            "dataSources": [
+                {
+                    "code": "0",
+                    "name": "停止"
+                },
+                {
+                    "code": "1",
+                    "name": "运行"
+                }
+            ]
+        },
+        {
+            "code": "secSysEquipName",
+            "name": "二级子系统或设备名称",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "serialNum",
+            "name": "出厂编号",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "生产厂家",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "serviceAreaType",
+            "name": "服务区域类型",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "技术参数",
+            "secondTag": "",
+            "originDataType": "Enum",
+            "dataType": "ENUM",
+            "dataSources": [
+                {
+                    "code": "1",
+                    "name": "室内公区"
+                },
+                {
+                    "code": "2",
+                    "name": "室内停车场"
+                },
+                {
+                    "code": "3",
+                    "name": "室外楼体"
+                },
+                {
+                    "code": "4",
+                    "name": "室外景观"
+                },
+                {
+                    "code": "5",
+                    "name": "室外标识"
+                },
+                {
+                    "code": "99",
+                    "name": "其他"
+                }
+            ]
+        },
+        {
+            "code": "serviceLife",
+            "name": "使用寿命",
+            "classCode": "LTLTCC",
+            "unit": "年",
+            "scale": 1,
+            "firstTag": "台账参数",
+            "secondTag": "运行维保",
+            "originDataType": "Num",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "skeletonLine",
+            "name": "骨架线",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "specification",
+            "name": "设备型号",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "生产厂家",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "startDate",
+            "name": "投产日期",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "运行维保",
+            "originDataType": "DTime",
+            "dataType": "DATETIME",
+            "dataSources": []
+        },
+        {
+            "code": "supplier",
+            "name": "供应商单位名称",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "供应购买",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "supplierPhone",
+            "name": "供应商联系电话",
+            "classCode": "LTLTCC",
+            "unit": "",
+            "firstTag": "台账参数",
+            "secondTag": "供应购买",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "systemCode",
+            "name": "系统编号",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "systemEquipCategory",
+            "name": "系统或设备类别",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "thirdSysEquipName",
+            "name": "三级子系统或设备名称",
+            "classCode": "LTLTCC",
+            "firstTag": "基本参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        },
+        {
+            "code": "u",
+            "name": "工作电压",
+            "classCode": "LTLTCC",
+            "unit": "V",
+            "scale": 1,
+            "firstTag": "运行参数",
+            "secondTag": "整机",
+            "originDataType": "Inst",
+            "dataType": "DOUBLE",
+            "dataSources": []
+        },
+        {
+            "code": "useIllustration",
+            "name": "用途说明",
+            "classCode": "LTLTCC",
+            "firstTag": "台账参数",
+            "secondTag": "",
+            "originDataType": "Str",
+            "dataType": "STRING",
+            "dataSources": []
+        }
+    ],
+    "message": null,
+    "timestamp": "1719821355336"
+}

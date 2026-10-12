@@ -1,0 +1,9 @@
+export const OVERALL_LAYOUT = 'layout';
+export const DETAIL_ADJUSTMENT = 'adjust';
+export const EQUIPMENTNODE = 'equipmentNode';
+export const PASSBY = 'passBy';
+export const ERRORMESSAGE = '操作失败';
+export const SUCCESSMESSAGE = '操作成功';
+export const SUCCESSCODE = '00000';
+export const LAYOUTSELD_GRAPH_CLASSCODE = ['SELD'];
+export const CUSTOM_CONTAINER_CLASS = 'CUSTOM_CONTAINER_CLASS';

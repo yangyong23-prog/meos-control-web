@@ -1,0 +1,80 @@
+{
+    "data": {
+        "summary": {
+            "total": 100,
+            "openCount": 2,
+            "closeCount": 3,
+            "unConfigCount": 4
+        },
+        "circuitSettings": [
+            {
+                "circuitId": "999",
+                "circuitLocalId": "回路本地编码",
+                "circuitLocalName": "回路本地名称",
+                "funcType": "回路功能类型",
+                "funcTypeName": "回路功能类型名称",
+                "lampFuncType": "回路灯具类型",
+                "lampFuncTypeName": "回路灯具类型名称",
+                "settingMode": "OPEN",
+                "sceneModes": [
+                    {
+                        "sceneId": "s1",
+                        "sceneName": "场景1",
+                        "sceneMode": "ALL"
+                    },
+                    {
+                        "sceneId": "s2",
+                        "sceneName": "场景2",
+                        "sceneMode": "OPEN"
+                    },
+                    {
+                        "sceneId": "s3",
+                        "sceneName": "场景3",
+                        "sceneMode": "CLOSE"
+                    }
+                ]
+            },
+            {
+                "circuitId": "999",
+                "circuitLocalId": "回路本地编码",
+                "circuitLocalName": "回路本地名称",
+                "funcType": "回路功能类型",
+                "funcTypeName": "回路功能类型名称",
+                "lampFuncType": "回路灯具类型",
+                "lampFuncTypeName": "回路灯具类型名称",
+                "settingMode": "OPEN",
+                "sceneModes": [
+                    {
+                        "sceneId": "s1",
+                        "sceneName": "场景1",
+                        "sceneMode": "ALL"
+                    },
+                    {
+                        "sceneId": "s2",
+                        "sceneName": "场景2",
+                        "sceneMode": "OPEN"
+                    },
+                    {
+                        "sceneId": "s3",
+                        "sceneName": "场景3",
+                        "sceneMode": "CLOSE"
+                    }
+                ]
+            }
+        ]
+    },
+    "cause": "string",
+    "code": "00000",
+    "count": "string",
+    "defExec": true,
+    "extra": "string",
+    "includeColumns": "string",
+    "isFail": true,
+    "isSuccess": true,
+    "message": "string",
+    "result": "success",
+    "timestamp": 0,
+    "total": 100,
+    "traceId": "string",
+    "withColumns": "string"
+}

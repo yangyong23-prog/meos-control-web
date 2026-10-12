@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Content-Security-Policy" />
+        <script  src="/yiheng-common-web/static/env/apm.env.js"></script>
+        <script defer src="/meos-control-web/video-sdk/h5player.min.js"></script>
+        <script defer src="/meos-control-web/dahua-rtsp-sdk/scripts/videoPlayer.js"></script>
+        <script defer src="/meos-control-web/video-sdk/hik-rtsp/webVideoCtrl.js"></script>
+        <script>
+            let _loadStyles = function() {
+                let prefix = window.apmCommonEnv ? window.apmCommonEnv.INTERFACE_PREFIX_APM_STATIC_CONFIG : undefined;
+                let createLink = function(url, id) {
+                    let urlLink = document.createElement('link');
+                    urlLink.rel='stylesheet';
+                    urlLink.id = id;
+                    urlLink.href=url;
+                    document.head.prepend(urlLink);
+                }
+                let isLinkExists = function(id) {
+                    let node = document.querySelector('link[id="' + id + '"]');
+                    return node === null;
+                }
+                if (prefix !== undefined) {
+                    isLinkExists("fontcss") && createLink(`${prefix}/styles/font/font.css`, 'fontcss');
+                }
+            }
+            _loadStyles();
+        </script>
+        <title><%- title -%></title>
+        <% cdnList.forEach(function(cdn) { %> <%- `
+        <script src="${cdn}"></script>
+        ` -%> <% }) %>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script type="module" src="./src/main.ts"></script>
+    </body>
+</html>

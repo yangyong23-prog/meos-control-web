@@ -1,0 +1,42 @@
+.hello {
+    color: var(--red-500);
+}
+.ys-equip-icon-warp {
+    pointer-events: none;
+    .ys-icon-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        overflow: hidden;
+        transition: width 0.2s, height 0.2s, border-radius 0.2s;
+    }
+    .ys-group-count {
+        width: 24px;
+        height: 24px;
+        pointer-events: auto;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Microsoft YaHei';
+        font-style: normal;
+        font-weight: 700;
+        color: #ffffff;
+        font-size: 12px;
+        border: 1px solid #ffffff;
+    }
+    .ys-equip-icon-txt {
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 12px;
+        text-overflow: ellipsis;
+        pointer-events: auto;
+        transform: translateX(-50%);
+        text-shadow: 1px 0 0 #ffffff, 0 1px 0 #ffffff, -1px 0 0 #ffffff, 0 -1px 0 #ffffff;
+    }
+}

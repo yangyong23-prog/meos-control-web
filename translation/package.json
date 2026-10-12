@@ -1,0 +1,22 @@
+{
+  "name": "translation",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "findChinese": "node ./sh/findChineseToExcel.js",
+    "generateKey": "node ./sh/generateKeyExcel.js",
+    "invalid": "node ./sh/invalidkey.js",
+    "generateJson": "node ./sh/generateJson.js",
+    "translateByDir": "node ./sh/translateByDir.mjs",
+    "translateByExcel": "node ./sh/translateByExcel.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "lodash": "^4.17.21",
+    "xlsx": "^0.18.5"
+  }
+}

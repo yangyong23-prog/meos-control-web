@@ -1,0 +1,289 @@
+<template>
+    <m-modal
+        v-model:visible="showSpaceType"
+        :append-to="$modalAppendTo"
+        :escable="false"
+        type="default"
+        modal-class-name="space-funcType-modal"
+        :content-class-name="'space-funcType-content-modal'"
+        :title="name"
+        width="420"
+        height="500"
+        @close="close"
+    >
+        <template #content>
+            <div v-if="spaceDataTree.length" class="content-container">
+                <m-input
+                    v-model="keyword"
+                    :clearable="true"
+                    prefix-icon="IconMeriActionSearch"
+                    class="search-input"
+                    :width="388"
+                    :placeholder="i18n.global.t('meos_control_web.search')"
+                >
+                </m-input>
+
+                <m-scrollbar max-height="430px">
+                    <m-tree
+                        ref="treeRef"
+                        v-model="temporarily"
+                        :search-as-tree="true"
+                        :data="spaceDataTree"
+                        multiple
+                        class="tree-container"
+                        :filter-node-method="filterNodeMethod"
+                        :filter-value="keyword"
+                        @change="architectureTreeChange"
+                    >
+                    </m-tree>
+                </m-scrollbar>
+            </div>
+            <div v-else-if="spaceDataTree.length === 0 && !modalLoading" class="no-data">
+                <m-illustration :title="i18n.global.t('meos_control_web.no_configurable_content')" type="noContent" content=""> </m-illustration>
+            </div>
+        </template>
+        <template #footer>
+            <m-button type="default" @click.stop="close">{{ i18n.global.t('common.cancel') }}</m-button>
+            <m-tips theme="darkTransparent" :disabled="!modalLoading" :content="i18n.global.t('meos_control_web.loading_please_wait_alt')" placement="top">
+                <m-button type="primary" :disabled="modalLoading" @click.stop="sureArchitecture">{{ i18n.global.t('common.confirm') }}</m-button>
+            </m-tips>
+        </template>
+    </m-modal>
+</template>
+<script setup>
+import { MLoading, $Message } from 'meri-plus';
+import { getTreeSpaceRoomFuncTypes } from '@/apis/DemandManagementHomeNew';
+import { findMatchingNodes } from '@/utils/viewUtils';
+import { filterTreeByLeafIds, handleTreeNodeOpen } from '@/utils/index';
+import { curMenuIdKey, globalLoopListKey, globalRoomFuncTypesKey, globalLoopRoomFuncTypesTreeKey } from '../../hooks/useGlobalData';
+import { leftTreeListKey } from '../../hooks/useConfigCommonHook';
+import { getLoopTreeIds, setRoomFuncTypeTree } from '../../utils/index';
+import { OBJECT_SELECT_TYPE } from '../../constant/index';
+import useStore from '@/store';
+import i18n from '@/localization';
+
+const globalLoopList = inject(globalLoopListKey);
+const globalRoomFuncTypes = inject(globalRoomFuncTypesKey);
+const globalSpaceRoomFuncTypeTree = inject(globalLoopRoomFuncTypesTreeKey);
+const templateType = inject(curMenuIdKey);
+const leftTreeList = inject(leftTreeListKey);
+const showSpaceType = ref(false);
+const nameArr = ref([]);
+const treeRef = ref(null);
+const isFound = ref(false);
+const temporarily = ref([]);
+const modalLoading = ref(false);
+const props = defineProps({
+    name: {
+        type: String,
+        default: i18n.global.t('meos_control_web.select_object_space_type')
+    },
+    ids: {
+        type: Array,
+        default: () => []
+    },
+    type: {
+        type: String,
+        default: ''
+    }
+});
+const { base } = useStore();
+const { projectId, projectName } = base;
+const spaceDataTree = ref([]);
+const emits = defineEmits(['close', 'nameObjFun']);
+const keyword = ref('');
+
+watchEffect(() => {
+    temporarily.value = [...props.ids];
+});
+const close = () => {
+    showSpaceType.value = false;
+    nextTick(() => {
+        emits('close');
+    });
+};
+
+const filterNodeMethod = (node, nodes, searchString) => {
+    console.log(node, nodes, searchString);
+    const { funcTypeName = '', name } = node || {};
+    return (name || funcTypeName)?.includes(searchString);
+};
+const sureArchitecture = () => {
+    if (modalLoading.value) {
+        return;
+    }
+    if (spaceDataTree.value.length === 0) {
+        close();
+        return;
+    }
+
+    if (temporarily.value && temporarily.value.length) {
+        nameArr.value = findMatchingNodes(spaceDataTree.value, temporarily.value);
+    }
+    if (!nameArr.value?.length) {
+        $Message.error({ title: i18n.global.t('meos_control_web.please_select_at_least_one_object') });
+        return;
+    }
+    const obj = {
+        arr: nameArr.value,
+        type: 'spaceType'
+    };
+    emits('nameObjFun', obj);
+    close();
+};
+
+const handleRoomFuncTypeData = data => {
+    let result = [],
+        cloneData;
+    if (globalSpaceRoomFuncTypeTree.value.length) {
+        result = globalSpaceRoomFuncTypeTree.value;
+    } else {
+        // 过滤仅回路服务空间的空间功能类型
+        const { roomFuncTypeIds } = getLoopTreeIds(globalLoopList.value);
+        result = setRoomFuncTypeTree(data, roomFuncTypeIds);
+    }
+
+    const filteredArray = leftTreeList?.value.filter(item => item.objectType === OBJECT_SELECT_TYPE.ROOM_FUNC_TYPE);
+
+    if (props.type === 'edit') {
+        const filterIds = filteredArray[0]?.relInstanceIds?.filter(v => !temporarily.value.includes(v)) || [];
+        const cacheTree = filterTreeByLeafIds(result, {
+            leafIds: filterIds,
+            isExclude: true,
+            matchMap: [
+                ['funcType', 'id'],
+                ['funcTypeName', 'name']
+            ],
+            idKey: 'funcType'
+        });
+
+        cloneData = cacheTree;
+    } else {
+        const filterIds = filteredArray[0]?.relInstanceIds || [];
+        // const tempTree = filterTree(data, filteredArray[0]?.relInstanceIds);
+        const cacheTree = filterTreeByLeafIds(result, {
+            leafIds: filterIds,
+            isExclude: true,
+            matchMap: [
+                ['funcType', 'id'],
+                ['funcTypeName', 'name']
+            ],
+            idKey: 'funcType'
+        });
+        cloneData = cacheTree;
+    }
+    // 添加项目树根节点
+    if (Array.isArray(cloneData) && cloneData?.length) {
+        spaceDataTree.value = [
+            {
+                id: projectId || 'projectId',
+                name: projectName || i18n.global.t('meos_control_web.project_name'),
+                children: cloneData,
+                instanceType: 'PROJECT',
+                open: true
+            }
+        ];
+        isFound.value = false;
+        nextTick(() => {
+            if (Array.isArray(treeRef.value?.data)) {
+                // 默认展开层级为1的节点
+                treeRef.value?.data?.forEach(item => {
+                    handleTreeNodeOpen(item, { lv: 0 });
+                });
+            }
+        });
+    }
+};
+
+//查询建筑楼层空间树
+const getTreeBuildingFloorSpaceFuc = loading => {
+    if (globalRoomFuncTypes.value?.length) {
+        handleRoomFuncTypeData(globalRoomFuncTypes.value);
+        return;
+    }
+    let Mloading = null;
+    if (loading) {
+        modalLoading.value = true;
+        Mloading = MLoading.service({
+            target: '.m-modal-main-content',
+            fullscreen: false,
+            duration: 30000,
+            lottieName: 'ball',
+            loadIconStyle: {
+                width: '100px',
+                height: '100px'
+            },
+            background: 'transparent'
+        });
+    }
+    getTreeSpaceRoomFuncTypes({
+        templateType: templateType.value
+    })
+        .then(res => {
+            const { data, code } = res;
+
+            if (code === '00000') {
+                handleRoomFuncTypeData(data);
+            }
+            Mloading?.destroy();
+            modalLoading.value = false;
+        })
+        .finally(() => {
+            Mloading?.destroy();
+            modalLoading.value = false;
+        });
+};
+onMounted(() => {
+    showSpaceType.value = true;
+});
+
+watch(
+    showSpaceType,
+    curShow => {
+        if (curShow) {
+            getTreeBuildingFloorSpaceFuc(true);
+        }
+    },
+    {
+        immediate: true
+    }
+);
+</script>
+<style lang="less">
+.space-funcType-modal {
+    .m-tree {
+        min-height: 400px;
+        padding: 0px;
+    }
+
+    .search-input {
+        margin-bottom: 4px;
+    }
+
+    .space-funcType-content-modal.m-modal-main-content {
+        min-height: 400px;
+        padding-right: 0px !important;
+        padding-left: 16px !important;
+        padding-block: 16px !important;
+        .tree-container {
+            padding-right: 16px;
+        }
+    }
+}
+</style>
+<style lang="less" scoped>
+.highlight {
+    width: 270px;
+    ::v-deep span {
+        color: var(--primary-color);
+    }
+}
+
+.no-data {
+    min-height: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>

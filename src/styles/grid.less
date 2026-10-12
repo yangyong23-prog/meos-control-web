@@ -1,0 +1,54 @@
+/* 容器样式设置 */
+.m-container,
+.m-container-fluid {
+    padding-left: 15px; /* 设置padding是为了后面Column直接嵌套m-row预留 */
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.m-container *,
+.m-container-fluid * {
+    box-sizing: border-box;
+}
+.m-row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.mrow {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.m-row:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.mrow:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+[class*='m-col-'] {
+    float: left;
+    min-height: 1px;
+    padding: 0 15px;
+}
+[class*='mcol-'] {
+    float: left;
+    min-height: 1px;
+    padding: 0 15px;
+}
+
+.colfun(@n, @i: 1) when (@i =< @n) {
+    .m-col-@{i} {
+        width: (@i * 100% / @n);
+    }
+    .mcol-@{i} {
+        width: (@i * 100% / @n);
+    }
+    .colfun(@n, (@i + 1));
+}
+.colfun(12);

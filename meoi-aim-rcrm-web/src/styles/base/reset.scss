@@ -1,0 +1,60 @@
+/* stylelint-disable no-duplicate-selectors */
+body,
+div,
+dl,
+dd,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+legend,
+input,
+textarea,
+optgroup,
+p,
+blockquote,
+figure,
+hr,
+menu,
+dir,
+thead,
+tbody,
+tfoot,
+th,
+td,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+ul,
+ol {
+    list-style: none;
+}
+a img {
+    outline: none;
+}
+img {
+    vertical-align: middle;
+}
+i {
+    font-style: normal;
+}
+b {
+    font-weight: normal;
+}
+s,
+u {
+    text-decoration: none;
+}

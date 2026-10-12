@@ -1,0 +1,624 @@
+{
+    "code": "00000",
+    "result": "success",
+    "message": "aute dolor irure",
+    "data": {
+        "totalCount": 33,
+        "totalPage": 44,
+        "records": [
+            {
+                "id": "63",
+                "name": "器品作究",
+                "localId": "77",
+                "localName": "部需向小",
+                "objType": "laboris",
+                "classCode": "52",
+                "valid": true,
+                "basicInfos": {
+                    "relDistributionCabinet": {
+                        "id": "100",
+                        "name": "今此青劳派",
+                        "localId": "94",
+                        "localName": "选想层由或集",
+                        "objType": "mollit veniam dolore commodo",
+                        "classCode": "26",
+                        "valid": true
+                    },
+                    "relSpace": {
+                        "id": "96",
+                        "name": "却九常革",
+                        "localId": "56",
+                        "localName": "运约次实律",
+                        "objType": "consectetur officia elit",
+                        "classCode": "58",
+                        "valid": true
+                    }
+                },
+                "runningParameters": [
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    },
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    }
+                ],
+                "abnormalEventCount": 4,
+                "abnormalEvents":[
+                    {
+                        "duration":"2",
+                        "problemsName":"哈哈哈",
+                        "exceptionStartTime":"222"
+                    }
+                ]
+            },{
+                "id": "63",
+                "name": "器品作究",
+                "localId": "77",
+                "localName": "部需向小",
+                "objType": "laboris",
+                "classCode": "52",
+                "valid": true,
+                "basicInfos": {
+                    "relDistributionCabinet": {
+                        "id": "100",
+                        "name": "今此青劳派",
+                        "localId": "94",
+                        "localName": "选想层由或集",
+                        "objType": "mollit veniam dolore commodo",
+                        "classCode": "26",
+                        "valid": true
+                    },
+                    "relSpace": {
+                        "id": "96",
+                        "name": "却九常革",
+                        "localId": "56",
+                        "localName": "运约次实律",
+                        "objType": "consectetur officia elit",
+                        "classCode": "58",
+                        "valid": true
+                    }
+                },
+                "runningParameters": [
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    },
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    }
+                ],
+                "abnormalEventCount": 4
+            },{
+                "id": "63",
+                "name": "器品作究",
+                "localId": "77",
+                "localName": "部需向小",
+                "objType": "laboris",
+                "classCode": "52",
+                "valid": true,
+                "basicInfos": {
+                    "relDistributionCabinet": {
+                        "id": "100",
+                        "name": "今此青劳派",
+                        "localId": "94",
+                        "localName": "选想层由或集",
+                        "objType": "mollit veniam dolore commodo",
+                        "classCode": "26",
+                        "valid": true
+                    },
+                    "relSpace": {
+                        "id": "96",
+                        "name": "却九常革",
+                        "localId": "56",
+                        "localName": "运约次实律",
+                        "objType": "consectetur officia elit",
+                        "classCode": "58",
+                        "valid": true
+                    }
+                },
+                "runningParameters": [
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    },
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    }
+                ],
+                "abnormalEventCount": 4
+            },{
+                "id": "63",
+                "name": "器品作究",
+                "localId": "77",
+                "localName": "部需向小",
+                "objType": "laboris",
+                "classCode": "52",
+                "valid": true,
+                "basicInfos": {
+                    "relDistributionCabinet": {
+                        "id": "100",
+                        "name": "今此青劳派",
+                        "localId": "94",
+                        "localName": "选想层由或集",
+                        "objType": "mollit veniam dolore commodo",
+                        "classCode": "26",
+                        "valid": true
+                    },
+                    "relSpace": {
+                        "id": "96",
+                        "name": "却九常革",
+                        "localId": "56",
+                        "localName": "运约次实律",
+                        "objType": "consectetur officia elit",
+                        "classCode": "58",
+                        "valid": true
+                    }
+                },
+                "runningParameters": [
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    },
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    }
+                ],
+                "abnormalEventCount": 4
+            },{
+                "id": "63",
+                "name": "器品作究",
+                "localId": "77",
+                "localName": "部需向小",
+                "objType": "laboris",
+                "classCode": "52",
+                "valid": true,
+                "basicInfos": {
+                    "relDistributionCabinet": {
+                        "id": "100",
+                        "name": "今此青劳派",
+                        "localId": "94",
+                        "localName": "选想层由或集",
+                        "objType": "mollit veniam dolore commodo",
+                        "classCode": "26",
+                        "valid": true
+                    },
+                    "relSpace": {
+                        "id": "96",
+                        "name": "却九常革",
+                        "localId": "56",
+                        "localName": "运约次实律",
+                        "objType": "consectetur officia elit",
+                        "classCode": "58",
+                        "valid": true
+                    }
+                },
+                "runningParameters": [
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    },
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    }
+                ],
+                "abnormalEventCount": 4
+            },{
+                "id": "63",
+                "name": "器品作究",
+                "localId": "77",
+                "localName": "部需向小",
+                "objType": "laboris",
+                "classCode": "52",
+                "valid": true,
+                "basicInfos": {
+                    "relDistributionCabinet": {
+                        "id": "100",
+                        "name": "今此青劳派",
+                        "localId": "94",
+                        "localName": "选想层由或集",
+                        "objType": "mollit veniam dolore commodo",
+                        "classCode": "26",
+                        "valid": true
+                    },
+                    "relSpace": {
+                        "id": "96",
+                        "name": "却九常革",
+                        "localId": "56",
+                        "localName": "运约次实律",
+                        "objType": "consectetur officia elit",
+                        "classCode": "58",
+                        "valid": true
+                    }
+                },
+                "runningParameters": [
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    },
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    }
+                ],
+                "abnormalEventCount": 4
+            },{
+                "id": "63",
+                "name": "器品作究",
+                "localId": "77",
+                "localName": "部需向小",
+                "objType": "laboris",
+                "classCode": "52",
+                "valid": true,
+                "basicInfos": {
+                    "relDistributionCabinet": {
+                        "id": "100",
+                        "name": "今此青劳派",
+                        "localId": "94",
+                        "localName": "选想层由或集",
+                        "objType": "mollit veniam dolore commodo",
+                        "classCode": "26",
+                        "valid": true
+                    },
+                    "relSpace": {
+                        "id": "96",
+                        "name": "却九常革",
+                        "localId": "56",
+                        "localName": "运约次实律",
+                        "objType": "consectetur officia elit",
+                        "classCode": "58",
+                        "valid": true
+                    }
+                },
+                "runningParameters": [
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    },
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    }
+                ],
+                "abnormalEventCount": 4
+            },{
+                "id": "63",
+                "name": "器品作究",
+                "localId": "77",
+                "localName": "部需向小",
+                "objType": "laboris",
+                "classCode": "52",
+                "valid": true,
+                "basicInfos": {
+                    "relDistributionCabinet": {
+                        "id": "100",
+                        "name": "今此青劳派",
+                        "localId": "94",
+                        "localName": "选想层由或集",
+                        "objType": "mollit veniam dolore commodo",
+                        "classCode": "26",
+                        "valid": true
+                    },
+                    "relSpace": {
+                        "id": "96",
+                        "name": "却九常革",
+                        "localId": "56",
+                        "localName": "运约次实律",
+                        "objType": "consectetur officia elit",
+                        "classCode": "58",
+                        "valid": true
+                    }
+                },
+                "runningParameters": [
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    },
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    }
+                ],
+                "abnormalEventCount": 4
+            },{
+                "id": "63",
+                "name": "器品作究",
+                "localId": "77",
+                "localName": "部需向小",
+                "objType": "laboris",
+                "classCode": "52",
+                "valid": true,
+                "basicInfos": {
+                    "relDistributionCabinet": {
+                        "id": "100",
+                        "name": "今此青劳派",
+                        "localId": "94",
+                        "localName": "选想层由或集",
+                        "objType": "mollit veniam dolore commodo",
+                        "classCode": "26",
+                        "valid": true
+                    },
+                    "relSpace": {
+                        "id": "96",
+                        "name": "却九常革",
+                        "localId": "56",
+                        "localName": "运约次实律",
+                        "objType": "consectetur officia elit",
+                        "classCode": "58",
+                        "valid": true
+                    }
+                },
+                "runningParameters": [
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    },
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    }
+                ],
+                "abnormalEventCount": 4
+            },{
+                "id": "63",
+                "name": "器品作究",
+                "localId": "77",
+                "localName": "部需向小",
+                "objType": "laboris",
+                "classCode": "52",
+                "valid": true,
+                "basicInfos": {
+                    "relDistributionCabinet": {
+                        "id": "100",
+                        "name": "今此青劳派",
+                        "localId": "94",
+                        "localName": "选想层由或集",
+                        "objType": "mollit veniam dolore commodo",
+                        "classCode": "26",
+                        "valid": true
+                    },
+                    "relSpace": {
+                        "id": "96",
+                        "name": "却九常革",
+                        "localId": "56",
+                        "localName": "运约次实律",
+                        "objType": "consectetur officia elit",
+                        "classCode": "58",
+                        "valid": true
+                    }
+                },
+                "runningParameters": [
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    },
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    }
+                ],
+                "abnormalEventCount": 4
+            },{
+                "id": "63",
+                "name": "器品作究",
+                "localId": "77",
+                "localName": "部需向小",
+                "objType": "laboris",
+                "classCode": "52",
+                "valid": true,
+                "basicInfos": {
+                    "relDistributionCabinet": {
+                        "id": "100",
+                        "name": "今此青劳派",
+                        "localId": "94",
+                        "localName": "选想层由或集",
+                        "objType": "mollit veniam dolore commodo",
+                        "classCode": "26",
+                        "valid": true
+                    },
+                    "relSpace": {
+                        "id": "96",
+                        "name": "却九常革",
+                        "localId": "56",
+                        "localName": "运约次实律",
+                        "objType": "consectetur officia elit",
+                        "classCode": "58",
+                        "valid": true
+                    }
+                },
+                "runningParameters": [
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    },
+                    {
+                        "infoCode": "75",
+                        "updateTime":"2023-12-12",
+                        "infoCodeName": "影权民节音张",
+                        "dataSource": [
+                            {
+                                "code": "00000",
+                                "name": "队色取关里千"
+                            }
+                        ],
+                        "infoCodeValue": "29"
+                    }
+                ],
+                "abnormalEventCount": 4
+            }
+        ]
+    }
+}

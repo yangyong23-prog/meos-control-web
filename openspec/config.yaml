@@ -1,0 +1,52 @@
+schema: spec-driven
+
+# 项目上下文
+# 此内容会在创建产物流程时展示给 AI 助手。
+# 添加技术栈、编码规范、领域知识等信息。
+context: |
+    语言：中文（简体）
+    所有产出物必须用简体中文撰写。
+
+    项目概述：
+    - 项目名称：meos-control-web
+    - 项目类型：企业级多应用前端工作区（Brownfield 项目）
+    - 主应用位于 src/ 目录，支持独立运行和 Qiankun 微前端嵌入
+
+    技术栈：
+    - 语言：TypeScript 5.x
+    - 框架：Vue 3（Composition API + `<script setup>`）
+    - 构建工具：Vite
+    - 包管理器：pnpm 8+
+    - 运行时：Node.js 20+
+    - UI 组件库：meri-plus、meri-icon
+    - 国际化：@/localization（locales/langs/zh.json、locales/langs/en.json）
+
+    项目结构：
+    - src/：主 Vue 3 + Vite 应用
+    - meoi-aim-rcrm-web/：独立的 Vue 3 + Webpack 5 遗留应用
+    - operation-duty-homepage/：独立的 Vue 3 + Vite 应用（模块联邦）
+    - meos-daily-report-web/：独立的 React + Vite 应用
+
+    编码规范：
+    - 使用 Composition API 和 `<script setup>` 语法（除非明确要求 Options API）
+    - 遵循项目现有的组件模式和文件结构
+    - UI 文本使用国际化，禁止硬编码
+    - 复用现有 UI 库和组件模式
+    - 修改限于目标应用范围，避免跨应用影响
+
+# 产物流程规则（可选）
+# 为特定产物流程添加自定义规则。
+rules:
+    proposal:
+        - 提案保持结构清晰、重点突出，字数建议控制在 600 字以内
+        - 明确说明影响范围（哪些应用受影响）
+    specs:
+        - 使用 Given/When/Then 格式描述场景
+        - 使用 RFC 2119 关键词（应当/必须/可以）
+    tasks:
+        - 每个任务必须有明确的完成标准
+        - 标注任务依赖关系
+    design:
+        - 记录关键技术决策和权衡
+        - 说明与现有架构的兼容性
+        - 包含回滚方案（如适用）

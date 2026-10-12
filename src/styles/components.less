@@ -1,0 +1,132 @@
+.m-button.bg-blue {
+    background: var(--blue-500);
+}
+.m-messagebox .m-messagebox__footer .m-button.loading .loading-icon {
+    position: relative;
+}
+
+// meri-plus 升级到4.1.0 此修改不需要
+// .m-time-picker-main-button > .m-button:nth-child(1) {
+//     margin-right: 0;
+// }
+// .m-time-picker-main-button {
+//     .m-button + .m-button {
+//         margin-left: 12px;
+//     }
+// }
+.m-radio {
+    margin-right: 16px;
+}
+[class^='m-'].disabled.m-time-picker-trigger {
+    border: 1px solid var(--gray-400);
+}
+.m-messagebox .m-messagebox__footer .m-button {
+    width: max-content;
+}
+.light-popover-wrap {
+    padding: 4px !important;
+}
+.input-wrap-select-box {
+    width: 282px !important;
+}
+.common-input-wrap-select-box {
+    width: 260px !important;
+}
+.loop-module-list-wrap .meri-table .meri-table-body {
+    .m-scrollbar__box.m-scrollbar__box--hidden-default > div > table > tbody > tr:hover {
+        .light-loop-control-hover-active {
+            color: @blue-500 !important;
+            cursor: pointer;
+        }
+    }
+}
+.light-loop-module-popover-wrap {
+    padding: 8px 0 8px 8px !important;
+}
+.loop-module-list-wrap .loop-list-wrap .meri-table-tooltips {
+    bottom: calc(100% + 4px);
+    z-index: var(--z-index-table-tooltip) !important;
+    left: -1px;
+}
+
+// .loop-module-list-wrap .loop-list-wrap .meri-table {
+//     border-left: none;
+//     .meri-table-element {
+//         border-left: 1px solid @grey-300;
+//     }
+// }
+.manual-custom-wrap textarea {
+    resize: none;
+}
+.text-hide {
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.modal-content-wrap-custom {
+    padding: 0 !important;
+}
+.manual-intervention-child-info-popover {
+    padding: 0 !important;
+}
+.parameter-determination-tips-wrap {
+    padding: 0 !important;
+}
+.m-message .message-item {
+    padding: 6px 120px 6px 16px;
+}
+.m-checkbox-label {
+    user-select: none;
+}
+
+// meos-frame 的子应用根节点已避开框架头部，抽屉无需再次预留 48px。
+#app[data-frame-source='meos-frame'] {
+    min-width: 1280px;
+    position: relative;
+    overflow: hidden;
+    .m-drawer.m-drawer-inner {
+        position: absolute;
+    }
+    .m-drawer-mask,
+    .m-drawer-container {
+        top: 0 !important;
+    }
+    .m-drawer-container {
+        height: 100% !important;
+    }
+    .m-modal-bg {
+        position: absolute;
+    }
+    .m-modal-bg .m-modal-main {
+        position: absolute;
+    }
+    .m-modal-bg .m-modal-full {
+        position: absolute;
+    }
+}
+.no-scrollbar-bar.m-scrollbar .m-scrollbar__bar {
+    opacity: 0;
+}
+.has-btn-input-number {
+    /* stylelint-disable-next-line selector-class-pattern */
+    .m-input-number-rightButton {
+        padding-right: 0;
+    }
+    input {
+        &::-webkit-inner-spin-button {
+            height: 32px;
+            background-color: var(--gray-0);
+            -webkit-appearance: push-button;
+            cursor: pointer;
+        }
+    }
+}
+/* stylelint-disable-next-line selector-class-pattern */
+.m-input-num.m-input-num-rightButton {
+    padding: 0;
+    /* stylelint-disable-next-line selector-class-pattern */
+    .m-input-num-rightButton {
+        // background-color: #ffffff;
+    }
+}

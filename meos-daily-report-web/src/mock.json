@@ -1,0 +1,366 @@
+{
+  "reportDate": "2025.08.27",
+  "overview": {
+    "electricity": { "current": 32500, "prev": 30000, "trend": 2.5, "monthlyTotal": 854230 },
+    "budget": { 
+      "rate": 80.0, 
+      "budget": 30000, 
+      "actual": 18000, 
+      "monthlyBudget": 1200000, 
+      "monthlyActual": 854230, 
+      "monthlyRate": 71, 
+      "monthlyBudgetUsedRate": 72,
+      "totalMonthBudget": 1500000 
+    },
+    "weather": { "temp": 30.5, "humidity": 75, "status": "小雨转晴", "tempRange": "29.4°C~32.8°C", "humidRange": "70%~90%" }
+  },
+  "acResults": {
+    "tempRate": 96.0,
+    "overCoolRooms": 40,
+    "longCoolRooms": 17,
+    "longHeatRooms": 15,
+    "overHeatRooms": 16,
+    "standard": "工作日",
+    "strategy": "费用最低",
+    "runStatusDescription": "冷站当日未运行",
+    "exceptionLogsEmptyMessage": "暂无设备异常",
+    "westPlant": { "plantName": "西区冷站", "runtime": "08:00-23:00", "rate": 96.0, "consumption": 20000, "trend": -2.3 },
+    "exceptionLogs": []
+  },
+  "ventilation": [
+    { "name": "机房后勤", "standard": "共12个空间执行工作日标准", "stats": [{ "label": "温度异常空间", "value": "3个" }, { "label": "O₂浓度异常", "value": "40个" }, { "label": "设备运行异常", "value": "5个" }] },
+    { "name": "卫生间", "standard": "共10个空间执行工作日标准", "stats": [{ "label": "NH₃异常空间", "value": "3个" }, { "label": "H₂S浓度异常", "value": "40个" }, { "label": "设备运行异常", "value": "5个" }] },
+    { "name": "穹顶", "standard": "共1个空间执行工作日标准", "stats": [{ "label": "温度异常空间", "value": "3个" }, { "label": "O₂浓度异常", "value": "40个" }, { "label": "设备运行异常", "value": "5个" }] }
+  ],
+  "lighting": [
+    { "name": "公共", "circuitCount": 100, "standard": "执行工作日标准，划分了5个场景时段", "stats": [{ "label": "人工控制次数", "value": "20次" }, { "label": "人工控制频发时段", "value": "营业前（00：00-07：00）" }] },
+    { "name": "停车场", "circuitCount": 100, "standard": "执行工作日标准，划分了5个场景时段", "stats": [{ "label": "人工控制次数", "value": "20次" }, { "label": "人工控制频发时段", "value": "营业前（00：00-07：00）" }] },
+    { "name": "楼体", "circuitCount": 100, "standard": "执行工作日标准，划分了5个场景时段", "stats": [{ "label": "人工控制次数", "value": "0次" }, { "label": "人工控制频发时段", "value": "营业前（00：00-07：00）" }] },
+    { "name": "景观", "circuitCount": 100, "standard": "执行工作日标准，划分了5个场景时段", "stats": [{ "label": "人工控制次数", "value": "20次" }, { "label": "人工控制频发时段", "value": "营业前（00：00-07：00）" }] }
+  ],
+  "lightingDetails": [
+    { 
+      "name": "公共", "standard": "执行工作日标准，划分了5个场景时段", "circuitCount": 100, "manualCount": 20, "deviceError": 0, "timeRange": "营业前（00：00-07：00）",
+      "savingRate": "12%", "autoRate": "98%",
+      "overrideData": [{ "scene": "营业前（00：00-07：00）", "count": "20次", "tag": "人工控制最多" }, { "scene": "营业中（07：00-22：00）", "count": "全按照明需求自动运行，未进行人工控制", "color": "text-[#0C9B4A]" }],
+      "exceptionLogs": [{ "time": "00:30:00", "device": "1#照明控制器", "action": "状态异常" }]
+    },
+    { 
+      "name": "停车场", "standard": "执行工作日标准，划分了5个场景时段", "circuitCount": 100, "manualCount": 20, "deviceError": 0, "timeRange": "营业前（00：00-07：00）",
+      "savingRate": "15%", "autoRate": "100%",
+      "overrideData": [{ "scene": "营业前（00：00-07：00）", "count": "20次", "tag": "人工控制最多" }],
+      "exceptionLogs": []
+    },
+    { 
+      "name": "楼体", "standard": "执行工作日标准，划分了5个场景时段", "circuitCount": 100, "manualCount": 0, "deviceError": 0, "timeRange": "无",
+      "savingRate": "8%", "autoRate": "95%",
+      "overrideData": [{ "scene": "营业前（00：00-07：00）", "count": "全按照明需求自动运行，未进行人工控制", "color": "text-[#0C9B4A]" }], "exceptionLogs": []
+    },
+    { 
+      "name": "景观", "standard": "执行工作日标准，划分了5个场景时段", "circuitCount": 100, "manualCount": 20, "deviceError": 0, "timeRange": "营业前（00：00-07：00）",
+      "savingRate": "10%", "autoRate": "92%",
+      "overrideData": [{ "scene": "营业前（00：00-07：00）", "count": "20次", "tag": "人工控制最多" }], "exceptionLogs": []
+    }
+  ],
+  "ventilationDetails": [
+    { 
+      "name": "机房后勤", "standard": "未配置运行标准", "fullDescription": "", "tempError": 3, "o2Error": 40, "nh3Error": 0, "h2sError": 0, "deviceError": 5,
+      "heatmapData": [
+        { "building": "禹数大楼A座", "floor": "1F", "name": "制冷间#1", "status": [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0] },
+        { "building": "禹数大楼A座", "floor": "2F", "name": "多功能会议室#1", "status": [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] }
+      ],
+      "offHoursEquipment": [{ "category": "送风机", "name": "B01送风机", "periods": "07:00-07:30", "duration": "0.5h", "spaces": "强电间#1、等10个空间" }],
+      "exceptionLogs": [{ "time": "00:30:00", "device": "1#排风机", "action": "状态异常" }]
+    },
+    { 
+      "name": "卫生间", "standard": "未配置运行标准", "fullDescription": "", "tempError": 0, "o2Error": 0, "nh3Error": 3, "h2sError": 40, "deviceError": 5,
+      "heatmapData": [{ "building": "禹数大楼A座", "floor": "1F", "name": "卫生间#1", "status": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] }],
+      "offHoursEquipment": [], 
+      "exceptionLogs": []
+    },
+    { 
+      "name": "穹顶", "standard": "未配置运行标准", "fullDescription": "", "tempError": 3, "o2Error": 40, "nh3Error": 0, "h2sError": 0, "deviceError": 5,
+      "heatmapData": [{ "building": "禹数大楼A座", "floor": "4F", "name": "穹顶区", "status": [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0] }],
+      "offHoursEquipment": [], 
+      "exceptionLogs": []
+    }
+  ],
+  "consumptionAnalysis": [
+    { "name": "公区", "today": 20000, "ratio": 60.0, "lastYear": 200000, "trend": 5.0, "monthly": 200000 },
+    { "name": "暖通空调", "today": 15000, "ratio": 40.0, "lastYear": 200000, "trend": 5.0, "monthly": 200000 },
+    { "name": "公共照明", "today": 2000, "ratio": 10.0, "lastYear": 200000, "trend": -4.0, "monthly": 200000 },
+    { "name": "电扶梯", "today": 2000, "ratio": 5.0, "lastYear": 200000, "trend": 5.0, "monthly": 200000 },
+    { "name": "给排水", "today": 1000, "ratio": 5.0, "lastYear": 200000, "trend": 5.0, "monthly": 200000 },
+    { "name": "其他", "today": 12180, "ratio": 40.0, "lastYear": 200000, "trend": -3.0, "monthly": 200000 }
+  ],
+  "energyBudget": [
+    { "name": "公区", "budget": 20000, "actual": 20000, "diff": 1000, "ratio": 110, "monthlyActual": 20000, "monthlyBudget": 20000, "monthlyRatio": 105 },
+    { "name": "暖通空调", "budget": 15000, "actual": 1500, "diff": -2000, "ratio": 90, "monthlyActual": 20000, "monthlyBudget": 20000, "monthlyRatio": 80 },
+    { "name": "公共照明", "budget": 2000, "actual": 2000, "diff": 2000, "ratio": 110, "monthlyActual": 20000, "monthlyBudget": 20000, "monthlyRatio": 80 },
+    { "name": "电扶梯", "budget": 2000, "actual": 2000, "diff": -1000, "ratio": 90, "monthlyActual": 20000, "monthlyBudget": 20000, "monthlyRatio": 105 },
+    { "name": "给排水", "budget": 1000, "actual": 2000, "diff": 0, "ratio": 100, "monthlyActual": 20000, "monthlyBudget": 20000, "monthlyRatio": 100 }
+  ],
+  "acDetails": {
+    "coolingAnalysis": [
+      { "time": "00:00", "actual": 16, "target": 16, "price": 1.6 },
+      { "time": "02:00", "actual": 18, "target": 20, "price": 1.6 },
+      { "time": "04:00", "actual": 12, "target": 15, "price": 1.6 },
+      { "time": "06:00", "actual": 22, "target": 22, "price": 1.6 },
+      { "time": "08:00", "actual": 28, "target": 28, "price": 1.6 },
+      { "time": "10:00", "actual": 28, "target": 28, "price": 1.6 },
+      { "time": "12:00", "actual": 26, "target": 26, "price": 1.6 },
+      { "time": "14:00", "actual": 28, "target": 28, "price": 1.6 },
+      { "time": "16:00", "actual": 30, "target": 28, "price": 1.6 },
+      { "time": "18:00", "actual": 28, "target": 28, "price": 0.8 },
+      { "time": "20:00", "actual": 24, "target": 26, "price": 0.8 },
+      { "time": "22:00", "actual": 22, "target": 24, "price": 0.8 },
+      { "time": "23:00", "actual": 29, "target": 28, "price": 0.8 }
+    ],
+    "envQuality": {
+      "description": "",
+      "totalRooms": 50, "tempPassRate": 96.5, "overCool": 40, "overHeat": 16, "longCool": 17, "longHeat": 15, "worstCool": "制冷间#1", "worstHeat": "强电间#1",
+      "heatmapData": [
+          { "floor": "1F", "name": "强电间#1", "status": [0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0] },
+          { "floor": "1F", "name": "制冷间#1", "status": [4, 4, 4, 3, 3, 3, 0, 0, 0, 0, 0, 0] },
+          { "floor": "1F", "name": "办公空间 1-1", "status": [0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+          { "floor": "2F", "name": "办公空间 1-2", "status": [0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+          { "floor": "3F", "name": "办公空间 1-3", "status": [0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+          { "floor": "4F", "name": "办公空间 1-4", "status": [0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+          { "floor": "5F", "name": "办公空间 1-5", "status": [0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+          { "floor": "6F", "name": "办公空间 1-6", "status": [0, 0, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0] }
+      ]
+    },
+    "coolingEnergyChart": [
+      {"time":"00:00","actualEnergy":2000,"predictedEnergy":1800,"actualCooling":2500,"predictedCooling":2300},
+      {"time":"01:00","actualEnergy":2050,"predictedEnergy":1850,"actualCooling":2550,"predictedCooling":2350},
+      {"time":"02:00","actualEnergy":2100,"predictedEnergy":1900,"actualCooling":2600,"predictedCooling":2400},
+      {"time":"03:00","actualEnergy":2150,"predictedEnergy":1950,"actualCooling":2650,"predictedCooling":2450},
+      {"time":"04:00","actualEnergy":2200,"predictedEnergy":2000,"actualCooling":2700,"predictedCooling":2500},
+      {"time":"05:00","actualEnergy":2300,"predictedEnergy":2100,"actualCooling":2800,"predictedCooling":2600},
+      {"time":"06:00","actualEnergy":2500,"predictedEnergy":2300,"actualCooling":3000,"predictedCooling":2800},
+      {"time":"07:00","actualEnergy":2800,"predictedEnergy":2600,"actualCooling":3300,"predictedCooling":3100},
+      {"time":"08:00","actualEnergy":3200,"predictedEnergy":3000,"actualCooling":3700,"predictedCooling":3500},
+      {"time":"09:00","actualEnergy":3600,"predictedEnergy":3400,"actualCooling":4100,"predictedCooling":3900},
+      {"time":"10:00","actualEnergy":4000,"predictedEnergy":3800,"actualCooling":4500,"predictedCooling":4300},
+      {"time":"11:00","actualEnergy":4400,"predictedEnergy":4200,"actualCooling":4900,"predictedCooling":4700},
+      {"time":"12:00","actualEnergy":4800,"predictedEnergy":4400,"actualCooling":4950,"predictedCooling":4750},
+      {"time":"13:00","actualEnergy":4900,"predictedEnergy":4500,"actualCooling":5000,"predictedCooling":4800},
+      {"time":"14:00","actualEnergy":5000,"predictedEnergy":4600,"actualCooling":5000,"predictedCooling":4800},
+      {"time":"15:00","actualEnergy":4800,"predictedEnergy":4400,"actualCooling":4900,"predictedCooling":4700},
+      {"time":"16:00","actualEnergy":4600,"predictedEnergy":4200,"actualCooling":4700,"predictedCooling":4500},
+      {"time":"17:00","actualEnergy":4200,"predictedEnergy":3800,"actualCooling":4300,"predictedCooling":4100},
+      {"time":"18:00","actualEnergy":3800,"predictedEnergy":3400,"actualCooling":3900,"predictedCooling":3700},
+      {"time":"19:00","actualEnergy":3400,"predictedEnergy":3000,"actualCooling":3500,"predictedCooling":3300},
+      {"time":"20:00","actualEnergy":3000,"predictedEnergy":2600,"actualCooling":3100,"predictedCooling":2900},
+      {"time":"21:00","actualEnergy":2600,"predictedEnergy":2200,"actualCooling":2700,"predictedCooling":2500},
+      {"time":"22:00","actualEnergy":2300,"predictedEnergy":1900,"actualCooling":2400,"predictedCooling":2200},
+      {"time":"23:00","actualEnergy":2100,"predictedEnergy":1850,"actualCooling":2300,"predictedCooling":2150}
+    ]
+  },
+  "coolingSystem": {
+     "energyChart": [
+       {"time":"00:00","totalEnergy":4000,"predictedEnergy":3200,"outdoorTemp":27},
+       {"time":"01:00","totalEnergy":4050,"predictedEnergy":3240,"outdoorTemp":27},
+       {"time":"02:00","totalEnergy":4100,"predictedEnergy":3280,"outdoorTemp":27},
+       {"time":"03:00","totalEnergy":4080,"predictedEnergy":3260,"outdoorTemp":26},
+       {"time":"04:00","totalEnergy":4020,"predictedEnergy":3210,"outdoorTemp":26},
+       {"time":"05:00","totalEnergy":4050,"predictedEnergy":3240,"outdoorTemp":26},
+       {"time":"06:00","totalEnergy":4100,"predictedEnergy":3280,"outdoorTemp":27},
+       {"time":"07:00","totalEnergy":5000,"predictedEnergy":4000,"outdoorTemp":30},
+       {"time":"08:00","totalEnergy":5100,"predictedEnergy":4080,"outdoorTemp":30},
+       {"time":"09:00","totalEnergy":5200,"predictedEnergy":4160,"outdoorTemp":31},
+       {"time":"10:00","totalEnergy":5300,"predictedEnergy":4240,"outdoorTemp":32},
+       {"time":"11:00","totalEnergy":5400,"predictedEnergy":4320,"outdoorTemp":33},
+       {"time":"12:00","totalEnergy":5500,"predictedEnergy":4400,"outdoorTemp":33},
+       {"time":"13:00","totalEnergy":5550,"predictedEnergy":4440,"outdoorTemp":34},
+       {"time":"14:00","totalEnergy":5500,"predictedEnergy":4400,"outdoorTemp":34},
+       {"time":"15:00","totalEnergy":5450,"predictedEnergy":4360,"outdoorTemp":33},
+       {"time":"16:00","totalEnergy":5400,"predictedEnergy":4320,"outdoorTemp":32},
+       {"time":"17:00","totalEnergy":5300,"predictedEnergy":4240,"outdoorTemp":31},
+       {"time":"18:00","totalEnergy":5200,"predictedEnergy":4160,"outdoorTemp":30},
+       {"time":"19:00","totalEnergy":4500,"predictedEnergy":3600,"outdoorTemp":29},
+       {"time":"20:00","totalEnergy":4400,"predictedEnergy":3520,"outdoorTemp":28},
+       {"time":"21:00","totalEnergy":4300,"predictedEnergy":3440,"outdoorTemp":28},
+       {"time":"22:00","totalEnergy":4200,"predictedEnergy":3360,"outdoorTemp":27},
+       {"time":"23:00","totalEnergy":4100,"predictedEnergy":3280,"outdoorTemp":27}
+     ],
+     "operationChart": [
+       {"time":"00:00","chiller1":30,"chiller2":30,"chiller3":20,"chiller4":25,"chiller5":35,"chiller6":30,"chiller7":25,"chiller8":32,"chiller9":30,"chiller10":28,"chiller11":35,"chiller12":25,"tempOut":7.5,"tempDiff":5.5,"pump1":45,"pump2":46,"pump3":42,"pump4":47,"pump5":45,"pump6":45,"pump7":46},
+       {"time":"01:00","chiller1":31,"chiller2":29,"chiller3":21,"chiller4":26,"chiller5":34,"chiller6":31,"chiller7":26,"chiller8":31,"chiller9":31,"chiller10":29,"chiller11":34,"chiller12":26,"tempOut":7.4,"tempDiff":5.6,"pump1":46,"pump2":45,"pump3":43,"pump4":46,"pump5":46,"pump6":44,"pump7":45},
+       {"time":"02:00","chiller1":30,"chiller2":30,"chiller3":20,"chiller4":25,"chiller5":35,"chiller6":30,"chiller7":25,"chiller8":32,"chiller9":30,"chiller10":28,"chiller11":35,"chiller12":25,"tempOut":7.5,"tempDiff":5.5,"pump1":45,"pump2":46,"pump3":42,"pump4":47,"pump5":45,"pump6":45,"pump7":46},
+       {"time":"03:00","chiller1":31,"chiller2":29,"chiller3":21,"chiller4":26,"chiller5":34,"chiller6":31,"chiller7":26,"chiller8":31,"chiller9":31,"chiller10":29,"chiller11":34,"chiller12":26,"tempOut":7.4,"tempDiff":5.6,"pump1":46,"pump2":45,"pump3":43,"pump4":46,"pump5":46,"pump6":44,"pump7":45},
+       {"time":"04:00","chiller1":30,"chiller2":30,"chiller3":20,"chiller4":25,"chiller5":35,"chiller6":30,"chiller7":25,"chiller8":32,"chiller9":30,"chiller10":28,"chiller11":35,"chiller12":25,"tempOut":7.5,"tempDiff":5.5,"pump1":45,"pump2":46,"pump3":42,"pump4":47,"pump5":45,"pump6":45,"pump7":46},
+       {"time":"05:00","chiller1":31,"chiller2":29,"chiller3":21,"chiller4":26,"chiller5":34,"chiller6":31,"chiller7":26,"chiller8":31,"chiller9":31,"chiller10":29,"chiller11":34,"chiller12":26,"tempOut":7.4,"tempDiff":5.6,"pump1":46,"pump2":45,"pump3":43,"pump4":46,"pump5":46,"pump6":44,"pump7":45},
+       {"time":"06:00","chiller1":30,"chiller2":30,"chiller3":20,"chiller4":25,"chiller5":35,"chiller6":30,"chiller7":25,"chiller8":32,"chiller9":30,"chiller10":28,"chiller11":35,"chiller12":25,"tempOut":7.5,"tempDiff":5.5,"pump1":45,"pump2":46,"pump3":42,"pump4":47,"pump5":45,"pump6":45,"pump7":46},
+       {"time":"07:00","chiller1":35,"chiller2":35,"chiller3":25,"chiller4":30,"chiller5":40,"chiller6":35,"chiller7":30,"chiller8":37,"chiller9":35,"chiller10":33,"chiller11":40,"chiller12":30,"tempOut":7.8,"tempDiff":6.0,"pump1":50,"pump2":51,"pump3":48,"pump4":52,"pump5":50,"pump6":50,"pump7":51},
+       {"time":"08:00","chiller1":40,"chiller2":40,"chiller3":30,"chiller4":35,"chiller5":45,"chiller6":40,"chiller7":35,"chiller8":42,"chiller9":40,"chiller10":38,"chiller11":45,"chiller12":35,"tempOut":8.0,"tempDiff":6.2,"pump1":55,"pump2":56,"pump3":52,"pump4":57,"pump5":55,"pump6":55,"pump7":56},
+       {"time":"09:00","chiller1":60,"chiller2":60,"chiller3":50,"chiller4":55,"chiller5":65,"chiller6":60,"chiller7":55,"chiller8":62,"chiller9":60,"chiller10":58,"chiller11":65,"chiller12":55,"tempOut":8.5,"tempDiff":7.0,"pump1":70,"pump2":71,"pump3":68,"pump4":72,"pump5":70,"pump6":70,"pump7":71},
+       {"time":"10:00","chiller1":62,"chiller2":62,"chiller3":52,"chiller4":57,"chiller5":67,"chiller6":62,"chiller7":57,"chiller8":64,"chiller9":62,"chiller10":60,"chiller11":67,"chiller12":57,"tempOut":8.6,"tempDiff":7.1,"pump1":72,"pump2":73,"pump3":70,"pump4":74,"pump5":72,"pump6":72,"pump7":73},
+       {"time":"11:00","chiller1":65,"chiller2":65,"chiller3":55,"chiller4":60,"chiller5":70,"chiller6":65,"chiller7":60,"chiller8":67,"chiller9":65,"chiller10":63,"chiller11":70,"chiller12":60,"tempOut":8.8,"tempDiff":7.2,"pump1":75,"pump2":76,"pump3":73,"pump4":77,"pump5":75,"pump6":75,"pump7":76},
+       {"time":"12:00","chiller1":68,"chiller2":68,"chiller3":58,"chiller4":63,"chiller5":73,"chiller6":68,"chiller7":63,"chiller8":70,"chiller9":68,"chiller10":66,"chiller11":73,"chiller12":63,"tempOut":9.0,"tempDiff":7.4,"pump1":78,"pump2":79,"pump3":76,"pump4":80,"pump5":78,"pump6":78,"pump7":79},
+       {"time":"13:00","chiller1":70,"chiller2":70,"chiller3":60,"chiller4":65,"chiller5":75,"chiller6":70,"chiller7":65,"chiller8":72,"chiller9":70,"chiller10":68,"chiller11":75,"chiller12":65,"tempOut":9.1,"tempDiff":7.5,"pump1":80,"pump2":81,"pump3":78,"pump4":82,"pump5":80,"pump6":80,"pump7":81},
+       {"time":"14:00","chiller1":69,"chiller2":69,"chiller3":59,"chiller4":64,"chiller5":74,"chiller6":69,"chiller7":64,"chiller8":71,"chiller9":69,"chiller10":67,"chiller11":74,"chiller12":64,"tempOut":9.0,"tempDiff":7.4,"pump1":79,"pump2":80,"pump3":77,"pump4":81,"pump5":79,"pump6":79,"pump7":80},
+       {"time":"15:00","chiller1":66,"chiller2":66,"chiller3":56,"chiller4":61,"chiller5":71,"chiller6":66,"chiller7":61,"chiller8":68,"chiller9":66,"chiller10":64,"chiller11":71,"chiller12":61,"tempOut":8.9,"tempDiff":7.3,"pump1":76,"pump2":77,"pump3":74,"pump4":78,"pump5":76,"pump6":76,"pump7":77},
+       {"time":"16:00","chiller1":63,"chiller2":63,"chiller3":53,"chiller4":58,"chiller5":68,"chiller6":63,"chiller7":58,"chiller8":65,"chiller9":63,"chiller10":61,"chiller11":68,"chiller12":58,"tempOut":8.7,"tempDiff":7.1,"pump1":73,"pump2":74,"pump3":71,"pump4":75,"pump5":73,"pump6":73,"pump7":74},
+       {"time":"17:00","chiller1":60,"chiller2":60,"chiller3":50,"chiller4":55,"chiller5":65,"chiller6":60,"chiller7":55,"chiller8":62,"chiller9":60,"chiller10":58,"chiller11":65,"chiller12":55,"tempOut":8.5,"tempDiff":7.0,"pump1":70,"pump2":71,"pump3":68,"pump4":72,"pump5":70,"pump6":70,"pump7":71},
+       {"time":"18:00","chiller1":50,"chiller2":50,"chiller3":40,"chiller4":45,"chiller5":55,"chiller6":50,"chiller7":45,"chiller8":52,"chiller9":50,"chiller10":48,"chiller11":55,"chiller12":45,"tempOut":8.2,"tempDiff":6.5,"pump1":60,"pump2":61,"pump3":58,"pump4":62,"pump5":60,"pump6":60,"pump7":61},
+       {"time":"19:00","chiller1":40,"chiller2":40,"chiller3":30,"chiller4":35,"chiller5":45,"chiller6":40,"chiller7":35,"chiller8":42,"chiller9":40,"chiller10":38,"chiller11":45,"chiller12":35,"tempOut":8.0,"tempDiff":6.0,"pump1":50,"pump2":51,"pump3":48,"pump4":52,"pump5":50,"pump6":50,"pump7":51},
+       {"time":"20:00","chiller1":30,"chiller2":30,"chiller3":20,"chiller4":25,"chiller5":35,"chiller6":30,"chiller7":25,"chiller8":32,"chiller9":30,"chiller10":28,"chiller11":35,"chiller12":25,"tempOut":7.5,"tempDiff":5.5,"pump1":45,"pump2":46,"pump3":42,"pump4":47,"pump5":45,"pump6":45,"pump7":46},
+       {"time":"21:00","chiller1":30,"chiller2":30,"chiller3":20,"chiller4":25,"chiller5":35,"chiller6":30,"chiller7":25,"chiller8":32,"chiller9":30,"chiller10":28,"chiller11":35,"chiller12":25,"tempOut":7.5,"tempDiff":5.5,"pump1":45,"pump2":46,"pump3":42,"pump4":47,"pump5":45,"pump6":45,"pump7":46},
+       {"time":"22:00","chiller1":30,"chiller2":30,"chiller3":20,"chiller4":25,"chiller5":35,"chiller6":30,"chiller7":25,"chiller8":32,"chiller9":30,"chiller10":28,"chiller11":35,"chiller12":25,"tempOut":7.5,"tempDiff":5.5,"pump1":45,"pump2":46,"pump3":42,"pump4":47,"pump5":45,"pump6":45,"pump7":46},
+       {"time":"23:00","chiller1":30,"chiller2":30,"chiller3":20,"chiller4":25,"chiller5":35,"chiller6":30,"chiller7":25,"chiller8":32,"chiller9":30,"chiller10":28,"chiller11":35,"chiller12":25,"tempOut":7.5,"tempDiff":5.5,"pump1":45,"pump2":46,"pump3":42,"pump4":47,"pump5":45,"pump6":45,"pump7":46}
+     ],
+     "mainRegulation": {
+        "switch": {
+            "set": [{ "start": "08:00", "end": "16:30", "value": "开启" }, { "start": "16:30", "end": "22:00", "value": "关闭" }],
+            "ai": [{ "start": "08:00", "end": "22:00", "value": "开启" }]
+        },
+        "count": {
+            "set": [
+            { "start": "08:00", "end": "09:30", "value": "0大0小" },
+            { "start": "09:30", "end": "10:30", "value": "0大1小" },
+            { "start": "10:30", "end": "11:30", "value": "1大2小" },
+            { "start": "11:30", "end": "13:00", "value": "0大1小" },
+            { "start": "13:00", "end": "15:00", "value": "2大2小" },
+            { "start": "15:00", "end": "19:30", "value": "2大2小" },
+            { "start": "19:30", "end": "22:00", "value": "1大1小" }
+            ],
+            "ai": [
+            { "start": "08:00", "end": "09:00", "value": "0大0小" },
+            { "start": "09:00", "end": "10:30", "value": "1大2小" },
+            { "start": "10:30", "end": "12:00", "value": "2大2小" },
+            { "start": "12:00", "end": "17:00", "value": "2大2小" },
+            { "start": "17:00", "end": "22:00", "value": "1大1小" }
+            ]
+        },
+        "tempOut": {
+            "set": [
+            { "start": "08:00", "end": "11:30", "value": "32℃" },
+            { "start": "11:30", "end": "13:00", "value": "24℃" },
+            { "start": "13:00", "end": "14:00", "value": "27℃" },
+            { "start": "14:00", "end": "16:00", "value": "26℃" },
+            { "start": "16:00", "end": "16:30", "value": "32℃" },
+            { "start": "16:30", "end": "17:30", "value": "28℃" },
+            { "start": "17:30", "end": "22:00", "value": "32℃" }
+            ],
+            "ai": [
+            { "start": "08:00", "end": "12:00", "value": "32℃" },
+            { "start": "12:00", "end": "14:00", "value": "27℃" },
+            { "start": "14:00", "end": "16:00", "value": "26℃" },
+            { "start": "16:00", "end": "17:00", "value": "28℃" },
+            { "start": "17:00", "end": "22:00", "value": "32℃" }
+            ]
+        },
+        "tempDiff": {
+            "set": [
+            { "start": "08:00", "end": "15:00", "value": "32℃" },
+            { "start": "15:00", "end": "17:00", "value": "24℃" },
+            { "start": "17:00", "end": "19:00", "value": "17℃" },
+            { "start": "19:00", "end": "22:00", "value": "22℃" }
+            ],
+            "ai": [
+            { "start": "08:00", "end": "22:00", "value": "32℃" }
+            ]
+        },
+        "pressDiff": {
+            "set": [],
+            "ai": [
+            { "start": "08:00", "end": "13:00", "value": "32℃" },
+            { "start": "13:00", "end": "15:00", "value": "27℃" },
+            { "start": "15:00", "end": "22:00", "value": "32℃" }
+            ]
+        }
+     },
+     "zoneRegulation": {
+        "switch_default": { "set": [{ "start": "08:00", "end": "22:00", "value": "开启" }] }
+     },
+     "northZoneChart": [
+       {"time":"00:00","valve1":0},
+       {"time":"01:00","valve1":0},
+       {"time":"02:00","valve1":1},
+       {"time":"03:00","valve1":1},
+       {"time":"04:00","valve1":1},
+       {"time":"05:00","valve1":1},
+       {"time":"06:00","valve1":1},
+       {"time":"07:00","valve1":1},
+       {"time":"08:00","valve1":1},
+       {"time":"09:00","valve1":1},
+       {"time":"10:00","valve1":1},
+       {"time":"11:00","valve1":0},
+       {"time":"12:00","valve1":0},
+       {"time":"13:00","valve1":0},
+       {"time":"14:00","valve1":0},
+       {"time":"15:00","valve1":0},
+       {"time":"16:00","valve1":0},
+       {"time":"17:00","valve1":0},
+       {"time":"18:00","valve1":0},
+       {"time":"19:00","valve1":1},
+       {"time":"20:00","valve1":1},
+       {"time":"21:00","valve1":1},
+       {"time":"22:00","valve1":1},
+       {"time":"23:00","valve1":1},
+       {"time":"24:00","valve1":1}
+     ],
+     "pumpGroupRegulation": {
+        "switch_default": { "set": [{ "start": "08:00", "end": "22:00", "value": "开启" }] },
+        "pump_count": {
+            "set": [
+            { "start": "08:00", "end": "09:00", "value": "0大0小" },
+            { "start": "09:00", "end": "09:15", "value": "0大1小" },
+            { "start": "09:15", "end": "10:30", "value": "1大2小" },
+            { "start": "10:30", "end": "10:45", "value": "0大1小" },
+            { "start": "10:45", "end": "12:00", "value": "2大2小" },
+            { "start": "12:00", "end": "12:15", "value": "1大1小" },
+            { "start": "12:15", "end": "19:30", "value": "2大2小" },
+            { "start": "19:30", "end": "22:00", "value": "1大1小" }
+            ]
+        },
+        "pump_freq": {
+            "set": [
+            { "start": "08:00", "end": "11:00", "value": "32Hz" },
+            { "start": "11:00", "end": "14:00", "value": "24Hz" },
+            { "start": "14:00", "end": "16:00", "value": "17Hz" },
+            { "start": "16:00", "end": "22:00", "value": "22Hz" }
+            ]
+        },
+        "water_press_diff": {
+            "set": [
+            { "start": "08:00", "end": "12:00", "value": "32kPa" },
+            { "start": "12:00", "end": "14:00", "value": "22kPa" },
+            { "start": "14:00", "end": "15:00", "value": "17kPa" },
+            { "start": "15:00", "end": "16:00", "value": "26kPa" }
+            ]
+        }
+     },
+     "terminalPumpLogs": [
+        { "time": "00:30:00", "device": "1#冷冻水泵", "action": "发生 变频器状态反馈与指令不符报警" },
+        { "time": "01:15:00", "device": "2#电动通断水阀", "action": "发生 控制失能报警" }
+     ],
+     "terminalPumpChart": [
+       {"time":"00:00","p1":40,"p2":35,"p3":45,"p4":40,"p5":38,"p6":42},
+       {"time":"01:00","p1":42,"p2":37,"p3":47,"p4":42,"p5":40,"p6":44},
+       {"time":"02:00","p1":41,"p2":36,"p3":46,"p4":41,"p5":39,"p6":43},
+       {"time":"03:00","p1":43,"p2":38,"p3":48,"p4":43,"p5":41,"p6":45},
+       {"time":"04:00","p1":40,"p2":35,"p3":45,"p4":40,"p5":38,"p6":42},
+       {"time":"05:00","p1":42,"p2":37,"p3":47,"p4":42,"p5":40,"p6":44},
+       {"time":"06:00","p1":41,"p2":36,"p3":46,"p4":41,"p5":39,"p6":43},
+       {"time":"07:00","p1":50,"p2":45,"p3":55,"p4":50,"p5":48,"p6":52},
+       {"time":"08:00","p1":55,"p2":50,"p3":60,"p4":55,"p5":53,"p6":57},
+       {"time":"09:00","p1":70,"p2":65,"p3":75,"p4":70,"p5":68,"p6":72},
+       {"time":"10:00","p1":72,"p2":67,"p3":77,"p4":72,"p5":70,"p6":74},
+       {"time":"11:00","p1":75,"p2":70,"p3":80,"p4":75,"p5":73,"p6":77},
+       {"time":"12:00","p1":73,"p2":68,"p3":78,"p4":73,"p5":71,"p6":75},
+       {"time":"13:00","p1":74,"p2":69,"p3":79,"p4":74,"p5":72,"p6":76},
+       {"time":"14:00","p1":76,"p2":71,"p3":81,"p4":76,"p5":74,"p6":78},
+       {"time":"15:00","p1":72,"p2":67,"p3":77,"p4":72,"p5":70,"p6":74},
+       {"time":"16:00","p1":70,"p2":65,"p3":75,"p4":70,"p5":68,"p6":72},
+       {"time":"17:00","p1":68,"p2":63,"p3":73,"p4":68,"p5":66,"p6":70},
+       {"time":"18:00","p1":65,"p2":60,"p3":70,"p4":65,"p5":63,"p6":67},
+       {"time":"19:00","p1":60,"p2":55,"p3":65,"p4":60,"p5":58,"p6":62},
+       {"time":"20:00","p1":40,"p2":35,"p3":45,"p4":40,"p5":38,"p6":42},
+       {"time":"21:00","p1":41,"p2":36,"p3":46,"p4":41,"p5":39,"p6":43},
+       {"time":"22:00","p1":40,"p2":35,"p3":45,"p4":40,"p5":38,"p6":42},
+       {"time":"23:00","p1":42,"p2":37,"p3":47,"p4":42,"p5":40,"p6":44}
+     ]
+  }
+}

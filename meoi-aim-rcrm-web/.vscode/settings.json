@@ -1,0 +1,33 @@
+{
+    "editor.formatOnSave": false,
+    "prettier.bracketSameLine": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.stylelint": "explicit"
+    },
+    "path-autocomplete.pathMappings": {
+        "@": "${folder}/src"
+    },
+    "stylelint.enable": true,
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "stylelint.validate": ["vue", "html", "css", "less", "scss", "sass", "stylus", "postcss"],
+    "eslint.validate": ["javascript", "vue", "typescript"],
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[less]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.eol": "\n"
+}
