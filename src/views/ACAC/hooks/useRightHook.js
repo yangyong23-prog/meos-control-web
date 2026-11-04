@@ -22,6 +22,9 @@ import DockSingleton from '@/hooks/responsiveDock';
 import useEchartsPie from './useEchartsPie';
 import { CONTROL_CONFIG_FUN } from './config';
 import { isEdge } from '@/utils/envUtils';
+import { startVisiblePolling, clearPolling } from '@/utils/polling';
+
+const OPT_WEATHER_REFRESH_MS = 15 * 60 * 1000;
 import { isNil, orderBy, uniq } from 'lodash';
 import { INFO_EXTEND_SET } from '@/utils/SSEEventTypes';
 import { useConsoleSseHook } from './useConsoleSSEHook';
@@ -416,17 +419,14 @@ export default function useRightHook() {
             if (!isUnmounted) {
                 showControl.value = true;
                 // 清理旧定时器，避免重复创建
-                if (timer) clearInterval(timer);
-                if (timer2) clearInterval(timer2);
+                if (timer) clearPolling(timer);
+                if (timer2) clearPolling(timer2);
                 // 边缘端 - 每隔1min钟获取一次数据
                 // 非边缘端 - 每隔5min获取一次数据
                 if (isEdge()) {
-                    timer = setInterval(() => {
-                        getWeatherList();
-                    }, 1000 * 60);
-                    timer2 = setInterval(() => {
-                        getAirControlListData(false);
-                    }, 1000 * 60);
+                    // opt/edge-call F3：天气 1 分钟 → 15 分钟；F4：末端控制参数仍 1 分钟，但页面隐藏时暂停、上一轮未返回时跳过
+                    timer = startVisiblePolling(() => getWeatherList(), OPT_WEATHER_REFRESH_MS);
+                    timer2 = startVisiblePolling(() => getAirControlListData(false), 1000 * 60);
                 } else {
                     timer = setInterval(() => {
                         if (dayjs().minute() % 5 === 0) {
@@ -513,10 +513,10 @@ export default function useRightHook() {
     onUnmounted(() => {
         isUnmounted = true;
         if (timer) {
-            clearInterval(timer);
+            clearPolling(timer);
         }
         if (timer2) {
-            clearInterval(timer2);
+            clearPolling(timer2);
         }
     });
     watch(

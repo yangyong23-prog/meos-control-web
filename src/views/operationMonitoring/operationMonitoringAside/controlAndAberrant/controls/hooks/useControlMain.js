@@ -2,6 +2,12 @@
 import i18n from '@/localization';
 import { MLoading } from 'meri-plus';
 import emitter from '@/utils/bus';
+import { startVisiblePolling } from '@/utils/polling';
+
+// opt/edge-call F2：控制面板策略列表原来 10 秒轮询一次，改为 30 秒，页面隐藏时暂停、上一轮未返回时跳过
+const CONTROL_REFRESH_MS = 30 * 1000;
+// opt/edge-call F3：天气原来 5 分钟，天气源本身是小时级，改为 15 分钟
+const WEATHER_REFRESH_MS = 15 * 60 * 1000;
 
 export default (
     isColdHotControl,
@@ -18,8 +24,14 @@ export default (
 ) => {
     const loading = ref(false);
     const selectedSystemObj = inject('selectedSystemObj');
-    const timer = ref();
-    const timerWeather = ref();
+    let stopControlPolling = null,
+        stopWeatherPolling = null;
+    const stopPolling = () => {
+        stopControlPolling?.();
+        stopControlPolling = null;
+        stopWeatherPolling?.();
+        stopWeatherPolling = null;
+    };
 
     const innerQuerySystemRunningModel = () => {
         if (isColdHotControl.value === 'ColdHotControl') {
@@ -43,15 +55,15 @@ export default (
         }
     };
 
+    // 返回 Promise，供轮询器判断上一轮是否结束
     const refreshControlFun = (hasError = true) => {
         if (isColdHotControl.value === 'ColdHotControl') {
-            getListColdHotStrategy(hasError);
-        } else if (isColdHotControl.value === 'ColdSource') {
-            getListCoolStrategy(hasError);
-            getListFixedTimeStrategy(hasError);
-        } else {
-            getListHotStrategy(hasError);
+            return Promise.all([getListColdHotStrategy(hasError)]);
         }
+        if (isColdHotControl.value === 'ColdSource') {
+            return Promise.all([getListCoolStrategy(hasError), getListFixedTimeStrategy(hasError)]);
+        }
+        return Promise.all([getListHotStrategy(hasError)]);
     };
 
     const initData = async function () {
@@ -77,14 +89,9 @@ export default (
                 getNumberOfChillersFun();
             }
             await refreshFun();
-            clearInterval(timerWeather.value);
-            timerWeather.value = setInterval(() => {
-                getWeatherList();
-            }, 1000 * 60 * 5);
-            clearInterval(timer.value);
-            timer.value = setInterval(() => {
-                refreshControlFun(false);
-            }, 1000 * 10);
+            stopPolling();
+            stopWeatherPolling = startVisiblePolling(() => getWeatherList(), WEATHER_REFRESH_MS);
+            stopControlPolling = startVisiblePolling(() => refreshControlFun(false), CONTROL_REFRESH_MS);
             onSetTopHeight();
 
             emitter.on('SYSTEM_DATE_CHANGE', refreshControlFun);
@@ -99,8 +106,7 @@ export default (
     });
 
     onUnmounted(() => {
-        clearInterval(timer.value);
-        clearInterval(timerWeather.value);
+        stopPolling();
         emitter.off('SYSTEM_DATE_CHANGE', refreshControlFun);
         emitter.off('release_intervention', innerQuerySystemRunningModel);
     });

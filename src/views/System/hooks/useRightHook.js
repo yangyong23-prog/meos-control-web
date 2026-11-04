@@ -8,6 +8,9 @@ import { currentSystemKey } from './useStateHook';
 import dataDockHandling from '@/hooks/dataDockHandling';
 import { DETAIL, SUCCESSCODE } from '@/utils/globalVariables';
 import { isEdge } from '@/utils/envUtils';
+import { startVisiblePolling, clearPolling } from '@/utils/polling';
+
+const OPT_WEATHER_REFRESH_MS = 15 * 60 * 1000;
 import useStore from '@/store';
 import { useRightSSEHook } from './useSSEHook';
 
@@ -143,9 +146,9 @@ export const useRightTPASHook = ({ controlTabs, controlData }) => {
             // 边缘端 - 每隔1min钟获取一次数据
             // 非边缘端 - 每隔5min获取一次数据
             if (isEdge()) {
-                weatherTimer = setInterval(() => {
-                    getWeatherList();
-                }, 1000 * 60);
+                // opt/edge-call F3：天气 1 分钟 → 15 分钟，页面隐藏时暂停
+                clearPolling(weatherTimer);
+                weatherTimer = startVisiblePolling(() => getWeatherList(), OPT_WEATHER_REFRESH_MS);
             } else {
                 weatherTimer = setInterval(() => {
                     getWeatherList();
@@ -182,7 +185,7 @@ export const useRightTPASHook = ({ controlTabs, controlData }) => {
     });
     onUnmounted(() => {
         if (weatherTimer) {
-            clearInterval(weatherTimer);
+            clearPolling(weatherTimer);
         }
     });
 
