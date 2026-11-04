@@ -183,6 +183,7 @@ class Http {
     private init() {
         this.instance.interceptors.request.use(
             (config: any) => {
+                applyOptTimeout(config);
                 this.open(config.url);
                 const needformdata = diffPost(config.url);
                 // 公共参数
@@ -297,9 +298,29 @@ class Http {
     }
 }
 
+// opt/edge-call F1：默认超时从 24 小时改为 15 秒，后端卡住时页面不再一直挂着请求。
+// 导入导出、上传下载这类本来就慢的请求放宽到 10 分钟；个别慢接口可在调用处传 timeout 覆盖。
+const DEFAULT_TIMEOUT_MS = 15 * 1000;
+const LONG_TIMEOUT_MS = 10 * 60 * 1000;
+const LONG_REQUEST_URL = /export|import|upload|download|excel|report|file/i;
+
+const isLongRequest = (cfg: any): boolean =>
+    cfg?.responseType === 'blob' ||
+    cfg?.responseType === 'arraybuffer' ||
+    (typeof FormData !== 'undefined' && cfg?.data instanceof FormData) ||
+    LONG_REQUEST_URL.test(cfg?.url || '');
+
+export const applyOptTimeout = (cfg: any) => {
+    // 只在沿用默认超时时调整；调用处显式传了 timeout 的不动
+    if (cfg && cfg.timeout === DEFAULT_TIMEOUT_MS && isLongRequest(cfg)) {
+        cfg.timeout = LONG_TIMEOUT_MS;
+    }
+    return cfg;
+};
+
 const config: CreateAxiosDefaults = {
     baseURL: '/',
-    timeout: 24 * 60 * 60 * 1000,
+    timeout: DEFAULT_TIMEOUT_MS,
     headers: {
         post: {
             'Content-Type': 'application/json'
