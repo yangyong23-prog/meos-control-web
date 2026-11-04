@@ -285,6 +285,9 @@ class Http {
                 }
                 if (error.config?.autoHandleError !== false && error.response) {
                     errHandle(error.response);
+                } else if (error.config?.autoHandleError !== false && isOptWriteTimeout(error)) {
+                    // opt/edge-call：写请求超时时后端可能仍在执行，提示用户而不是静默失败，避免重复提交
+                    $Message.error({ title: i18n.global.t('meos_control_web.request_timeout') });
                 } else {
                     console.log('cancel', error.request);
                     // 控制台不展示取消请求错误
@@ -298,11 +301,18 @@ class Http {
     }
 }
 
-// opt/edge-call F1：默认超时从 24 小时改为 15 秒，后端卡住时页面不再一直挂着请求。
-// 导入导出、上传下载这类本来就慢的请求放宽到 10 分钟；个别慢接口可在调用处传 timeout 覆盖。
+// opt/edge-call F1：默认超时从 24 小时改为分档：
+// - GET 等查询 15 秒，后端卡住时页面不再一直挂着请求；
+// - POST/PUT/DELETE 等写请求 2 分钟（批量下发、批量设参、复制配置等在边缘逐对象执行，可能超过 15 秒）；
+// - 导入导出、上传下载、批量/复制/应用/重置/同步类 10 分钟。
+// 调用处显式传了 timeout 的不动。
 const DEFAULT_TIMEOUT_MS = 15 * 1000;
+const WRITE_TIMEOUT_MS = 2 * 60 * 1000;
 const LONG_TIMEOUT_MS = 10 * 60 * 1000;
-const LONG_REQUEST_URL = /export|import|upload|download|excel|report|file/i;
+const LONG_REQUEST_URL = /export|import|upload|download|excel|report|file|batch|copy|apply|reset|sync/i;
+const READ_METHODS = ['get', 'head', 'options'];
+
+const isOptWriteTimeout = (error: any): boolean => error?.code === 'ECONNABORTED' && !READ_METHODS.includes(String(error?.config?.method || 'get').toLowerCase());
 
 const isLongRequest = (cfg: any): boolean =>
     cfg?.responseType === 'blob' ||
@@ -312,8 +322,11 @@ const isLongRequest = (cfg: any): boolean =>
 
 export const applyOptTimeout = (cfg: any) => {
     // 只在沿用默认超时时调整；调用处显式传了 timeout 的不动
-    if (cfg && cfg.timeout === DEFAULT_TIMEOUT_MS && isLongRequest(cfg)) {
+    if (!cfg || cfg.timeout !== DEFAULT_TIMEOUT_MS) return cfg;
+    if (isLongRequest(cfg)) {
         cfg.timeout = LONG_TIMEOUT_MS;
+    } else if (!READ_METHODS.includes(String(cfg.method || 'get').toLowerCase())) {
+        cfg.timeout = WRITE_TIMEOUT_MS;
     }
     return cfg;
 };
