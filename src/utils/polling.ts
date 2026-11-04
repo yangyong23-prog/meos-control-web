@@ -58,3 +58,77 @@ export const startAlignedInterval = (callback: () => void, intervalMs: number = 
         }
     };
 };
+
+export interface VisiblePollerOptions {
+    /** 页面从隐藏恢复可见时，如果隐藏期间错过了轮询，立即补一次（默认 true） */
+    refreshOnVisible?: boolean;
+}
+
+/**
+ * opt/edge-call F1：带"页面隐藏暂停"和"在途守卫"的轮询器。
+ * - 页面隐藏（切到别的标签页、最小化）时不发请求，恢复可见后补一次；
+ * - 上一次回调返回的 Promise 还没结束时，本次跳过，避免下游变慢时请求越堆越多。
+ *
+ * @returns stop 函数
+ */
+export const startVisiblePolling = (callback: () => unknown, intervalMs: number, { refreshOnVisible = true }: VisiblePollerOptions = {}): (() => void) => {
+    let inFlight = false,
+        missed = false,
+        stopped = false;
+
+    const run = () => {
+        if (stopped || inFlight) return;
+        let result: unknown;
+        try {
+            result = callback();
+        } catch (e) {
+            console.error('polling callback error', e);
+            return;
+        }
+        if (result && typeof (result as Promise<unknown>).then === 'function') {
+            inFlight = true;
+            (result as Promise<unknown>)
+                .catch(e => console.error('polling callback error', e))
+                .finally(() => {
+                    inFlight = false;
+                });
+        }
+    };
+
+    const tick = () => {
+        if (typeof document !== 'undefined' && document.hidden) {
+            missed = true;
+            return;
+        }
+        run();
+    };
+
+    const onVisibilityChange = () => {
+        if (!document.hidden && missed && refreshOnVisible) {
+            missed = false;
+            run();
+        }
+    };
+
+    const timer = setInterval(tick, intervalMs);
+    if (typeof document !== 'undefined') {
+        document.addEventListener('visibilitychange', onVisibilityChange);
+    }
+
+    return () => {
+        stopped = true;
+        clearInterval(timer);
+        if (typeof document !== 'undefined') {
+            document.removeEventListener('visibilitychange', onVisibilityChange);
+        }
+    };
+};
+
+/** 清理 setInterval 返回的 id 或 startVisiblePolling 返回的 stop 函数 */
+export const clearPolling = (handle: unknown) => {
+    if (typeof handle === 'function') {
+        handle();
+    } else if (handle) {
+        clearInterval(handle as ReturnType<typeof setInterval>);
+    }
+};

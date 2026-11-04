@@ -12,6 +12,8 @@ const store = useStore();
 const SSE_ROTATION_CONNECT_TIMEOUT = 30 * 1000;
 const SSE_AUTO_RECONNECT_MINUTES = sseReConnectMinutes || 60;
 const SSE_AUTO_RECONNECT_INTERVAL = SSE_AUTO_RECONNECT_MINUTES * 60 * 1000;
+// opt/edge-call F1：连接被判定为不可重连（4xx）后，隔多久再重建一次
+const SSE_FATAL_REBUILD_DELAY = 60 * 1000;
 
 const iotDataChangeHandle = res => {
     if (res.data) {
@@ -39,6 +41,10 @@ export default class SSEClient {
         this.pendingEventSource = null;
         this.rotateConnectionTimer = null;
         this.eventsInfoMap = new Map();
+        // opt/edge-call F1：断线重连成功后的回调（页面用来补拉一次全量数据）
+        this.reconnectCallbacks = [];
+        this.hasOpened = false;
+        this.fatalRebuildTimer = null;
         this.removeDevRealtimeConnectionGuard = registerDevRealtimeConnection(() => this.close());
         console.log(`SSE自动重连时长为: ${SSE_AUTO_RECONNECT_MINUTES}分钟`);
         this._initOptions(options);
@@ -116,6 +122,8 @@ export default class SSEClient {
     setOptions(options = {}) {
         if (!this.isDestory) {
             this.close();
+            // 主动换参数不算断线重连
+            this.hasOpened = false;
             this._initOptions(options);
         }
     }
@@ -226,7 +234,9 @@ export default class SSEClient {
                 // console.log('Connection opened!');
                 this.open = true;
                 this._startAutoReconnectTimer();
+                this._handleOpened();
             });
+            this.eventSource?.addEventListener('fatal', () => this._handleFatal());
 
             this._addConnectionErrorListener(this.eventSource);
 
@@ -239,6 +249,43 @@ export default class SSEClient {
             }
             console.error(`SSEClient connect error: ${e}`);
         }
+    }
+
+    _handleOpened() {
+        if (this.hasOpened) {
+            // 不是第一次打开，说明中间断过：断线期间的推送已经丢了，通知页面补拉
+            this.reconnectCallbacks.forEach(cb => {
+                try {
+                    cb();
+                } catch (e) {
+                    console.error('SSE reconnect callback error', e);
+                }
+            });
+        }
+        this.hasOpened = true;
+    }
+
+    // 原逻辑：连接 Fatal 后 open 一直是 true，connect() 直接 return，页面永久停更。
+    // 现在复位 open，并在一段时间后重建连接。
+    _handleFatal() {
+        this.open = false;
+        clearTimeout(this.fatalRebuildTimer);
+        if (this.isDestory) return;
+        this.fatalRebuildTimer = setTimeout(() => {
+            this.fatalRebuildTimer = null;
+            if (this.isDestory || this.open || !this.options?.url) return;
+            this.eventSource?.close();
+            this.connect();
+        }, SSE_FATAL_REBUILD_DELAY);
+    }
+
+    /** 注册断线重连成功后的回调，返回取消函数 */
+    onReconnect(callback) {
+        if (typeof callback !== 'function') return () => {};
+        this.reconnectCallbacks.push(callback);
+        return () => {
+            this.reconnectCallbacks = this.reconnectCallbacks.filter(cb => cb !== callback);
+        };
     }
 
     rotateConnection() {
@@ -261,6 +308,10 @@ export default class SSEClient {
                 this.rotateConnectionTimer = null;
                 this.pendingEventSource = null;
                 this.eventSource = candidateEventSource;
+                candidateEventSource.addEventListener('open', () => this._handleOpened());
+                candidateEventSource.addEventListener('fatal', () => {
+                    if (this.eventSource === candidateEventSource) this._handleFatal();
+                });
                 this._initAddEvents();
                 previousEventSource?.close();
                 this._startAutoReconnectTimer();
@@ -280,6 +331,8 @@ export default class SSEClient {
     }
 
     close() {
+        clearTimeout(this.fatalRebuildTimer);
+        this.fatalRebuildTimer = null;
         clearInterval(this.autoReconnectTimer);
         this.autoReconnectTimer = null;
         clearTimeout(this.rotateConnectionTimer);
@@ -295,6 +348,7 @@ export default class SSEClient {
         this.removeDevRealtimeConnectionGuard?.();
         this._releaseIotExpire();
         this.eventsInfoMap?.clear();
+        this.reconnectCallbacks = [];
 
         this.isDestory = true;
         this.eventSource = null;

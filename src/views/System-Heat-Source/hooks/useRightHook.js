@@ -4,6 +4,9 @@ import useStore from '@/store';
 import dataDockHandling from '@/hooks/dataDockHandling';
 import { DETAIL, SUCCESSCODE } from '@/utils/globalVariables';
 import { isEdge } from '@/utils/envUtils';
+import { startVisiblePolling, clearPolling } from '@/utils/polling';
+
+const OPT_WEATHER_REFRESH_MS = 15 * 60 * 1000;
 import DockSingleton from '@/hooks/responsiveDock';
 
 import { queryWeather } from '@/apis/systemDiagram';
@@ -250,13 +253,12 @@ export const useRightHook = props => {
         } finally {
             if (!isUnmounted) {
                 // 清理旧定时器，避免重复创建
-                if (weatherTimer) clearInterval(weatherTimer);
+                if (weatherTimer) clearPolling(weatherTimer);
                 // 边缘端 - 每隔1min钟获取一次数据
                 // 非边缘端 - 每隔5min获取一次数据
                 if (isEdge()) {
-                    weatherTimer = setInterval(() => {
-                        getWeatherList();
-                    }, 1000 * 60);
+                    // opt/edge-call F3：天气 1 分钟 → 15 分钟，页面隐藏时暂停
+                    weatherTimer = startVisiblePolling(() => getWeatherList(), OPT_WEATHER_REFRESH_MS);
                 } else {
                     weatherTimer = setInterval(() => {
                         if (dayjs().minute() % 5 === 0) {
@@ -521,12 +523,11 @@ export const useRightHook = props => {
                 // 非边缘端 - 每隔5min获取一次数据
 
                 if (isEdge()) {
-                    clearInterval(timer2);
-                    timer2 = setInterval(() => {
-                        getAirControlListData(false);
-                    }, 1000 * 60);
+                    clearPolling(timer2);
+                    // opt/edge-call F4：仍 1 分钟，但页面隐藏时暂停、上一轮未返回时跳过
+                    timer2 = startVisiblePolling(() => getAirControlListData(false), 1000 * 60);
                 } else {
-                    clearInterval(timer2);
+                    clearPolling(timer2);
                     timer2 = setInterval(() => {
                         if (dayjs().minute() % 5 === 0) {
                             getAirControlListData(false);
@@ -570,11 +571,11 @@ export const useRightHook = props => {
     onUnmounted(() => {
         isUnmounted = true;
         if (weatherTimer) {
-            clearInterval(weatherTimer);
+            clearPolling(weatherTimer);
         }
 
         if (timer2) {
-            clearInterval(timer2);
+            clearPolling(timer2);
         }
     });
 
