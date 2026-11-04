@@ -45,6 +45,8 @@ export interface EventSourceMessage {
     /** The reconnection interval (in milliseconds) to wait before retrying the connection */
     retry?: number;
     size?: string;
+    /** opt/edge-call：SSE 注释行内容（":xxx"），服务端用它下发 EVENT_ID 的 eventKey */
+    comment?: string;
 }
 
 /**
@@ -206,6 +208,10 @@ export function getMessages(onId: (id: string) => void, onRetry: (retry: number)
             // empty line denotes end of message. Trigger the callback and start a new message:
             onMessage?.(message);
             message = newMessage();
+        } else if (fieldLength === 0) {
+            // opt/edge-call：注释行（":xxx"）。原逻辑直接丢弃；这里记到 message.comment，供读取 EVENT_ID 的 eventKey。
+            const comment = decoder.decode(line.subarray(1)).trim();
+            message.comment = message.comment ? `${message.comment}\n${comment}` : comment;
         } else if (fieldLength && fieldLength > 0) {
             // exclude comments and lines with no values
             // line is of format "<field>:<value>" or "<field>: <value>"
