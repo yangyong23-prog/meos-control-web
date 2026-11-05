@@ -28,6 +28,17 @@ function diffPost(url: string): boolean {
 }
 
 /**
+ * opt B15：主框架登录信息里的姓名，边缘端放在请求头 opt-user-name 里，供运行日志显示操作人
+ * （不并入请求参数）
+ */
+function getOperatorName(): string {
+    const { base } = useStore();
+    const userInfoStr = systemInstance.queryUser();
+    const userInfo = isNull(userInfoStr) ? base.userInfo : JSON.parse(userInfoStr);
+    return (userInfo && (userInfo.name || userInfo.userName)) || '';
+}
+
+/**
  * 获取需合并到请求头中的参数
  * @returns params
  */
@@ -197,6 +208,14 @@ class Http {
                     'project-id': params.projectId,
                     'accept-language': getLocaleLang(DEFAULT_LANG)
                 });
+
+                // opt B15：URL 编码（请求头不能直接放中文）；后端开关 switch.opt.operatorNameLocal 打开后才使用
+                if (isEdge()) {
+                    const operatorName = getOperatorName();
+                    if (operatorName) {
+                        config.headers['opt-user-name'] = encodeURIComponent(operatorName);
+                    }
+                }
 
                 if (!isEdge()) {
                     const { base } = useStore();
