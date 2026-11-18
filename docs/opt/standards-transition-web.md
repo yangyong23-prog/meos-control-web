@@ -1,7 +1,7 @@
 # 运行标准过渡期前端改动（W1–W5）
 
 依据：《运行标准服务对 meos-control 配置的覆盖评估》"两个服务的下一步改动清单"（2026-11-18 定稿）。
-后端配套：meos-control-parent 分支 `opt/standards-transition`（B1/B2/B4）。W6（下线菜单与页面）不在本轮。
+后端配套：meos-control-parent #19（分支 `opt/standards-transition`，B1/B2/B4；只读清单可由 Nacos `switch.opt.standards.readonly-paths` 覆盖）。W6（下线菜单与页面）不在本轮。
 
 所有改动都在开关后面，**默认全部关闭，关闭时行为与改动前完全一致**。
 
