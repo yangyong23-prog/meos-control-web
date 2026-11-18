@@ -10,7 +10,7 @@ import { optOn, OPT_SWITCH } from './optSwitch';
 
 export const READONLY_MESSAGE = '由云端运行标准管理';
 
-/** 与后端 B2 默认拦截清单一致（后端可经 Nacos opt.standards.readonly-paths 覆盖，前端这里只做提前提示） */
+/** 与后端 B2 默认拦截清单一致（后端可经 Nacos switch.opt.standards.readonly-paths 覆盖，前端这里只做提前提示） */
 export const READONLY_WRITE_PATHS = [
     '/demand/addInstanceConfig',
     '/demand/addDemandConfig',
