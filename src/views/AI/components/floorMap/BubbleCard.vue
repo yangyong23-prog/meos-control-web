@@ -17,6 +17,13 @@
     </Bubble>
 </template>
 
+<script>
+import { createPromiseCache as createBubbleCache } from '@/utils/opt/promiseCache';
+
+// 模块级，所有 BubbleCard 实例共享
+const bubbleCache = createBubbleCache({ ttlMs: 5 * 60 * 1000 });
+</script>
+
 <script setup>
 import Bubble from '@/components/3dEngineElements/Bubble.vue';
 // removed unused dateAirSearonMapKey
@@ -30,6 +37,7 @@ import { SUCCESSCODE } from '@/utils/globalVariables';
 import UseCancelTokenHooks from '@/hooks/UseCancelTokenHooks';
 import i18n from '@/localization';
 import { isEmpty } from 'lodash';
+import { optOn, OPT_SWITCH } from '@/utils/opt/optSwitch';
 
 const props = defineProps({
     data: {
@@ -50,6 +58,11 @@ const dateTime = computed(() => {
     return curSelectedTime?.value ? dayjs(getOriginalTime(curSelectedTime.value)).format('YYYY-MM-DD') : null;
 });
 
+// opt W3：每次 hover 气泡都会查"空调季 + 空间运行标准"两次。OPT_AI_BUBBLE_CACHE 打开后，
+// 空调季按 项目+日期、标准按 项目+日期+空间 缓存 5 分钟（模块级，所有气泡共享）。
+// 缓存的请求不带取消令牌：被某个气泡卸载时取消会让共享的 Promise 永远不结束。
+const bubbleCacheOn = optOn(OPT_SWITCH.AI_BUBBLE_CACHE);
+
 const { cancelQuest: cancelQuestA, cancelToken: cancelTokenA } = UseCancelTokenHooks();
 const fetchAcQuarter = () => {
     const params = {
@@ -57,6 +70,9 @@ const fetchAcQuarter = () => {
         beginDate: dateTime.value,
         endDate: dateTime.value
     };
+    if (bubbleCacheOn) {
+        return bubbleCache.get(`acQuarter|${params.objId}|${params.beginDate}`, () => getAcQuarter(params));
+    }
     return getAcQuarter(params, { cancelToken: cancelTokenA() });
 };
 
@@ -69,6 +85,9 @@ const fetchDemandConfig = () => {
         instanceIds: [props.data.id],
         withColumns: ['instanceId', 'finalConfig']
     };
+    if (bubbleCacheOn) {
+        return bubbleCache.get(`acConfig|${baseStore().projectId}|${param.date}|${props.data.id}`, () => listConfigsByInstance(param));
+    }
     return listConfigsByInstance(param, { cancelToken: cancelTokenD() });
 };
 

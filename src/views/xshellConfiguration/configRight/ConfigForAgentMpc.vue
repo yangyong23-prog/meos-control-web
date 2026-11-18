@@ -1,5 +1,6 @@
 <template>
     <div class="config-container">
+        <StandardsReadonlyBanner />
         <title-type class="row" :title="i18n.global.t('meos_control_web.AI_MPC_Config')" />
         <template v-if="!Object.keys(mpcConfigData).length"> <Empty :text="i18n.global.t('meos_control_web.no_content')" class="empty-new" /></template>
         <template v-else>
@@ -28,6 +29,7 @@
 </template>
 
 <script setup>
+import StandardsReadonlyBanner from '@/components/opt/StandardsReadonlyBanner.vue';
 import { $Message } from 'meri-plus';
 import emitter from '@/utils/bus';
 import i18n from '@/localization';

@@ -7,6 +7,7 @@
  */
 import http from '@/utils/http';
 import { INTERFACE_PREFIX_MEOS, INTERFACE_PREFIX_EMS, INTERFACE_PREFIX_ENERGY_QUALITY } from '@/config';
+import { withStandardsDisplay, listStandardDateSetting } from '@/apis/standards';
 // const INTERFACE_PREFIX_MEOS = 'https://qa.yushu.cloud';
 
 /**
@@ -93,7 +94,10 @@ export const listTemplate = (params: any, config: any) => http.post(INTERFACE_PR
  * @param params
  * @returns
  */
-export const listDateSetting = (params: any, config: any) => http.post(INTERFACE_PREFIX_MEOS + '/demand/template/listDateSetting', params, config);
+const legacyListDateSetting = (params: any, config: any) => http.post(INTERFACE_PREFIX_MEOS + '/demand/template/listDateSetting', params, config);
+
+// opt W3：需求日历（空调）按日期展示的标准；OPT_STANDARDS_DISPLAY 打开且项目已切时改读 B4（我方后端转 dtp-meos）
+export const listDateSetting = withStandardsDisplay(legacyListDateSetting, listStandardDateSetting);
 
 /**
  * 需求日历-应用日期模板

@@ -1,3 +1,5 @@
+import { resolveStrictPrefix } from '@/utils/opt/strictPrefix';
+
 const isDev = import.meta.env.MODE === 'development';
 const proxyHit = '/proxy-api'; // 代理命中前嘴
 const wssProxyHit = '/proxy-wss'; // wss代理命中前缀
@@ -158,7 +160,8 @@ export const INTERFACE_PREFIX_BDTP_ELECTRICITY = getInterfacePrefix('meosEnv', '
 // window.proxy?.apmCommonEnv?.INTERFACE_PREFIX_MEOS ||
 // window.apmCommonEnv?.INTERFACE_PREFIX_MEOS; // moes 后端服务
 
-export const INTERFACE_PREFIX_MEOS_DTP = getInterfacePrefix('meosEnv', 'apmCommonEnv', 'INTERFACE_PREFIX_MEOS_DTP');
+// opt W1：开关 OPT_STRICT_EDGE_PREFIX 打开后只认 meosEnv，未配置时拦截，不回落 apmCommonEnv（云端网关）
+export const INTERFACE_PREFIX_MEOS_DTP = resolveStrictPrefix('INTERFACE_PREFIX_MEOS_DTP', () => getInterfacePrefix('meosEnv', 'apmCommonEnv', 'INTERFACE_PREFIX_MEOS_DTP'));
 // '/meos-control-server-edge' ||
 // window.proxy?.meosEnv?.INTERFACE_PREFIX_MEOS_DTP ||
 // window.meosEnv?.INTERFACE_PREFIX_MEOS_DTP ||
@@ -274,7 +277,8 @@ export const MEOS_MONITOR_CONTROL_DEBOUNCE_WAIT = getInterfacePrefix('meosEnv', 
 // window.proxy?.apmCommonEnv?.MEOS_MONITOR_CONTROL_DEBOUNCE_WAIT ||
 // window.apmCommonEnv?.MEOS_MONITOR_CONTROL_DEBOUNCE_WAIT;
 
-export const INTERFACE_PREFIX_AI_AUTORUN = getInterfacePrefix('meosEnv', 'apmCommonEnv', 'INTERFACE_PREFIX_AI_AUTORUN');
+// opt W5：AI 页直调 agent 的 /strategy/* 前缀，同 W1 规则
+export const INTERFACE_PREFIX_AI_AUTORUN = resolveStrictPrefix('INTERFACE_PREFIX_AI_AUTORUN', () => getInterfacePrefix('meosEnv', 'apmCommonEnv', 'INTERFACE_PREFIX_AI_AUTORUN'));
 
 export const INTERFACE_PREFIX_MID_CALENDAR = getInterfacePrefix('meosEnv', 'apmCommonEnv', 'INTERFACE_PREFIX_MID_CALENDAR');
 

@@ -15,6 +15,32 @@ import { applyPrecisionMarker } from '@/apis/precisionWhitelist';
 import iotExpireManager from '@/utils/iotExpireManager';
 import { useRoute, useRouter } from 'vue-router';
 import i18n, { getLocaleLang, DEFAULT_LANG } from '@/localization';
+import { INTERFACE_PREFIX_MEOS } from '@/config';
+import { isMissingPrefixUrl, missingPrefixKeyOf } from '@/utils/opt/strictPrefix';
+import { isReadonlyWriteUrl, isStandardsReadonly, READONLY_MESSAGE } from '@/utils/opt/standardsModeState';
+
+/** opt W1：同一前缀只提示一次，避免页面轮询刷屏 */
+const notifiedMissingPrefix = new Set<string>();
+
+/**
+ * opt W1/W2：请求发出前的拦截。返回拒绝原因；不需要拦截时返回 null。
+ * - W1：前缀未在 meosEnv 配置（OPT_STRICT_EDGE_PREFIX 打开时）→ 不发请求；
+ * - W2：项目已切新运行标准且 OPT_STANDARDS_READONLY 打开 → 配置写接口不发请求（后端 B2 也会拦，这里提前给提示）。
+ */
+function optBlockReason(url: string, projectId: string): { code: string; message: string; silent?: boolean } | null {
+    if (isMissingPrefixUrl(url)) {
+        const key = missingPrefixKeyOf(url);
+        const message = `主框架未配置接口前缀 ${key}，请求已拦截`;
+        // 同一前缀只在第一次提示，之后静默失败，避免轮询刷屏
+        const first = !notifiedMissingPrefix.has(key);
+        notifiedMissingPrefix.add(key);
+        return { code: 'OPT_PREFIX_MISSING', message, silent: !first };
+    }
+    if (INTERFACE_PREFIX_MEOS && url.startsWith(INTERFACE_PREFIX_MEOS) && isReadonlyWriteUrl(url) && isStandardsReadonly(projectId)) {
+        return { code: 'A0403', message: READONLY_MESSAGE };
+    }
+    return null;
+}
 
 const jsonStringArray = jsonStringServerNames([]);
 /**
@@ -187,6 +213,15 @@ class Http {
                 const needformdata = diffPost(config.url);
                 // 公共参数
                 const params = getMergeReqParams();
+                const blocked = optBlockReason(config.url || '', params.projectId);
+                if (blocked) {
+                    if (blocked.silent) {
+                        config.autoHandleError = false;
+                    }
+                    // 不发请求，本地返回与后端 B2 拦截同形的失败结果（HTTP 200 + code≠00000），
+                    // 调用方照常按 code 判断，错误提示由下面的响应拦截器统一弹出
+                    config.adapter = () => Promise.resolve({ data: { code: blocked.code, message: blocked.message }, status: 200, statusText: 'OK', headers: {}, config });
+                }
                 Object.assign(config.headers, {
                     groupCode: params.groupCode,
                     projectId: params.projectId,
