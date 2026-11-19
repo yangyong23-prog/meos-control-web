@@ -1,7 +1,9 @@
-# 运行标准过渡期前端改动（W1–W5）
+# 运行标准过渡期前端改动（W1–W4）
 
 依据：《运行标准服务对 meos-control 配置的覆盖评估》"两个服务的下一步改动清单"（2026-11-18 定稿）。
 后端配套：meos-control-parent #19（分支 `opt/standards-transition`，B1/B2/B4；只读清单可由 Nacos `switch.opt.standards.readonly-paths` 覆盖）。W6（下线菜单与页面）不在本轮。
+
+**11-19 更新（Blake）**：ai-autorun-agent-edge 不纳入新边缘盒子架构（与已移除的 ai-au 不是同一个服务，两者都不进），原 W5 取消；安防/通风/排油烟需求、干预任务、壳配置都由运行标准服务和 dtp-meos 负责。因此：AI_AUTORUN 前缀在边缘静默禁用；干预类调用本来就走 dtp-meos，保留不改前缀；W6 下线范围扩大到这些配置页和 AI（ai-autorun）页。
 
 所有改动都在开关后面，**默认全部关闭，关闭时行为与改动前完全一致**。
 
@@ -11,7 +13,7 @@
 
 | 开关 | 条目 | 打开后 |
 |---|---|---|
-| `OPT_STRICT_EDGE_PREFIX` | W1 / W5 | `INTERFACE_PREFIX_MEOS_DTP`、`INTERFACE_PREFIX_AI_AUTORUN` 只认 meosEnv；没配时请求在本地拦截并提示"主框架未配置接口前缀 X"（同一前缀只提示一次），不再回落 `apmCommonEnv`（新主框架镜像里是云端开发网关） |
+| `OPT_STRICT_EDGE_PREFIX` | W1 | `INTERFACE_PREFIX_MEOS_DTP` 只认 meosEnv；没配时请求在本地拦截并提示"主框架未配置接口前缀 X"（同一前缀只提示一次），不再回落 `apmCommonEnv`（新主框架镜像里是云端开发网关）。`INTERFACE_PREFIX_AI_AUTORUN` 不要求配置：没配时 AI 页直调 agent 的 `/strategy/*` 在本地静默失败，不提示、不回落云端 |
 | `OPT_STANDARDS_READONLY` | W2 | 已切新运行标准的项目（后端 B1 `readOnly=true`），空调需求配置、需求日历、MPC 智能体配置页顶部显示"由云端运行标准管理"，MPC 启动按钮禁用；下方 13 个写接口在本地直接返回失败（与后端 B2 同形：HTTP 200、code `A0403`） |
 | `OPT_STANDARDS_DISPLAY` | W3 | 已切项目的 AI 页标准值（平面图气泡、湿度开关）和需求日历（空调）改读后端 B4 同形接口。**后端本轮只做了原样转发，同形接口下一轮才有，上线前保持关闭** |
 | `OPT_AI_BUBBLE_CACHE` | W3 | AI 平面图气泡的"空调季 + 空间运行标准"两次查询按 项目+日期(+空间) 缓存 5 分钟，所有气泡共享；失败结果不缓存 |
@@ -36,10 +38,10 @@
 
 - `INTERFACE_PREFIX_MEOS`（我方后端）
 - `INTERFACE_PREFIX_MEOS_DTP`（dtp-meos，下面 W4 清单里的手动控制、监测、干预都走它）
-- `INTERFACE_PREFIX_AI_AUTORUN`（AI 页 `/strategy/*` 直调 agent）
+- 不需要 `INTERFACE_PREFIX_AI_AUTORUN`（ai-autorun-agent-edge 不在盒子上）；AI 页菜单应从盒子的 `authorizations.json` 去掉
 - 以及要打开的 `OPT_*` 开关
 
-4.91 目前是用 ConfigMap 覆盖 `yiheng-common-web-edge/static/env/apm.env.js` 追加了 7 个 meosEnv 前缀，需要核对是否包含上面两项（给框架开发者的问题清单第 13 条同一问题）。
+4.91 目前是用 ConfigMap 覆盖 `yiheng-common-web-edge/static/env/apm.env.js` 追加了 7 个 meosEnv 前缀，需要核对是否包含 `INTERFACE_PREFIX_MEOS_DTP`（给框架开发者的问题清单第 13 条同一问题）。
 
 ## W4：`INTERFACE_PREFIX_MEOS_DTP` 调用归类
 
@@ -49,8 +51,8 @@
 |---|---|---|---|
 | 监测 | 30 | 14 | 保留。盒子上必须配好 INTERFACE_PREFIX_MEOS_DTP；dtp-meos 独立后仍由它提供。 |
 | 手动控制 | 41 | 26 | 保留。手动控制统一经 dtp-meos 下发（对应后端 B5）；盒子上必须配好前缀。 |
-| 干预 | 34 | 32 | 保留（W6 不下线干预）。归属待 G3 定：若定归 dtp-meos 则不动；若归 meos-control 需改前缀。 |
-| 配置 | 15 | 8 | 配置类：时间表策略存在 dtp-meos。新运行标准服务的源/末端策略（acs）可能覆盖它，确认覆盖后随配置模块下线；本轮不动。 |
+| 干预 | 34 | 32 | 保留，前缀不改。11-19 已定干预任务归 dtp-meos（G3 结论），这些调用本来就直连 dtp-meos。 |
+| 配置 | 15 | 8 | 配置类：时间表策略存在 dtp-meos。按 11-19 决定，配置由运行标准服务和 dtp-meos 负责，这些页面随 W6 下线；本轮不动。 |
 | 合计 | 120 | 80 | |
 
 ### 监测（30 处 / 14 个接口）

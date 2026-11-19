@@ -16,7 +16,7 @@ import iotExpireManager from '@/utils/iotExpireManager';
 import { useRoute, useRouter } from 'vue-router';
 import i18n, { getLocaleLang, DEFAULT_LANG } from '@/localization';
 import { INTERFACE_PREFIX_MEOS } from '@/config';
-import { isMissingPrefixUrl, missingPrefixKeyOf } from '@/utils/opt/strictPrefix';
+import { isMissingPrefixUrl, missingPrefixKeyOf, isDisabledOnEdgePrefix } from '@/utils/opt/strictPrefix';
 import { isReadonlyWriteUrl, isStandardsReadonly, READONLY_MESSAGE } from '@/utils/opt/standardsModeState';
 
 /** opt W1：同一前缀只提示一次，避免页面轮询刷屏 */
@@ -30,6 +30,10 @@ const notifiedMissingPrefix = new Set<string>();
 function optBlockReason(url: string, projectId: string): { code: string; message: string; silent?: boolean } | null {
     if (isMissingPrefixUrl(url)) {
         const key = missingPrefixKeyOf(url);
+        if (isDisabledOnEdgePrefix(key)) {
+            // 服务不在边缘架构内（如 ai-autorun-agent-edge）：静默失败
+            return { code: 'OPT_SERVICE_NOT_ON_EDGE', message: `${key} 对应服务不在边缘盒子架构内`, silent: true };
+        }
         const message = `主框架未配置接口前缀 ${key}，请求已拦截`;
         // 同一前缀只在第一次提示，之后静默失败，避免轮询刷屏
         const first = !notifiedMissingPrefix.has(key);

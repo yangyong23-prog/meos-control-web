@@ -277,7 +277,7 @@ export const MEOS_MONITOR_CONTROL_DEBOUNCE_WAIT = getInterfacePrefix('meosEnv', 
 // window.proxy?.apmCommonEnv?.MEOS_MONITOR_CONTROL_DEBOUNCE_WAIT ||
 // window.apmCommonEnv?.MEOS_MONITOR_CONTROL_DEBOUNCE_WAIT;
 
-// opt W5：AI 页直调 agent 的 /strategy/* 前缀，同 W1 规则
+// opt：ai-autorun-agent-edge 不在新边缘架构内（11-19），OPT_STRICT_EDGE_PREFIX 打开且 meosEnv 未配时静默禁用，不回落云端
 export const INTERFACE_PREFIX_AI_AUTORUN = resolveStrictPrefix('INTERFACE_PREFIX_AI_AUTORUN', () => getInterfacePrefix('meosEnv', 'apmCommonEnv', 'INTERFACE_PREFIX_AI_AUTORUN'));
 
 export const INTERFACE_PREFIX_MID_CALENDAR = getInterfacePrefix('meosEnv', 'apmCommonEnv', 'INTERFACE_PREFIX_MID_CALENDAR');
