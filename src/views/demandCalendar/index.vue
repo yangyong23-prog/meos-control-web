@@ -1,6 +1,7 @@
 <!-- eslint-disable vue/v-on-event-hyphenation -->
 <template>
     <div style="height: 100%">
+        <StandardsReadonlyBanner />
         <div v-if="show" class="demand-calendar">
             <DemandCalendarLeft ref="child" @demandList="infoFun" />
             <DemandCalendarRight />
@@ -12,6 +13,7 @@
 </template>
 
 <script lang="ts" setup>
+import StandardsReadonlyBanner from '@/components/opt/StandardsReadonlyBanner.vue';
 // @ts-ignore
 import i18n from '@/localization';
 import DemandCalendarLeft from './DemandCalendarLeft.vue';

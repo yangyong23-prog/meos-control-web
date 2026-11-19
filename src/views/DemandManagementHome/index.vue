@@ -1,5 +1,6 @@
 <template>
     <div class="demand-management-container" :class="{ 'demand-management-container-bg': templateDemandType === 'AIRCONDITIONING' }">
+        <StandardsReadonlyBanner />
         <m-scrollbar style="width: 100%">
             <template v-if="isLoading">
                 <frame-management
@@ -117,6 +118,7 @@
 </template>
 
 <script lang="ts" setup>
+import StandardsReadonlyBanner from '@/components/opt/StandardsReadonlyBanner.vue';
 // @ts-ignore
 import i18n from '@/localization';
 import { useElementSize } from '@vueuse/core';
