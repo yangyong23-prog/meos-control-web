@@ -24,7 +24,14 @@ export const READONLY_WRITE_PATHS = [
     '/demand/template/applyTemplateByDate',
     '/demand/template/clearCalendar',
     '/valueSelection/saveConfig',
-    '/shellConfig/mpcAgentCfg'
+    '/shellConfig/mpcAgentCfg',
+    // 11-19：壳配置、干预任务配置也归运行标准服务 / dtp-meos（解除干预等手动操作不拦）
+    '/shellConfig/save',
+    '/shellConfig/changeAlgorithmConfig',
+    '/shellConfig/changeLtsmConfig',
+    '/interventionTaskConfig/saveOrUpdate',
+    '/interventionTaskConfig/remove',
+    '/intervention/config/saveOrUpdate'
 ];
 
 /** projectId -> { mode, readOnly, loaded } */

@@ -14,7 +14,7 @@
 | 开关 | 条目 | 打开后 |
 |---|---|---|
 | `OPT_STRICT_EDGE_PREFIX` | W1 | `INTERFACE_PREFIX_MEOS_DTP` 只认 meosEnv；没配时请求在本地拦截并提示"主框架未配置接口前缀 X"（同一前缀只提示一次），不再回落 `apmCommonEnv`（新主框架镜像里是云端开发网关）。`INTERFACE_PREFIX_AI_AUTORUN` 不要求配置：没配时 AI 页直调 agent 的 `/strategy/*` 在本地静默失败，不提示、不回落云端 |
-| `OPT_STANDARDS_READONLY` | W2 | 已切新运行标准的项目（后端 B1 `readOnly=true`），空调需求配置、需求日历、MPC 智能体配置页顶部显示"由云端运行标准管理"，MPC 启动按钮禁用；下方 13 个写接口在本地直接返回失败（与后端 B2 同形：HTTP 200、code `A0403`） |
+| `OPT_STANDARDS_READONLY` | W2 | 已切新运行标准的项目（后端 B1 `readOnly=true`），空调需求配置、需求日历、MPC 智能体配置页顶部显示"由云端运行标准管理"，MPC 启动按钮禁用；下方 19 个写接口在本地直接返回失败（与后端 B2 同形：HTTP 200、code `A0403`） |
 | `OPT_STANDARDS_DISPLAY` | W3 | 已切项目的 AI 页标准值（平面图气泡、湿度开关）和需求日历（空调）改读后端 B4 同形接口。**后端本轮只做了原样转发，同形接口下一轮才有，上线前保持关闭** |
 | `OPT_AI_BUBBLE_CACHE` | W3 | AI 平面图气泡的"空调季 + 空间运行标准"两次查询按 项目+日期(+空间) 缓存 5 分钟，所有气泡共享；失败结果不缓存 |
 
@@ -30,7 +30,7 @@
 | `POST /standards/display/computeResult`、`/computeResultDetail` | B4 原样转发 dtp-meos，本轮后端已有，前端暂未使用 |
 
 前端本地拦截的写接口（与后端 B2 默认清单一致，见 `src/utils/opt/standardsModeState.js`）：
-`/demand/addInstanceConfig`、`/demand/addDemandConfig`、`/demand/clearSettings`、`/demand/referenceSettings`、`/demand/copyConfigs`、`/demand/blacklist/addRules`、`/demand/instanceGroup/add|edit|copy`、`/demand/template/applyTemplateByDate`、`/demand/template/clearCalendar`、`/valueSelection/saveConfig`、`/shellConfig/mpcAgentCfg`。只拦 `INTERFACE_PREFIX_MEOS` 下的路径。
+`/demand/addInstanceConfig`、`/demand/addDemandConfig`、`/demand/clearSettings`、`/demand/referenceSettings`、`/demand/copyConfigs`、`/demand/blacklist/addRules`、`/demand/instanceGroup/add|edit|copy`、`/demand/template/applyTemplateByDate`、`/demand/template/clearCalendar`、`/valueSelection/saveConfig`、`/shellConfig/mpcAgentCfg`，以及 11-19 新增的 `/shellConfig/save`、`/shellConfig/changeAlgorithmConfig`、`/shellConfig/changeLtsmConfig`、`/interventionTaskConfig/saveOrUpdate`、`/interventionTaskConfig/remove`、`/intervention/config/saveOrUpdate`（解除干预等手动操作不拦）。只拦 `INTERFACE_PREFIX_MEOS` 下的路径。
 
 ## 需要主框架侧配置的（不改框架代码，作为部署配置 / 给框架开发者的需求）
 
