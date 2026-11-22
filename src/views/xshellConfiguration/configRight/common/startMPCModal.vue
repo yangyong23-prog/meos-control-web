@@ -55,7 +55,7 @@
                     <m-button type="default" :disabled="submitLoading" @click.stop="closeModal">
                         {{ i18n.global.t('common.cancel') }}
                     </m-button>
-                    <m-button type="primary" :loading="submitLoading" @click="confirm">
+                    <m-button type="primary" :loading="submitLoading" :disabled="standardsReadOnly" :title="standardsReadOnly ? readonlyMessage : ''" @click="confirm">
                         {{ i18n.global.t('common.confirm') }}
                     </m-button>
                 </div>
@@ -67,11 +67,14 @@
 <script setup>
 import i18n from '@/localization';
 import { mpcAgentCfg } from '@/apis/xshellConfiguration';
+import useStandardsMode from '@/hooks/opt/useStandardsMode';
 import { $Message } from 'meri-plus';
 import { IconMeriComponentDialogLinear } from 'meri-icon';
 import { systemTreeMPCKey, systemTreeMPCLoadingKey, getMPCConfigDataAndSystemDataKey } from '../../hooks/useGlobalData';
 
 const emits = defineEmits(['close', 'after-submit']);
+// opt W2：已切新运行标准的项目禁用提交（开关 OPT_STANDARDS_READONLY 关闭时恒为 false）
+const { readOnly: standardsReadOnly, readonlyMessage } = useStandardsMode();
 const showModal = ref(false);
 const submitLoading = ref(false);
 const systemTreeMPC = inject(systemTreeMPCKey);
@@ -109,6 +112,10 @@ const closeModal = () => {
 };
 
 const confirm = () => {
+    if (standardsReadOnly.value) {
+        $Message.error({ title: readonlyMessage });
+        return;
+    }
     submitLoading.value = true;
     const params = [];
     systemTreeMPC.value.map(item => {

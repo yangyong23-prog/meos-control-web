@@ -9,6 +9,7 @@ import {
     INTERFACE_PREFIX_EMS,
     INTERFACE_PREFIX_IT_OPS
 } from '@/config';
+import { withStandardsDisplay, listStandardConfigsByInstance } from '@/apis/standards';
 
 const getAiApiPrefix = () => {
     if (import.meta.env.DEV) {
@@ -95,7 +96,10 @@ export const getProjectByIdService = params =>
  */
 export const getAcQuarter = (params, config) => http.post(INTERFACE_PREFIX_MID_CALENDAR + '/v2.0/work/calendar/getEveryDayDateTag', params, config);
 
-export const listConfigsByInstance = (params, config) => http.post(`${INTERFACE_PREFIX_MEOS}/demand/config/listConfigsByInstance`, params, config);
+const legacyListConfigsByInstance = (params, config) => http.post(`${INTERFACE_PREFIX_MEOS}/demand/config/listConfigsByInstance`, params, config);
+
+// opt W3：AI 平面图气泡、运行标准湿度开关的标准值；OPT_STANDARDS_DISPLAY 打开且项目已切时改读 B4（我方后端转 dtp-meos）
+export const listConfigsByInstance = withStandardsDisplay(legacyListConfigsByInstance, listStandardConfigsByInstance);
 
 /**
  * 获取系统开关服务ACCC
