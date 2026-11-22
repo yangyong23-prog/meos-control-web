@@ -1,4 +1,4 @@
-import { resolveStrictPrefix } from '@/utils/opt/strictPrefix';
+import { resolveStrictPrefix, resolveEdgeOnlyPrefix } from '@/utils/opt/strictPrefix';
 
 const isDev = import.meta.env.MODE === 'development';
 const proxyHit = '/proxy-api'; // 代理命中前嘴
@@ -30,6 +30,13 @@ const getInterfacePrefix = (...params) => {
         const nameSpace = params[0];
         const nameSpaceSpare = params[1];
         const serverCode = params[2];
+        // opt：OPT_NO_CLOUD_FALLBACK 打开时边缘前缀只认 meosEnv，不回落 apmCommonEnv（云端）
+        if (nameSpace === 'meosEnv' && nameSpaceSpare === 'apmCommonEnv') {
+            const edgeOnly = resolveEdgeOnlyPrefix(serverCode);
+            if (edgeOnly !== null) {
+                return edgeOnly;
+            }
+        }
         urlPerfix =
             window.proxy?.[nameSpace]?.[serverCode] || window[nameSpace]?.[serverCode] || window.proxy?.[nameSpaceSpare]?.[serverCode] || window[nameSpaceSpare]?.[serverCode];
     }

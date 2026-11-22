@@ -19,7 +19,12 @@ export const MISSING_PREFIX_MARK = '/__meosEnv_missing__/';
 export const STRICT_PREFIX_KEYS = ['INTERFACE_PREFIX_MEOS_DTP', 'INTERFACE_PREFIX_AI_AUTORUN'];
 
 /** 边缘不部署的服务：没配属于正常情况，静默禁用，不报错不提示 */
-export const DISABLED_ON_EDGE_PREFIX_KEYS = ['INTERFACE_PREFIX_AI_AUTORUN'];
+export const DISABLED_ON_EDGE_PREFIX_KEYS = [
+    'INTERFACE_PREFIX_AI_AUTORUN',
+    // 能耗分析类（energy-ddp 等）11-17 已从标准边缘架构去掉
+    'INTERFACE_PREFIX_ENERGY_RESEARCH',
+    'INTERFACE_PREFIX_ENERGY_QUALITY'
+];
 
 export const isDisabledOnEdgePrefix = key => DISABLED_ON_EDGE_PREFIX_KEYS.includes(key);
 
@@ -42,6 +47,35 @@ export const resolveStrictPrefix = (key, legacyResolve) => {
         console.info(`[opt] ${key} 对应服务不在边缘盒子架构内，相关请求已禁用（不回落云端网关）`);
     } else {
         console.error(`[opt] 主框架 meosEnv 未配置 ${key}，相关请求将被拦截（不回落云端网关）`);
+    }
+    return `${MISSING_PREFIX_MARK}${key}`;
+};
+
+/**
+ * opt：OPT_NO_CLOUD_FALLBACK 打开时，所有 getInterfacePrefix('meosEnv', 'apmCommonEnv', key) 只读 meosEnv。
+ *
+ * 新主框架挂载的公共 apm.env.js 是云端配置（qa-gw.meos.net.cn 等），回落它等于把盒子页面的请求发到云端，
+ * 违背“配置以云为准、盒子页面只用盒内服务”的原则（2026-11-22 Blake 同意）。打开后：
+ * - meosEnv 配了就用；
+ * - 没配时返回占位前缀，http 拦截器拒绝请求（DISABLED_ON_EDGE_PREFIX_KEYS 中的静默），不会发到任何云端地址。
+ * 开关关闭时返回 null，调用方按原逻辑解析。
+ *
+ * @param {string} key 前缀名
+ * @returns {string|null}
+ */
+export const resolveEdgeOnlyPrefix = key => {
+    if (!optOn(OPT_SWITCH.NO_CLOUD_FALLBACK)) {
+        return null;
+    }
+    const value = window.proxy?.meosEnv?.[key] || window.meosEnv?.[key];
+    if (value) return value;
+    if (!missing.has(key)) {
+        missing.add(key);
+        if (isDisabledOnEdgePrefix(key)) {
+            console.info(`[opt] ${key} 对应服务不在边缘盒子架构内，相关请求已禁用（不回落云端）`);
+        } else {
+            console.error(`[opt] 主框架 meosEnv 未配置 ${key}，相关请求将被拦截（不回落云端）`);
+        }
     }
     return `${MISSING_PREFIX_MARK}${key}`;
 };
