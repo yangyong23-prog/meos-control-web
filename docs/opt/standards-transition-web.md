@@ -154,3 +154,15 @@
 | `/demandStrategy/optionsUpdateStrategy` | 时间表策略（需求策略）配置 | DTP | `optionsUpdateStrategy` timetable.js:7<br>`optionsUpdateStrategy` ACAC.js:79 | components/TimeTableEditorModal、views/ACAC、views/System-Heat-Source |
 | `/demandStrategy/removeStrategy` | 时间表策略（需求策略）配置 | DTP | `removeStrategy` timetable.js:30<br>`removeStrategy` ACAC.js:122 | views/ACAC、views/ACAI、views/System-Heat-Source、views/WaterSupply、views/coldHotStrategicInterventions |
 | `/demandStrategy/saveStrategy` | 时间表策略（需求策略）配置 | DTP | `saveStrategy` timetable.js:11<br>`saveStrategy` ACAC.js:148 | components/TimeTableEditorModal、views/ACAC、views/System-Heat-Source |
+
+## OPT_NO_CLOUD_FALLBACK：所有边缘前缀不回落云端（2026-11-22）
+
+背景：4.91 换成新主框架 meos-home-web-edge 后，自控子应用读到的 `apm.env.js` 来自框架公共配置，里面没有 `window.meosEnv`，`apmCommonEnv` 全是云端 QA 地址（IoT 前缀还指向另一个客户的边缘盒子）。原逻辑 meosEnv 没配就回落 apmCommonEnv，页面请求因此可能悄悄发到云端。W1 只约束 MEOS_DTP 和 AI_AUTORUN 两个前缀。
+
+开关 `OPT_NO_CLOUD_FALLBACK`（只读 meosEnv，默认关）打开后，`getInterfacePrefix('meosEnv', 'apmCommonEnv', key)` 的所有前缀都只认 meosEnv：
+
+- 配了就用；
+- 没配返回占位前缀 `/__meosEnv_missing__/KEY`，http 拦截器拒绝请求并提示一次（不会发到任何云端地址）；
+- `DISABLED_ON_EDGE_PREFIX_KEYS`（AI_AUTORUN、ENERGY_RESEARCH、ENERGY_QUALITY）属于已移出边缘架构的服务，静默禁用。
+
+不在范围：`getInterfacePrefix('apmPageUrl', ...)` 的跳转页面地址；MonitorPlayer 直接读 `apmCommonEnv.INTERFACE_PREFIX_IOTHUB` 的视频播放（4.91 部署配置里另行修正）。
