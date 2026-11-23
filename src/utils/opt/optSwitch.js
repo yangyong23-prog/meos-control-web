@@ -12,6 +12,7 @@
  *   OPT_AI_BUBBLE_CACHE: true      // W3 AI 平面图气泡结果缓存，去掉每次 hover 的重复外查
  *   OPT_NO_CLOUD_FALLBACK: true    // 所有 meosEnv/apmCommonEnv 前缀都只认 meosEnv，未配置时拦截，不回落云端（W1 的全量版）
  *   OPT_HIDE_ABNORMAL_EVENTS: true // 去掉各页面的“异常事件”页签/面板（新架构里异常监测归 meos-hub 工作台）
+ *   OPT_EDGE_CLOUD_PROXY: true     // 天气、电价、碳排、工作历日期标签改经我方后端转发（需后端 switch.opt.edgeCloudProxy）
  */
 export const OPT_SWITCH = Object.freeze({
     STRICT_EDGE_PREFIX: 'OPT_STRICT_EDGE_PREFIX',
@@ -19,7 +20,8 @@ export const OPT_SWITCH = Object.freeze({
     STANDARDS_DISPLAY: 'OPT_STANDARDS_DISPLAY',
     AI_BUBBLE_CACHE: 'OPT_AI_BUBBLE_CACHE',
     NO_CLOUD_FALLBACK: 'OPT_NO_CLOUD_FALLBACK',
-    HIDE_ABNORMAL_EVENTS: 'OPT_HIDE_ABNORMAL_EVENTS'
+    HIDE_ABNORMAL_EVENTS: 'OPT_HIDE_ABNORMAL_EVENTS',
+    EDGE_CLOUD_PROXY: 'OPT_EDGE_CLOUD_PROXY'
 });
 
 const readMeosEnv = key => {

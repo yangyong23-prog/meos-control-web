@@ -10,6 +10,7 @@ import {
     INTERFACE_PREFIX_IT_OPS
 } from '@/config';
 import { withStandardsDisplay, listStandardConfigsByInstance } from '@/apis/standards';
+import { edgeCloudProxyUrl } from '@/utils/opt/edgeCloudProxy';
 
 const getAiApiPrefix = () => {
     if (import.meta.env.DEV) {
@@ -72,7 +73,7 @@ export const getValueSelect = params => http.post(INTERFACE_PREFIX_MEOS + '/valu
  * @returns
  */
 export const Hour24Forecast = params =>
-    http.post(INTERFACE_PREFIX_BDTP_WEATHER + '/api/entrance/unifierJson/Hour24Forecast', params, { autoHandleError: false, headers: { mergeParams: false } });
+    http.post(edgeCloudProxyUrl('weather/hour24Forecast', INTERFACE_PREFIX_BDTP_WEATHER + '/api/entrance/unifierJson/Hour24Forecast'), params, { autoHandleError: false, headers: { mergeParams: false } });
 
 /**
  * 自行查询天气服务-历史小时数据
@@ -94,7 +95,7 @@ export const getProjectByIdService = params =>
  * @param {*} params
  * @returns
  */
-export const getAcQuarter = (params, config) => http.post(INTERFACE_PREFIX_MID_CALENDAR + '/v2.0/work/calendar/getEveryDayDateTag', params, config);
+export const getAcQuarter = (params, config) => http.post(edgeCloudProxyUrl('calendar/getEveryDayDateTag', INTERFACE_PREFIX_MID_CALENDAR + '/v2.0/work/calendar/getEveryDayDateTag'), params, config);
 
 const legacyListConfigsByInstance = (params, config) => http.post(`${INTERFACE_PREFIX_MEOS}/demand/config/listConfigsByInstance`, params, config);
 
