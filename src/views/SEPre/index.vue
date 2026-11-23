@@ -1,6 +1,6 @@
 <template>
     <div :class="{ 'se-container': true }">
-        <ExpansionCollapse ref="toggleWidthDivRef" :is-unpack="unpackShow">
+        <ExpansionCollapse ref="toggleWidthDivRef" :is-unpack="unpackShow" :hide-right="hideAbnormal">
             <template #left>
                 <Left />
             </template>
@@ -22,6 +22,9 @@ import useGlobalData from './hooks/useGlobalData';
 import useSSE from './hooks/useSSE';
 import useAbnormalList from './hooks/useAbnormalList';
 import { MENU_CODE } from './constant/index';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const { toggleWidthDivRef, unpackShow, abnormalTargetObjIds, classCode2ObjectIds } = useGlobalData();
 const { sseClient, setSSEClientOptionUtil } = useSSE();

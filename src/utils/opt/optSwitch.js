@@ -11,13 +11,15 @@
  *   OPT_STANDARDS_DISPLAY: true    // W3 监测页的标准值改经我方后端（转 dtp-meos）读取
  *   OPT_AI_BUBBLE_CACHE: true      // W3 AI 平面图气泡结果缓存，去掉每次 hover 的重复外查
  *   OPT_NO_CLOUD_FALLBACK: true    // 所有 meosEnv/apmCommonEnv 前缀都只认 meosEnv，未配置时拦截，不回落云端（W1 的全量版）
+ *   OPT_HIDE_ABNORMAL_EVENTS: true // 去掉各页面的“异常事件”页签/面板（新架构里异常监测归 meos-hub 工作台）
  */
 export const OPT_SWITCH = Object.freeze({
     STRICT_EDGE_PREFIX: 'OPT_STRICT_EDGE_PREFIX',
     STANDARDS_READONLY: 'OPT_STANDARDS_READONLY',
     STANDARDS_DISPLAY: 'OPT_STANDARDS_DISPLAY',
     AI_BUBBLE_CACHE: 'OPT_AI_BUBBLE_CACHE',
-    NO_CLOUD_FALLBACK: 'OPT_NO_CLOUD_FALLBACK'
+    NO_CLOUD_FALLBACK: 'OPT_NO_CLOUD_FALLBACK',
+    HIDE_ABNORMAL_EVENTS: 'OPT_HIDE_ABNORMAL_EVENTS'
 });
 
 const readMeosEnv = key => {

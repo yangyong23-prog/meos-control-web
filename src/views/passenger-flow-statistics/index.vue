@@ -1,6 +1,6 @@
 <template>
     <div class="passenger-flow-statistics-wrapper" :style="{ backgroundColor: !floorView ? '#f1f4f6' : '#D4DDE5' }">
-        <ExpansionCollapse ref="toggleWidthDivRef" :is-unpack="unpackShow" :is-hide-expand="isHideExpand">
+        <ExpansionCollapse ref="toggleWidthDivRef" :is-unpack="unpackShow" :is-hide-expand="isHideExpand" :hide-right="hideAbnormal">
             <template #left>
                 <div id="observed-element" class="left">
                     <Header></Header>
@@ -66,6 +66,9 @@ import ExpansionCollapse from '@/components/expansionCollapseAssembly/index.vue'
 import useDrawerVisible from '@/hooks/useDrawerVisible';
 import AbnormalTabBox from '@/views/Common/AbnormalListPlus/abnormal-tab-box.vue';
 import { PASSENGER_FLOW, OBJ_TYPE } from '@/utils/globalVariables';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const runningMonitorType = PASSENGER_FLOW;
 provide(runningMonitorSecondTypeInjectKey, runningMonitorType);

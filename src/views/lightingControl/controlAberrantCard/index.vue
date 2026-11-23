@@ -8,13 +8,13 @@
 <template>
     <div ref="controlAberrantBox" class="control-aberrant-container">
         <template v-if="headerModelView === 'model'">
-            <div class="tab">
+            <div v-if="!hideAbnormal" class="tab">
                 <m-tabs v-model="curTab" size="large" :data="tabItems" type="segment"></m-tabs>
             </div>
             <div v-show="curTab === '1'" class="container" :style="{ height: `calc(100% - 72px)` }">
                 <RunControlEntry :has-spaces="props.hasSpaces" />
             </div>
-            <m-scrollbar v-show="curTab === '2'" class="container container-abnormal" style="height: calc(100% - 72px)">
+            <m-scrollbar v-if="!hideAbnormal" v-show="curTab === '2'" class="container container-abnormal" style="height: calc(100% - 72px)">
                 <div style="height: 100%">
                     <AbnormalList
                         :abnormal-event-list="abnormalEventList"
@@ -28,7 +28,7 @@
         </template>
         <template v-else>
             <!-- <m-scrollbar :class="[notifyList.length ? 'broadcast' : 'no-broadcast']"> -->
-            <div style="padding: 20px 0 16px 16px; height: 100%; overflow: hidden">
+            <div v-if="!hideAbnormal" style="padding: 20px 0 16px 16px; height: 100%; overflow: hidden">
                 <AbnormalList
                     :abnormal-event-list="abnormalEventList"
                     :abnormal-event-list-loading="abnormalEventListLoading || templateTypeLoading"
@@ -47,6 +47,9 @@ import RunControlEntry from './controls/index.vue';
 import AbnormalList from '@/views/Common/AbnormalListPlus/index.vue';
 import { h } from 'vue';
 import { MBadge } from 'meri-plus';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const abnormalEventListLoading = inject('abnormalEventListLoading');
 const abnormalEventListUpdateTime = inject('abnormalEventListUpdateTime');

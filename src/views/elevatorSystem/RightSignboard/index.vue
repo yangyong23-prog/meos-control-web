@@ -1,6 +1,6 @@
 <template>
     <div class="right-signboard-content">
-        <div class="tab">
+        <div v-if="!hideAbnormal" class="tab">
             <m-tabs :key="Math.random()" v-model="curTab" size="large" :data="tabItems" type="segment">
                 <template #name="{ item, index }">
                     <div style="color: red; font-weight: 700">{{ item.name + index }}</div>
@@ -26,6 +26,7 @@
             "
         />
         <AbnormalList
+            v-if="!hideAbnormal"
             v-show="curTab === tabAbnormalKey"
             class="abnormal-list-warp"
             :abnormal-event-list="abnormalEventList"
@@ -46,6 +47,9 @@ import useStore from '@/store';
 import { getAbnormalDataList } from '@/apis/elevatorSystem';
 import useAbnormalData from '@/views/Common/AbnormalListPlus/useAbnormalData';
 import { isMeosFrame } from '@/utils/envUtils';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 const currentFloorObj = inject('currentFloorObj');
 
 const tabControlKey = 'control';

@@ -15,7 +15,7 @@
                     </div>
 
                     <!-- 异常事件（一定没有异常事件） -->
-                    <div v-if="oneAbnormal" class="abnormal-event-content">
+                    <div v-if="oneAbnormal && !hideAbnormal" class="abnormal-event-content">
                         <TitlePrefix :title="i18n.global.t('meos_control_web.abnormal_event')" :col-gap="4" :font-size="14" />
                         <m-popover
                             style="pointer-events: none"
@@ -98,6 +98,9 @@ import { isEmpty } from 'lodash';
 import TitlePrefix from '@/components/title-prefix/index.vue';
 import DockSingleton from '@/hooks/responsiveDock';
 import { useWatchWithCleanup } from '@/hooks/useWatchEffectWithCleanup';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 const props = defineProps({
     queryData: {
         type: Object,

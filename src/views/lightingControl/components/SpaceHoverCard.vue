@@ -16,7 +16,7 @@
                     </div>
                     <div v-if="oneAbnormal || cardData?.deviceInfo?.length || cardData.workPlaneLux" class="split-line" />
 
-                    <div v-if="oneAbnormal" class="abnormal-event-content">
+                    <div v-if="oneAbnormal && !hideAbnormal" class="abnormal-event-content">
                         <div class="content-title">{{ i18n.global.t('meos_control_web.abnormal_event') }}</div>
                         <m-popover
                             style="pointer-events: none"
@@ -96,6 +96,9 @@ import { SUCCESSCODE } from '@/utils/globalVariables';
 import LeftArrow from '@/assets/images/common/right.svg';
 import { abnormalJumpFun, jumpToAnalysis } from '@/utils/envUtils';
 import { ABNORMAL_EVENT } from '@/utils/SSEEventTypes';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const { base } = useStore();
 const templateType = inject('templateType');

@@ -75,7 +75,7 @@
             <template #right>
                 <div class="control-module wh100">
                     <div class="control-module-main" :class="{ 'has-notify': notifyList.length }">
-                        <div v-if="controlTabs?.length > 1" class="control-tabs">
+                        <div v-if="!hideAbnormal && controlTabs?.length > 1" class="control-tabs">
                             <m-tabs v-model="controlData" :data="controlTabs" type="segment" size="large">
                                 <template #abnormal>
                                     <div class="fcc" style="display: flex; gap: 2px">
@@ -146,7 +146,7 @@
                                         </div>
                                     </template>
                                 </m-scrollbar>
-                                <slot v-else-if="controlData === ControlTabsEnum.ABNORMAL_EVENTS" name="abnormal" v-bind="bindObj" :control-tabs="controlTabs"> </slot>
+                                <slot v-else-if="controlData === ControlTabsEnum.ABNORMAL_EVENTS && !hideAbnormal" name="abnormal" v-bind="bindObj" :control-tabs="controlTabs"> </slot>
                             </div>
                         </div>
                     </div>
@@ -359,6 +359,9 @@ import SpaceList from './components/control/SpaceList.vue';
 import { useSystemSetHook } from './hooks/useSystemSetHook';
 import { useSpaceListHook } from './hooks/useSpaceListHook';
 import { clearModelType, setModelType } from '@/utils/tools';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 const ControlRef = ref();
 const props = withDefaults(defineProps<IndexProps>(), {
     headerProps: () => ({}),

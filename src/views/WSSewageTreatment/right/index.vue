@@ -2,7 +2,7 @@
     <div :class="[isFloorView ? 'floor-view' : '']" style="height: 100%; flex: 1">
         <div :style="notifyList?.length ? 'height: calc(100% - 70px);' : 'height: 100%;'">
             <div v-if="isFloorView" class="right-container">
-                <div class="tabs-wrapper">
+                <div v-if="!hideAbnormal" class="tabs-wrapper">
                     <m-tabs v-model="curTab" :data="tabItems" size="large" type="segment"> </m-tabs>
                 </div>
                 <div v-show="curTab === '1'" class="run-control-wrap">
@@ -12,7 +12,7 @@
                     </div>
                     <StatisticTab :card-statistics="cardStatistics" />
                 </div>
-                <div v-show="curTab === '2'" class="abnormal-all-wrap">
+                <div v-if="!hideAbnormal" v-show="curTab === '2'" class="abnormal-all-wrap">
                     <AbnormalList
                         class="abnormal-list-warp"
                         :abnormal-event-list="abnormalEventList"
@@ -24,7 +24,7 @@
                     />
                 </div>
             </div>
-            <div v-else class="container">
+            <div v-else-if="!hideAbnormal" class="container">
                 <AbnormalList
                     class="abnormal-list-warp"
                     :abnormal-event-list="abnormalEventList"
@@ -50,6 +50,9 @@ import { isMeosFrame } from '@/utils/envUtils';
 import AbnormalList from '@/views/Common/AbnormalListPlus/index.vue';
 import CommonNotify from '@/components/commonNotify/index.vue';
 import UseNotify from '@/components/commonNotify/hooks/useNotify';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 defineProps({
     cardStatistics: {
         type: Array,

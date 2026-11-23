@@ -1,11 +1,11 @@
 <template>
     <div ref="controlAberrantBox" class="control-aberrant-wrap" :class="{ 'control-aberrant-abnormal': curTab === 2 }">
         <div :style="{ marginRight: curTab === 2 ? '16px' : 0 }">
-            <m-tabs v-if="hasControls" v-model="curTab" :size="tabSize" :data="tabItems" type="segment"></m-tabs>
+            <m-tabs v-if="hasControls && !hideAbnormal" v-model="curTab" :size="tabSize" :data="tabItems" type="segment"></m-tabs>
         </div>
         <Controls v-if="curTab === 1" />
         <AbnormalList
-            v-if="curTab === 2"
+            v-if="curTab === 2 && !hideAbnormal"
             :style="`height: calc(100% - ${hasControls ? 56 : 0}px);paddingRight:0;marginTop:${hasControls ? 12 : 0}px`"
             :abnormal-event-list="abnormalEventList"
             :abnormal-event-list-loading="abnormalEventListLoading || templateTypeAllLoading"
@@ -25,6 +25,9 @@ import { useRoute } from 'vue-router';
 import { MBadge } from 'meri-plus';
 import { isMeosFrame } from '@/utils/envUtils';
 import { h } from 'vue';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const abnormalEventList = inject('abnormalEventList');
 const abnormalEventCount = inject('abnormalEventCount');
@@ -61,6 +64,11 @@ const getHasControls = () => {
 
 watchEffect(() => {
     hasControls.value = getHasControls();
+    if (hideAbnormal) {
+        // opt：不显示异常事件时只保留运行控制；没有控制的系统由父页面整块隐藏右侧栏
+        curTab.value = hasControls.value ? 1 : 0;
+        return;
+    }
     if (hasControls.value) {
         if (route.name === 'systemStatusGraph') {
             curTab.value = 1;

@@ -1,7 +1,7 @@
 <template>
     <div class="right-side-bar-wrapper">
         <div class="container">
-            <div :key="parentTabSize" class="tabs-wrapper">
+            <div v-if="!hideAbnormal" :key="parentTabSize" class="tabs-wrapper">
                 <m-tabs v-model="curTab" :data="tabItems" :size="parentTabSize" type="segment"> </m-tabs>
             </div>
             <!-- 运行控制 -->
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <!-- 异常事件 -->
-            <div v-show="curTab === '2'" class="abnormal-list-warp">
+            <div v-if="!hideAbnormal" v-show="curTab === '2'" class="abnormal-list-warp">
                 <AbnormalList
                     class="abnormal-list-inner"
                     :abnormal-event-list="abnormalEventList"
@@ -64,6 +64,9 @@ import EquipmentList from '@/views/Common/EquipmentList/index.vue';
 import AbnormalList from '@/views/Common/AbnormalList/index.vue';
 import dataAnalysis from '../components/dataAnalysis/index.vue';
 import DemandTargetTab from '../components/DemandTargetTab.vue';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const templateType = inject('templateType');
 const computedInstanceId = inject('computedInstanceId');

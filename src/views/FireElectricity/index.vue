@@ -1,6 +1,6 @@
 <template>
     <div class="fire-electricity-warpper" :class="[currentFloorId ? 'fire-electricity-warpper-bg' : 'fire-electricity-warpper-img']">
-        <ExpansionCollapse v-if="!isGlobalLoading" ref="toggleWidthDivRef" :is-unpack="unpackShow" :is-hide-expand="isHideExpand">
+        <ExpansionCollapse v-if="!isGlobalLoading" ref="toggleWidthDivRef" :is-unpack="unpackShow" :is-hide-expand="isHideExpand" :hide-right="hideAbnormal">
             <template #left>
                 <FireElectricityMain :current-floor-id="currentFloorId" @open-equipment-list="showEquipmentList = true" />
             </template>
@@ -60,6 +60,9 @@ import useStore from '@/store';
 import useDrawerVisible from '@/hooks/useDrawerVisible';
 import EquipmentList from '@/components/equipmentList/index.vue';
 import { useWatchWithCleanup } from '@/hooks/useWatchEffectWithCleanup';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const showEquipmentList = ref(false);
 const { base } = useStore();

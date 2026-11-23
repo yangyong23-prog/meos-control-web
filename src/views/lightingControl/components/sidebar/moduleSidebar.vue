@@ -79,7 +79,7 @@
                         </div>
                     </m-scrollbar>
                 </div>
-                <div v-show="state.curTab === 2" class="child">
+                <div v-if="!hideAbnormal" v-show="state.curTab === 2" class="child">
                     <m-scrollbar ref="scrollAbnormalbarRef" box-class="module-scrollbar" @scroll="scroll">
                         <div class="mt16">
                             <abnormalList />
@@ -104,6 +104,9 @@ import { isEdge, getAuthParamsString } from '@/utils/envUtils';
 import i18n from '@/localization';
 import { ABNORMAL_EVENT } from '@/utils/SSEEventTypes';
 import { OBJ_TYPE } from '@/utils/globalVariables';
+import { hideAbnormalEvents, withoutAbnormalTabs } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 const emits = defineEmits(['close']);
 const props = defineProps({
     id: {
@@ -133,7 +136,7 @@ const state = reactive({
     circuit: i18n.global.t('meos_control_web.expand'),
     circuitShow: true,
     unpackShow: true,
-    tabItems: [
+    tabItems: withoutAbnormalTabs([
         {
             id: 1,
             name: i18n.global.t('meos_control_web.module_associated_devices')
@@ -142,7 +145,7 @@ const state = reactive({
             id: 2,
             name: i18n.global.t('meos_control_web.abnormal_event')
         }
-    ],
+    ]),
     clickTop: false
 });
 const top = ref(0);
@@ -158,7 +161,7 @@ watch(
         if (state.curTab === 1) {
             scrollbarRef.value.setScrollTop(top.value);
         } else {
-            scrollAbnormalbarRef.value.setScrollTop(topAbnormal.value);
+            scrollAbnormalbarRef.value?.setScrollTop(topAbnormal.value);
         }
     }
 );
@@ -196,7 +199,7 @@ const tabChange = () => {
     if (state.curTab === 1) {
         scrollbarRef.value.setScrollTop(top.value);
     } else {
-        scrollAbnormalbarRef.value.setScrollTop(topAbnormal.value);
+        scrollAbnormalbarRef.value?.setScrollTop(topAbnormal.value);
     }
 };
 const itemInfo = () => {

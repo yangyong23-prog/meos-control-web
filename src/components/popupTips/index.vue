@@ -12,7 +12,7 @@
                             <m-tag v-for="tag in tagObjs" :key="tag.name" class="info-tag" color="#FFFFFF" :bg-color="tag.color" size="small">{{ tag.name }} </m-tag>
                         </div>
                     </div>
-                    <div v-if="dateilObj?.exceptionEventInfoList?.length" class="mt8">
+                    <div v-if="dateilObj?.exceptionEventInfoList?.length && !hideAbnormal" class="mt8">
                         <div class="title-info">{{ i18n.global.t('meos_control_web.abnormal_event') }}</div>
                         <div>
                             <m-popover
@@ -114,6 +114,9 @@ import { importanceDegree } from '@/utils/viewUtils';
 import { abnormalJumpFun, jumpToAnalysis } from '@/utils/envUtils';
 import { baseColors } from '@/constants/baseColors';
 import i18n from '@/localization';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const props = defineProps({
     queryData: {

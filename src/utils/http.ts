@@ -18,6 +18,7 @@ import i18n, { getLocaleLang, DEFAULT_LANG } from '@/localization';
 import { INTERFACE_PREFIX_MEOS } from '@/config';
 import { isMissingPrefixUrl, missingPrefixKeyOf, isDisabledOnEdgePrefix } from '@/utils/opt/strictPrefix';
 import { isReadonlyWriteUrl, isStandardsReadonly, READONLY_MESSAGE } from '@/utils/opt/standardsModeState';
+import { isSkippedAbnormalEventUrl } from '@/utils/opt/hideAbnormal';
 
 /** opt W1：同一前缀只提示一次，避免页面轮询刷屏 */
 const notifiedMissingPrefix = new Set<string>();
@@ -230,7 +231,11 @@ class Http {
                 // 公共参数
                 const params = getMergeReqParams();
                 const blocked = optBlockReason(config.url || '', params.projectId);
-                if (blocked) {
+                if (!blocked && isSkippedAbnormalEventUrl(config.url || '')) {
+                    // opt：OPT_HIDE_ABNORMAL_EVENTS 打开时异常事件查询不发请求，本地返回成功 + 空列表
+                    config.autoHandleError = false;
+                    config.adapter = () => Promise.resolve({ data: { code: '00000', message: 'success', data: [], total: 0 }, status: 200, statusText: 'OK', headers: {}, config });
+                } else if (blocked) {
                     if (blocked.silent) {
                         config.autoHandleError = false;
                     }

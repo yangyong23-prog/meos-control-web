@@ -1,6 +1,6 @@
 <template>
     <div class="operation-monitoring-wrap" :class="curContainerClass?.value">
-        <ExpansionCollapse ref="toggleWidthDivRef" :is-unpack="unpackShow" :is-floor-view="!majorCodeType" :is-hide-expand="isHideExpand">
+        <ExpansionCollapse ref="toggleWidthDivRef" :is-unpack="unpackShow" :is-floor-view="!majorCodeType" :is-hide-expand="isHideExpand" :hide-right="hideAbnormalAside">
             <template #left>
                 <OperationMonitoringMain />
             </template>
@@ -79,6 +79,15 @@ import ExpansionCollapse from '@/components/expansionCollapseAssembly/index.vue'
 
 import * as _ from 'lodash';
 import useDrawerVisible from '@/hooks/useDrawerVisible';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
+// 右侧栏只剩“异常事件”的系统（没有运行控制）整块隐藏，判断与 controlAndAberrant 的 getHasControls 一致
+const hideAbnormalAside = computed(
+    () =>
+        hideAbnormal &&
+        !(selectedSystemObj.value?.isControl || selectedSystemObj.value?.imageOrProductName === i18n.global.t('meos_control_web.vacant_hot_pot_system_graph'))
+);
 
 const { base } = useStore();
 const { projectId } = base || {};

@@ -13,7 +13,7 @@
                     </div>
                     <template v-for="config in relInfoCodeGroupConfigs" :key="config.groupCode">
                         <template v-if="toLower(config.groupCode) === 'riskevent'">
-                            <div v-if="exceptionEventDisplay" class="mt8">
+                            <div v-if="exceptionEventDisplay && !hideAbnormal" class="mt8">
                                 <TitlePrefix :title="i18n.global.t('meos_control_web.abnormal_event')" :col-gap="4" :font-size="14" />
                                 <div>
                                     <m-popover
@@ -117,6 +117,9 @@ import { AIR_TERMINAL, HOVER } from '@/utils/globalVariables';
 
 import { importanceDegree, getValueStr } from '@/utils/viewUtils';
 import { abnormalJumpFun } from '@/utils/envUtils';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 // import { jumpToAnalysis } from '@/views/lightingControl/loopModuleList/utils';
 
 const props = defineProps({
