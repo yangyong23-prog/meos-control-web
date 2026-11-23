@@ -25,7 +25,15 @@ export const DISABLED_ON_EDGE_PREFIX_KEYS = [
     'INTERFACE_PREFIX_ENERGY_RESEARCH',
     'INTERFACE_PREFIX_ENERGY_QUALITY',
     // mid-permission 已从盒子移除（11-14 Blake），账号权限由主框架负责
-    'INTERFACE_PREFIX_MID_PERMISSION'
+    'INTERFACE_PREFIX_MID_PERMISSION',
+    // 以下是云端运维、权限、告警接口，盒子上没有对应服务，也不需要（2026-11-23）：
+    // AIM 经 meos-control 转发到云端 meoi-aim，盒内未部署；EMS 查云端项目域名、IT_OPS 查云边连通状态，只在云端有意义；
+    // DMP / DMP_ALARM 是云端数据与告警，边缘异常监控由 meos-hub 负责
+    'INTERFACE_PREFIX_AIM',
+    'INTERFACE_PREFIX_EMS',
+    'INTERFACE_PREFIX_IT_OPS',
+    'INTERFACE_PREFIX_DMP',
+    'INTERFACE_PREFIX_DMP_ALARM'
 ];
 
 export const isDisabledOnEdgePrefix = key => DISABLED_ON_EDGE_PREFIX_KEYS.includes(key);

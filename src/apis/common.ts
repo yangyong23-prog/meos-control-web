@@ -9,6 +9,7 @@ import {
     INTERFACE_PREFIX_TWIN_DTP
 } from '@/config';
 import { isEdge } from '@/utils/envUtils';
+import { edgeCloudProxyUrl } from '@/utils/opt/edgeCloudProxy';
 import baseStore from '@/store/baseStore';
 import { ChillerData, ControllerParameter } from '@/views/Common/SystemsAndControl/types';
 import { AirData, CodeConfig, ControlListItem } from '@/views/Common/SystemsAndControl/types/control';
@@ -157,14 +158,14 @@ export const listInfoCodes = (params: any) => http.post(INTERFACE_PREFIX_MEOS + 
  * @param {any} params
  * @return {*}
  */
-export const queryProjectElecPrice = (params: any) => http.post(INTERFACE_PREFIX_BDTP_PERSIST + '/iot/ipcal/data/queryProjectElecPrice', params);
+export const queryProjectElecPrice = (params: any) => http.post(edgeCloudProxyUrl('persist/queryProjectElecPrice', INTERFACE_PREFIX_BDTP_PERSIST + '/iot/ipcal/data/queryProjectElecPrice'), params);
 
 /**
  * @description: 查询项目碳数据
  * @param {any} params
  * @return {*}
  */
-export const queryProjectCarbonData = (params: any) => http.post(INTERFACE_PREFIX_BDTP_ELECTRICITY + '/carbon/queryCategoryData', params);
+export const queryProjectCarbonData = (params: any) => http.post(edgeCloudProxyUrl('electricity/carbonCategoryData', INTERFACE_PREFIX_BDTP_ELECTRICITY + '/carbon/queryCategoryData'), params);
 // export const queryProjectCarbonData = (params: any) => http.post('https://dev-gw.meos.net.cn/dtp-electricity-server/carbon/queryCategoryData', params);
 
 /**
