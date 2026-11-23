@@ -235,7 +235,16 @@ export const INTERFACE_PREFIX_YUSHU_CDN = getInterfacePrefix('meosEnv', 'apmComm
 // window.proxy?.apmCommonEnv?.INTERFACE_PREFIX_YUSHU_CDN ||
 // window.apmCommonEnv?.INTERFACE_PREFIX_YUSHU_CDN;
 
-export const INTERFACE_PREFIX_MEOS_SOCKET = getInterfacePrefix('meosEnv', 'apmCommonEnv', 'INTERFACE_PREFIX_MEOS_SOCKET');
+// opt：盒子上 meosEnv 可以只写同源相对路径（如 /meos-control-server-edge），这里按当前页面协议和主机补成 ws(s):// 绝对地址，
+// 这样同一份配置在 IP 入口和域名入口都能用。绝对地址、占位前缀（/__meosEnv_missing__/）保持原样。
+const toSocketUrl = prefix => {
+    if (typeof prefix !== 'string' || !prefix.startsWith('/') || prefix.startsWith('/__meosEnv_missing__/') || typeof window === 'undefined' || !window.location) {
+        return prefix;
+    }
+    const scheme = window.location.protocol === 'https:' ? 'wss' : 'ws';
+    return `${scheme}://${window.location.host}${prefix}`;
+};
+export const INTERFACE_PREFIX_MEOS_SOCKET = toSocketUrl(getInterfacePrefix('meosEnv', 'apmCommonEnv', 'INTERFACE_PREFIX_MEOS_SOCKET'));
 // window.proxy?.meosEnv?.INTERFACE_PREFIX_MEOS_SOCKET ||
 // window.meosEnv?.INTERFACE_PREFIX_MEOS_SOCKET ||
 // window.proxy?.apmCommonEnv?.INTERFACE_PREFIX_MEOS_SOCKET ||
