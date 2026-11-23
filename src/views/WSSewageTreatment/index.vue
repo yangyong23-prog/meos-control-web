@@ -1,6 +1,6 @@
 <template>
     <div class="ws-sewage-treatment" :class="{ currentFloorObj: currentFloorObj?.id }">
-        <ExpansionCollapse ref="toggleWidthDivRef" :is-unpack="unpackShow" :is-floor-view="floorView" :abnormal-event-list="abnormalEventList" :is-hide-expand="isHideExpand">
+        <ExpansionCollapse ref="toggleWidthDivRef" :is-unpack="unpackShow" :is-floor-view="floorView" :abnormal-event-list="abnormalEventList" :is-hide-expand="isHideExpand" :hide-right="hideAbnormal && !floorView">
             <template #left>
                 <div class="ws-left h100">
                     <Left
@@ -46,6 +46,9 @@ import useStore from '@/store';
 import { RUNNING_MONITOR_TYPE_SEWAGE } from './constant';
 import ExpansionCollapse from '@/components/expansionCollapseAssembly/index.vue';
 import useDrawerVisible from '@/hooks/useDrawerVisible';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const { spaceSSEClient, setEquipmentSSEClientOption } = useSSE();
 const toggleWidthDivRef = ref(null);

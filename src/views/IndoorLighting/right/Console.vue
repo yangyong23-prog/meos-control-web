@@ -1,6 +1,6 @@
 <template>
     <div class="indoor-light-console">
-        <div class="console-tabs">
+        <div v-if="!hideAbnormal" class="console-tabs">
             <m-tabs v-model="controlData" :data="controlTabs" type="segment" size="large">
                 <template #abnormal>
                     <div class="fcc" style="display: flex; gap: 2px">
@@ -12,7 +12,7 @@
         </div>
         <div class="console-content">
             <OperatingControl v-show="controlData === variable.OPERATING_CONTROL.id" :loading="loading" />
-            <Abnormal v-show="controlData === variable.ABNORMAL_EVENT.id" @total-amount-change="totalAmountChange" />
+            <Abnormal v-if="!hideAbnormal" v-show="controlData === variable.ABNORMAL_EVENT.id" @total-amount-change="totalAmountChange" />
         </div>
     </div>
 </template>
@@ -21,6 +21,9 @@
 import OperatingControl from './OperatingControl.vue';
 import { GET_MENU_CONFIG } from '@/utils/globalVariables';
 import Abnormal from './abnormal/index.vue';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 defineProps({
     loading: {
         type: Boolean,

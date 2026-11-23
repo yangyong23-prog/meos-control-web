@@ -1,7 +1,7 @@
 <template>
     <div class="air-cold-right">
         <div class="air-cold-right-main wh100" :style="{ height: hasNotifyList ? 'calc(100% - 70px)' : '100%' }">
-            <div v-if="controlTabs.length > 1" style="padding: 16px 16px 0">
+            <div v-if="!hideAbnormal && controlTabs.length > 1" style="padding: 16px 16px 0">
                 <m-tabs v-model="controlData" :data="controlTabs" type="segment" size="large">
                     <template #abnormal>
                         <div class="fcc" style="display: flex; gap: 2px">
@@ -23,7 +23,7 @@
                     :charts-data-by-space-scope="chartsDataBySpaceScope"
                     :all-chart-spaces-count="allChartSpacesCount"
                 />
-                <Abnormal v-else :is-sub-panel="controlTabs.length > 1" />
+                <Abnormal v-else-if="!hideAbnormal" :is-sub-panel="controlTabs.length > 1" />
             </div>
         </div>
         <div v-if="hasNotifyList" class="notify-list">
@@ -40,6 +40,9 @@ import Abnormal from './abnormal/index.vue';
 import CommonNotify from '../components/commonNotify/index.vue';
 import { OPERATING_CONTROL } from '../variables';
 import { currentSystemKey, abnormalEventListKey, abnormalEventListLoadingKey } from '../hooks/useBaseHook';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const props = defineProps({
     notifyList: {

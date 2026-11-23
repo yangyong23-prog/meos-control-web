@@ -94,7 +94,7 @@
                     :running-monitor-type="runningMonitorType"
                     @click-equip="openEquipment"
                 />
-                <div v-if="tabModel === 'abnormal'" class="tab-for-custom-abnormal-container">
+                <div v-if="tabModel === 'abnormal' && !hideAbnormal" class="tab-for-custom-abnormal-container">
                     <AbnormalList
                         :abnormal-event-list="abnormalEventList"
                         :abnormal-event-list-loaded-time="curDateString"
@@ -131,6 +131,9 @@ import { OBJ_TYPE } from '@/utils/globalVariables';
 import SERelEquipmentList from './SERelEquipmentList.vue';
 import AbnormalList from '@/views/Common/AbnormalListPlus/index.vue';
 import { useElementSize } from '@vueuse/core';
+import { hideAbnormalEvents, withoutAbnormalTabs } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const props = defineProps({
     classCode: {
@@ -240,8 +243,9 @@ const baseTabs = [
     { id: '1', name: i18n.global.t('meos_control_web.operation_monitoring_alt') },
     { id: 'abnormal', name: i18n.global.t('meos_control_web.abnormal_event') }
 ];
-const tabListWithBase = ref(baseTabs);
-const tabListWithSe = ref(seTabs);
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签
+const tabListWithBase = ref(withoutAbnormalTabs(baseTabs));
+const tabListWithSe = ref(withoutAbnormalTabs(seTabs));
 const currentTabList = computed(() => {
     return props.classCode === 'SETDLC' ? tabListWithSe.value : tabListWithBase.value;
 });

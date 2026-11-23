@@ -2,13 +2,14 @@
     <div class="parking-right-side-bar-wrapper">
         <div class="container">
             <!-- <template v-if="isEdge()"> -->
-            <div class="tabs-wrapper">
+            <div v-if="!hideAbnormal" class="tabs-wrapper">
                 <m-tabs v-model="curTab" :data="tabItems" size="large" type="segment"> </m-tabs>
             </div>
             <div v-show="curTab === '1'" class="tab-one-container">
                 <Controls />
             </div>
             <AbnormalList
+                v-if="!hideAbnormal"
                 v-show="curTab === '2'"
                 class="abnormal-list-warp isEdge"
                 :abnormal-event-list="abnormalEventList"
@@ -37,6 +38,9 @@ import { RUNNING_MONITOR_TYPE } from '../constant/index';
 
 import useSinglePOSTSSEClient from '@/components/hooks/useSinglePOSTSSEClient';
 import { ABNORMAL_EVENT } from '@/utils/SSEEventTypes';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const { base } = useStore();
 const { projectId } = base || {};

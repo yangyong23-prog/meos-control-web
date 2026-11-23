@@ -38,7 +38,7 @@
         </div>
         <div class="air-container-right">
             <div class="air-container-right-content" :style="{ height: notifyList?.length ? 'calc(100% - 64px)' : '100%' }">
-                <div class="tab">
+                <div v-if="!hideAbnormal" class="tab">
                     <m-tabs v-model="curTab" size="large" :data="tabItems" type="segment">
                         <template #abnormal>
                             <div class="fcc" style="display: flex; gap: 2px">
@@ -53,7 +53,7 @@
                 <span v-show="curTab === 'control'">
                     <Controls @open-equipment-list="openEquipmentList" @close-equipment-list="closeEquipmentList" />
                 </span>
-                <span v-if="curTab === 'abnormal'">
+                <span v-if="curTab === 'abnormal' && !hideAbnormal">
                     <AbnormalList
                         class="abnormal-list-warp"
                         :abnormal-event-list="abnormalEventList"
@@ -358,6 +358,9 @@ import {
 import { getComponent } from '@/components/ObjectInfoComponents/OperationMonitoring/config';
 import { getFloorInfoByFloorId, getBuildingInfoByFloorId } from '@/utils/buildingUtils';
 import { $Message } from 'meri-plus';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const { base } = useStore();
 const treeBuildFloorPromise = treeBuildFloorStore().handleTreeBuildingFloorData();

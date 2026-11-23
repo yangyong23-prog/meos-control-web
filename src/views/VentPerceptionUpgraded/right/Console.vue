@@ -1,10 +1,10 @@
 <template>
     <div class="vent-upgraded-console">
         <template v-if="headerModelView === 'list'">
-            <Abnormal @total-amount-change="totalAmountChange" />
+            <Abnormal v-if="!hideAbnormal" @total-amount-change="totalAmountChange" />
         </template>
         <template v-else>
-            <m-tabs v-model="controlData" :data="controlTabs" type="segment" size="large">
+            <m-tabs v-if="!hideAbnormal" v-model="controlData" :data="controlTabs" type="segment" size="large">
                 <template #abnormal>
                     <div class="fcc" style="display: flex; gap: 2px">
                         <span class="m-tabs-name">{{ variable.ABNORMAL_EVENT.name }}</span>
@@ -14,7 +14,7 @@
             </m-tabs>
             <div class="console-content">
                 <OperatingControl v-show="controlData === variable.OPERATING_CONTROL.id" />
-                <Abnormal v-show="controlData === variable.ABNORMAL_EVENT.id" @total-amount-change="totalAmountChange" />
+                <Abnormal v-if="!hideAbnormal" v-show="controlData === variable.ABNORMAL_EVENT.id" @total-amount-change="totalAmountChange" />
             </div>
         </template>
     </div>
@@ -25,6 +25,9 @@ import OperatingControl from './OperatingControl.vue';
 import { GET_MENU_CONFIG } from '@/utils/globalVariables';
 import Abnormal from './abnormal/index.vue';
 import { headerModelViewKey } from '@/views/VentPerceptionUpgraded/hooks/useBaseHook';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const headerModelView = inject(headerModelViewKey);
 const total = ref(0);

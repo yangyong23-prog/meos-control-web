@@ -26,7 +26,7 @@
                             </div>
                         </template>
                         <template v-else-if="toLower(config.groupCode) === 'riskevent'">
-                            <div v-if="exceptionEventDisplay" class="mt8">
+                            <div v-if="exceptionEventDisplay && !hideAbnormal" class="mt8">
                                 <TitlePrefix :title="i18n.global.t('meos_control_web.abnormal_event')" :col-gap="4" :font-size="14" />
                                 <div>
                                     <m-popover
@@ -157,6 +157,9 @@ import TitlePrefix from './title-prefix/index.vue';
 import useEquipInfoSSEHandle from '@/components/hooks/useEquipInfoSSEHandle';
 import HoverRiskCard from '@/views/machine-room-safety/space-map/hoverRiskCard.vue';
 import DockSingleton from '@/hooks/responsiveDock';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const props = defineProps({
     queryData: {

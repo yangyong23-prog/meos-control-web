@@ -1,5 +1,6 @@
 // @ts-ignore
 import i18n from '@/localization';
+import { withoutAbnormalTabs } from '@/utils/opt/hideAbnormal';
 /*
  * @Author: guoxiaohuan
  * @Date: 2024-04-29 17:33:25
@@ -43,20 +44,22 @@ export default function (props) {
     ]);
 
     // 异常状态列表
-    const abnormalList = ref([
-        {
-            id: 'DEMAND_DEVIATION',
-            name: i18n.global.t('meos_control_web.demand_deviation')
-        },
-        {
-            id: ABNORMAL_EVENT,
-            name: i18n.global.t('meos_control_web.abnormal_event')
-        },
-        {
-            id: 'EQUIPMENT_STATUS_ABNORMAL',
-            name: i18n.global.t('meos_control_web.device_status_abnormal')
-        }
-    ]);
+    const abnormalList = ref(
+        withoutAbnormalTabs([
+            {
+                id: 'DEMAND_DEVIATION',
+                name: i18n.global.t('meos_control_web.demand_deviation')
+            },
+            {
+                id: ABNORMAL_EVENT,
+                name: i18n.global.t('meos_control_web.abnormal_event')
+            },
+            {
+                id: 'EQUIPMENT_STATUS_ABNORMAL',
+                name: i18n.global.t('meos_control_web.device_status_abnormal')
+            }
+        ])
+    );
 
     // 干预类型列表
     const intervenedList = ref([

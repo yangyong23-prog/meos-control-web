@@ -1,6 +1,6 @@
 <template>
     <div class="right-signboard-content" :class="{ full: currentModel === 'list', model: currentModel !== 'list' }">
-        <div v-if="currentModel !== 'list'" class="tab">
+        <div v-if="currentModel !== 'list' && !hideAbnormal" class="tab">
             <m-tabs v-model="curTab" size="large" :data="tabItems" type="segment"></m-tabs>
         </div>
         <Controls
@@ -11,7 +11,7 @@
             @open-edit-group="openEditGroup"
         />
         <AbnormalList
-            v-if="curTab === tabAbnormalKey"
+            v-if="curTab === tabAbnormalKey && !hideAbnormal"
             class="abnormal-list-warp"
             :abnormal-event-list="abnormalEventList"
             :abnormal-event-list-loading="abnormalEventListLoading"
@@ -29,6 +29,9 @@ import { currentModelInjectKey } from '../constants/injectKey';
 import { MBadge } from 'meri-plus';
 import { isMeosFrame } from '@/utils/envUtils';
 import { h } from 'vue';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 const emit = defineEmits(['clickMonitorGroup', 'hover-monitor-group', 'unhover-monitor-group', 'open-edit-group']);
 const clickMonitorGroup = group => {
     emit('clickMonitorGroup', group);
@@ -62,7 +65,7 @@ const tabItems = ref([
 watch(
     currentModel,
     () => {
-        if (currentModel.value === 'list') {
+        if (currentModel.value === 'list' && !hideAbnormal) {
             curTab.value = tabAbnormalKey;
         } else {
             curTab.value = tabControlKey;

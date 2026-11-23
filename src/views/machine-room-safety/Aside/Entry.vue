@@ -1,6 +1,6 @@
 <template>
     <div class="tabs-box">
-        <m-tabs v-model="curTab" size="large" :data="tabItems" type="segment">
+        <m-tabs v-model="curTab" size="large" :data="withoutAbnormalTabs(tabItems)" type="segment">
             <template #abnormal>
                 <div class="fcc" style="display: flex; gap: 2px">
                     <span class="m-tabs-name">{{ i18n.global.t('meos_control_web.abnormal_event') }}</span>
@@ -13,7 +13,7 @@
     </div>
 
     <AbnormalList
-        v-if="curTab === 'abnormal'"
+        v-if="curTab === 'abnormal' && !hideAbnormal"
         class="abnormal-list-warp"
         :show-type="'subPanel'"
         :abnormal-event-list="renderList"
@@ -36,6 +36,9 @@ import AbnormalList from '@/views/Common/AbnormalListPlus/index.vue';
 import UnknownRiskList from '../components/UnknownRiskList.vue';
 import useAsideData from '../hooks/useAsideData';
 import { loadingDangerEventsKey, abnormalIdleLoadingKey, riskEventIdleLoadingKey } from '../hooks/useBaseDataHook';
+import { hideAbnormalEvents, withoutAbnormalTabs } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 defineProps({
     isLoading: {
@@ -58,7 +61,7 @@ const tabItems = ref([
         name: i18n.global.t('meos_control_web.status_unknown_risk')
     }
 ]);
-const curTab = ref('abnormal');
+const curTab = ref(hideAbnormal ? 'risk' : 'abnormal');
 
 const loadingDangerEvents = inject(loadingDangerEventsKey);
 

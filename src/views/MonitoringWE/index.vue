@@ -4,6 +4,7 @@
             ref="toggleWidthDivRef"
             :is-unpack="unpackShow"
             :is-hide-expand="isHideExpand"
+            :hide-right="hideAbnormal"
         >
             <template #left>
                 <MonitoringMain @selected-node="selectedNode" />
@@ -84,6 +85,9 @@ import * as _ from 'lodash';
 import useSSE from './hooks/useSSE';
 import useDrawerVisible from '@/hooks/useDrawerVisible';
 import AbnormalTabBox from '@/views/Common/AbnormalListPlus/abnormal-tab-box.vue';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const tagsValue = ref();
 const popuptipsRef = ref();

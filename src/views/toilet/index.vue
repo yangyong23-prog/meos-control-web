@@ -1,6 +1,6 @@
 <template>
     <div class="toilet wh100" :class="currentFloorObj?.id && d3bgColor ? '' : 'image-bg'" :style="currentFloorObj?.id && d3bgColor ? { backgroundColor: `#${d3bgColor}` } : ''">
-        <ExpansionCollapseNew v-model="showExpansionCollapseNew" :hide-icon="showCommonDrawer">
+        <ExpansionCollapseNew v-model="showExpansionCollapseNew" :hide-icon="showCommonDrawer" :hide-right="hideAbnormal">
             <template #left> <Left :loading="loading" /> </template>
             <template #right>
                 <Right />
@@ -61,6 +61,9 @@ import OperatingMonitoring from '@/components/ObjectInfoComponents/OperationMoni
 import AngleViewByBuilding from '@/components/ObjectInfoComponents/AssociatedDevicesNew/AngleViewByBuilding.vue';
 import { usemessageInfo } from '@/utils/tools';
 import { OBJ_TYPE } from '@/utils/globalVariables';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const {
     d3bgColor,

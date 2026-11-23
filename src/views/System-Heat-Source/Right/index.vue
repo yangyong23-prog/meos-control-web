@@ -1,7 +1,7 @@
 <template>
     <div class="right-container wh100">
         <div class="right-content" :style="{ height: notifyList.length ? 'calc(100% - 70px)' : 'calc(100%)' }">
-            <div v-if="(controlTabs?.length ?? 0) > 1" class="control-tabs">
+            <div v-if="!hideAbnormal && (controlTabs?.length ?? 0) > 1" class="control-tabs">
                 <m-tabs v-model="controlData" :data="controlTabs" type="segment" size="large">
                     <template #abnormal>
                         <div class="fcc" style="display: flex; gap: 2px">
@@ -22,7 +22,7 @@
                     :charts-data-by-space-scope="chartsDataBySpaceScope"
                     :all-chart-spaces-count="allChartSpacesCount"
                 />
-                <Abnormal v-else :is-sub-panel="(controlTabs?.length ?? 0) > 1" />
+                <Abnormal v-else-if="!hideAbnormal" :is-sub-panel="(controlTabs?.length ?? 0) > 1" />
             </div>
         </div>
         <div v-if="notifyList?.length" class="notify-list">
@@ -42,6 +42,9 @@ import CommonNotify from '@/components/commonNotify/index.vue';
 
 import UseNotify from '@/components/commonNotify/hooks/useNotify';
 import { systemIdKey } from '../hooks/useBaseHook';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 const props = defineProps({
     setSseConsoleClient: {
         type: Function,

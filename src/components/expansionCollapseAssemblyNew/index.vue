@@ -3,12 +3,13 @@
         <div
             class="expansion-collapse-left transition-view"
             :class="{
-                unpackShow: unpackShow
+                unpackShow: unpackShow && !hideRight
             }"
         >
             <slot name="left"></slot>
         </div>
         <div
+            v-if="!hideRight"
             id="myDiv"
             :class="['expansion-collapse-right', 'transition-view', 'fc', !isFloorView ? 'move-left-active' : 'unpackShowWidth', unpackShow ? '' : 'packup-position-item']"
             @mouseenter="e => handleMouseEnter(e)"
@@ -46,6 +47,11 @@ const props = defineProps({
         default: () => []
     },
     hideIcon: {
+        type: Boolean,
+        default: false
+    },
+    // opt：右侧栏整块不显示，左侧占满（如右侧只有“异常事件”列表、开关 OPT_HIDE_ABNORMAL_EVENTS 打开时）
+    hideRight: {
         type: Boolean,
         default: false
     }

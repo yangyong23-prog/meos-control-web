@@ -1,6 +1,6 @@
 <template>
     <div class="wh100 toilet-right">
-        <m-tabs v-model="controlData" :data="controlTabs" type="segment" size="large">
+        <m-tabs v-if="!hideAbnormal" v-model="controlData" :data="controlTabs" type="segment" size="large">
             <template #abnormal>
                 <div class="fcc" style="display: flex; gap: 2px">
                     <span class="m-tabs-name">{{ variable.ABNORMAL_EVENT.name }}</span>
@@ -11,6 +11,7 @@
         <div class="console-content">
             <OperatingControl v-show="controlData === variable.OPERATING_CONTROL.id" />
             <AbnormalList
+                v-if="!hideAbnormal"
                 v-show="controlData === variable.ABNORMAL_EVENT.id"
                 :abnormal-event-list="abnormalEventListComputed"
                 :abnormal-event-list-loading="abnormalEventListLoading"
@@ -30,6 +31,9 @@ import OperatingControl from './OperatingControl.vue';
 import { GET_MENU_CONFIG } from '@/utils/globalVariables';
 import { abnormalEventListLoadingKey, abnormalEventListUpdateTimeKey, abnormalEventListLoadedTimeKey, curAbnormalIdsKey } from '../hooks/useBaseHook';
 import { uniqBy } from 'lodash';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 const abnormalEventListLoading = inject(abnormalEventListLoadingKey, false);
 const abnormalEventListUpdateTime = inject(abnormalEventListUpdateTimeKey, 0);
 const abnormalEventListLoadedTime = inject(abnormalEventListLoadedTimeKey);

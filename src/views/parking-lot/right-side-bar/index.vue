@@ -1,7 +1,7 @@
 <template>
     <div class="parking-right-side-bar-wrapper">
         <div class="container">
-            <div class="tabs-wrapper">
+            <div v-if="!hideAbnormal" class="tabs-wrapper">
                 <m-tabs v-model="curTab" :data="tabItems" size="large" type="segment"> </m-tabs>
             </div>
             <div v-show="curTab === '1'" class="tab-one-container">
@@ -9,6 +9,7 @@
                 <floorConstant v-if="floorView" />
             </div>
             <AbnormalList
+                v-if="!hideAbnormal"
                 v-show="curTab === '2'"
                 class="abnormal-list-warp"
                 :abnormal-event-list="abnormalEventList"
@@ -33,6 +34,9 @@ import useStore from '@/store';
 import Controls from '../Controls/index.vue';
 import floorConstant from '../floorConstant/index.vue';
 import { runningMonitorSecondTypeInjectKey, currentFloorObjInjectKey, floorViewInjectKey } from '../constant/injectKey';
+import { hideAbnormalEvents } from '@/utils/opt/hideAbnormal';
+// opt：OPT_HIDE_ABNORMAL_EVENTS 打开时去掉“异常事件”页签/面板（异常监测归 meos-hub）
+const hideAbnormal = hideAbnormalEvents();
 
 const { base } = useStore();
 const { projectId } = base || {};
